@@ -52,4 +52,4 @@ PhD Student / Researcher
 
 ## Contact
 
-Email: akamatsu@eagle.sophia.ac.jp
+Email: akamatsu [at] eagle.sophia.ac.jp [※please replace [at] with @]
