@@ -1,6 +1,6 @@
 # 赤松 祐治 / Yuji Akamatsu 
 上智大学大学院 博士後期課程
-PhD Student / Researcher  
+Ph.D. Student / Researcher  
 **Proactive Intelligence**
 
 ---
