@@ -1,3 +1,4 @@
+準備中：
 # 赤松 祐治 / Yuji Akamatsu 
 上智大学大学院 博士後期課程
 Ph.D. Student / Researcher  
