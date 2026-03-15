@@ -366,8 +366,7 @@
   #pw-modal {
     display: none;
     position: fixed; inset: 0; z-index: 10001;
-    background: rgba(247,246,243,0.92);
-    backdrop-filter: blur(8px);
+    background: rgba(247,246,243,0.95);
     align-items: center; justify-content: center;
   }
   #pw-modal.open { display: flex; }
@@ -647,16 +646,22 @@
   }
 
   adminBtn.addEventListener('click', () => {
-    if (sessionStorage.getItem('unlocked') === 'true') {
+    const unlocked = sessionStorage.getItem('unlocked') === 'true';
+    if (unlocked) {
       sessionStorage.removeItem('unlocked');
       overlay.style.display = 'flex';
       adminBtn.textContent = '管理者';
     } else {
-      openPwModal();
+      modal.style.display = 'flex';
+      modal.classList.add('open');
+      pwInput.value = '';
+      pwError.style.display = 'none';
+      setTimeout(() => pwInput.focus(), 100);
     }
   });
 
   function openPwModal() {
+    modal.style.display = 'flex';
     modal.classList.add('open');
     pwInput.value = '';
     pwError.style.display = 'none';
@@ -665,6 +670,7 @@
 
   function closePwModal() {
     modal.classList.remove('open');
+    modal.style.display = 'none';
   }
 
   function checkPw() {
@@ -672,6 +678,7 @@
       sessionStorage.setItem('unlocked', 'true');
       overlay.style.display = 'none';
       modal.classList.remove('open');
+      modal.style.display = 'none';
       adminBtn.textContent = '準備中 ON';
     } else {
       pwError.style.display = 'block';
