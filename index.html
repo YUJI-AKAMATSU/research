@@ -44,7 +44,6 @@
     z-index: 0;
   }
 
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -52,65 +51,54 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 48px;
-    height: 56px;
+    height: 64px;
     display: flex; align-items: center; justify-content: space-between;
   }
 
   .nav-logo {
     font-family: 'DM Serif Display', serif;
-    font-size: 17px; letter-spacing: -0.01em;
+    font-size: 20px; letter-spacing: -0.01em;
     color: var(--ink); text-decoration: none;
   }
   .nav-logo em { font-style: italic; color: var(--accent); }
 
   .nav-links { display: flex; gap: 28px; list-style: none; }
   .nav-links a {
-    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ink-mute); text-decoration: none;
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--accent); }
 
   .nav-cta {
-    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
-    padding: 8px 18px;
+    font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 9px 20px;
     border: 1px solid var(--accent); color: var(--accent);
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
   }
   .nav-cta:hover { background: var(--accent); color: #fff; }
 
-  /* ── LAYOUT ── */
   .container {
     max-width: 960px; margin: 0 auto; padding: 0 40px;
     position: relative; z-index: 1;
   }
 
-  /* ── HERO ── */
   .hero { padding: 120px 0 28px; }
 
   .hero-eyebrow {
-    font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+    font-size: 13px; letter-spacing: 0.35em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 28px;
     opacity: 0; animation: fadeUp 0.6s ease forwards 0.1s;
   }
 
   .hero-title {
     font-family: 'Noto Sans JP', 'DM Serif Display', serif;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 400; line-height: 1.08;
     letter-spacing: 0.02em; color: var(--ink);
     margin-bottom: 20px;
     opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s;
-  }
-  .hero-title em { font-style: normal; color: var(--ink); }
-
-  .hero-title-ja {
-    font-family: 'Noto Sans JP', serif;
-    font-size: 13px; font-weight: 300;
-    color: var(--ink-mute); letter-spacing: 0.15em;
-    margin-bottom: 32px;
-    opacity: 0; animation: fadeUp 0.6s ease forwards 0.3s;
   }
 
   .hero-badges {
@@ -119,8 +107,8 @@
   }
 
   .badge {
-    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-    padding: 6px 14px;
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 7px 16px;
     border: 1px solid var(--border);
     color: var(--ink-mute); background: var(--white);
   }
@@ -129,19 +117,18 @@
     color: var(--accent); background: rgba(200,16,46,0.04);
   }
 
-  /* keyword accent */
   .keyword-block {
     border: 1px solid var(--border);
     background: var(--white);
-    padding: 28px 32px;
+    padding: 32px 36px;
     position: relative;
     margin-bottom: 0;
     opacity: 0; animation: fadeUp 0.6s ease forwards 0.45s;
   }
   .keyword-block::before {
     content: 'CORE THEME';
-    position: absolute; top: -8px; left: 24px;
-    font-size: 9px; letter-spacing: 0.32em; color: var(--accent);
+    position: absolute; top: -9px; left: 24px;
+    font-size: 11px; letter-spacing: 0.32em; color: var(--accent);
     background: var(--bg); padding: 0 8px;
   }
   .keyword-block::after {
@@ -152,20 +139,19 @@
   }
   .kw-main {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(14px, 2vw, 20px);
-    font-style: italic; color: var(--ink); margin-bottom: 10px;
+    font-size: clamp(18px, 2.2vw, 24px);
+    font-style: italic; color: var(--ink); margin-bottom: 12px;
   }
   .kw-sub {
     font-family: 'Noto Sans JP', serif;
-    font-size: 14px; font-weight: 300;
+    font-size: 16px; font-weight: 300;
     line-height: 2; color: var(--ink-mute);
   }
 
-  /* ── MARQUEE ── */
   .strip {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    padding: 13px 0; overflow: hidden;
+    padding: 14px 0; overflow: hidden;
     background: var(--white);
     margin: 40px 0 20px;
     position: relative; z-index: 1;
@@ -176,7 +162,7 @@
     white-space: nowrap;
   }
   .strip-item {
-    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--ink-dim); padding: 0 36px; flex-shrink: 0;
   }
   .strip-item span { color: var(--accent); margin-right: 14px; }
@@ -186,59 +172,66 @@
     to   { transform: translateX(-50%); }
   }
 
-  /* ── SECTION ── */
-  section { margin-bottom: 48px; }
+  section { margin-bottom: 52px; }
 
   .section-label {
-    font-size: 9px; letter-spacing: 0.38em; text-transform: uppercase;
-    color: var(--accent2); margin-bottom: 12px;
+    font-size: 11px; letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--accent2); margin-bottom: 14px;
     display: flex; align-items: center; gap: 14px;
   }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
   h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(20px, 2.4vw, 26px);
     font-weight: 400; letter-spacing: -0.010em;
-    color: var(--ink); margin-bottom: 10px;
+    color: var(--ink); margin-bottom: 12px;
   }
-  h2 em { font-style: normal; color: var(--ink); }
 
   .body-text {
     font-family: 'Noto Sans JP', serif;
-    font-size: 15px; font-weight: 300;
+    font-size: 17px; font-weight: 300;
     line-height: 2.1; color: var(--ink-mid);
   }
 
-  /* ── INTERESTS GRID ── */
-  .interests-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1px; background: var(--border);
-    border: 1px solid var(--border);
+  /* ── INTERESTS — 縦5段カード ── */
+  .ri-wrap {
     margin-top: 28px;
+    display: flex; flex-direction: column; gap: 10px;
+    font-family: 'DM Mono', monospace;
   }
-  .interest-card {
-    background: var(--white); padding: 22px 24px;
-    transition: background 0.2s;
+  .ri-card {
+    display: flex; align-items: stretch; height: 84px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
   }
-  .interest-card:hover { background: #f0f3fa; }
-  .interest-num {
-    font-size: 10px; letter-spacing: 0.18em;
-    color: var(--ink-dim); margin-bottom: 10px;
+  .ri-num {
+    display: flex; align-items: center; justify-content: center;
+    min-width: 60px;
+    background: var(--accent);
+    font-size: 15px; font-weight: 500; letter-spacing: 0.08em;
+    color: #fff; flex-shrink: 0;
   }
-  .interest-name {
-    font-family: 'Noto Sans JP', serif;
-    font-size: 13px; font-weight: 400; color: var(--ink);
-    line-height: 1.6;
+  .ri-body {
+    padding: 0 28px;
+    display: flex; flex-direction: column; justify-content: center; gap: 4px;
   }
-  .interest-name::before { content: '// '; color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; }
+  .ri-label {
+    font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+  .ri-name {
+    font-size: 16px; font-weight: 400;
+    color: var(--ink); line-height: 1.4;
+    font-family: 'Noto Sans JP', 'DM Mono', monospace;
+  }
 
   /* ── DATA TAGS ── */
   .data-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
   .dtag {
-    font-size: 10px; letter-spacing: 0.1em;
-    padding: 5px 12px;
+    font-size: 12px; letter-spacing: 0.1em;
+    padding: 6px 14px;
     border: 1px solid var(--border);
     color: var(--ink-mute); background: var(--white);
     font-family: 'DM Mono', monospace;
@@ -248,45 +241,45 @@
   /* ── WORK BLOCK ── */
   .work-block {
     border: 1px solid var(--border); background: var(--white);
-    padding: 28px 32px; position: relative;
+    padding: 32px 36px; position: relative;
   }
   .work-status {
-    position: absolute; top: 18px; right: 22px;
-    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    position: absolute; top: 20px; right: 24px;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--accent2); display: flex; align-items: center; gap: 7px;
   }
-  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent2); animation: blink 1.8s infinite; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); animation: blink 1.8s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
 
   /* ── COLLAB ── */
   .collab-block {
     border: 1px solid rgba(200,16,46,0.22);
     background: rgba(200,16,46,0.03);
-    padding: 28px 32px; position: relative;
+    padding: 32px 36px; position: relative;
   }
   .collab-block::before {
     content: 'OPEN TO COLLABORATION';
-    position: absolute; top: -8px; left: 24px;
-    font-size: 9px; letter-spacing: 0.3em; color: var(--accent3);
+    position: absolute; top: -9px; left: 24px;
+    font-size: 11px; letter-spacing: 0.3em; color: var(--accent3);
     background: var(--bg); padding: 0 8px;
   }
 
   /* ── CONTACT ── */
   .contact-block {
     border: 1px solid var(--border); background: var(--white);
-    padding: 40px 40px; position: relative;
+    padding: 44px 44px; position: relative;
   }
   .contact-block::after {
     content: ''; position: absolute; top: 0; left: 0;
     width: 3px; height: 100%; background: var(--accent);
   }
-  .contact-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
-  .contact-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-dim); }
+  .contact-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 18px; }
+  .contact-label { font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-dim); }
   .contact-email {
-    font-size: 13px; color: var(--accent);
+    font-size: 15px; color: var(--accent);
     font-family: 'DM Mono', monospace; letter-spacing: 0.04em;
     text-decoration: none;
-    border-bottom: 1px solid rgba(26,63,212,0.3);
+    border-bottom: 1px solid rgba(200,16,46,0.3);
     padding-bottom: 1px; transition: border-color 0.2s;
   }
   .contact-email:hover { border-color: var(--accent); }
@@ -299,9 +292,9 @@
     flex-wrap: wrap; gap: 14px;
     position: relative; z-index: 1;
   }
-  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--ink); }
+  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--ink); }
   .footer-logo em { font-style: italic; color: var(--accent); }
-  .footer-copy { font-size: 10px; color: var(--ink-dim); letter-spacing: 0.12em; }
+  .footer-copy { font-size: 12px; color: var(--ink-dim); letter-spacing: 0.12em; }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -318,7 +311,6 @@
     .nav-links { display: none; }
     .container { padding: 0 20px; }
     .hero { padding: 96px 0 56px; }
-    .interests-grid { grid-template-columns: 1fr; }
     .contact-block { padding: 28px 24px; }
   }
 
@@ -328,7 +320,6 @@
     background: var(--bg);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    gap: 0;
   }
   #coming-soon-overlay::before {
     content: '';
@@ -341,33 +332,29 @@
   }
   .cs-inner { position: relative; text-align: center; padding: 48px; }
   .cs-label {
-    font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.38em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 20px;
     display: flex; align-items: center; justify-content: center; gap: 10px;
   }
   .cs-label::before, .cs-label::after { content: '——'; opacity: 0.4; }
   .cs-title {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(14px, 2.5vw, 26px);
+    font-size: clamp(18px, 3vw, 32px);
     font-weight: 400; color: var(--ink);
     letter-spacing: -0.02em; margin-bottom: 8px;
   }
   .cs-sub {
     font-family: 'Noto Sans JP', serif;
-    font-size: 13px; font-weight: 300;
+    font-size: 15px; font-weight: 300;
     color: var(--ink-mute); margin-bottom: 40px;
     line-height: 1.9;
   }
-  .cs-divider {
-    width: 40px; height: 1px;
-    background: var(--accent); margin: 0 auto 40px;
-  }
+  .cs-divider { width: 40px; height: 1px; background: var(--accent); margin: 0 auto 40px; }
 
-  /* Admin unlock button — subtle, bottom right */
   #admin-btn {
     position: fixed; bottom: 24px; right: 24px; z-index: 10000;
-    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
-    padding: 7px 14px;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 8px 16px;
     border: 1px solid var(--border);
     background: var(--white); color: var(--ink-dim);
     cursor: pointer; font-family: 'DM Mono', monospace;
@@ -375,7 +362,6 @@
   }
   #admin-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* Password modal */
   #pw-modal {
     display: none;
     position: fixed; inset: 0; z-index: 10001;
@@ -385,44 +371,33 @@
   }
   #pw-modal.open { display: flex; }
   .pw-box {
-    background: var(--white);
-    border: 1px solid var(--border);
-    padding: 40px 48px;
-    min-width: 320px;
-    position: relative;
+    background: var(--white); border: 1px solid var(--border);
+    padding: 40px 48px; min-width: 320px; position: relative;
   }
   .pw-box::before {
     content: ''; position: absolute; top: 0; left: 0;
     width: 3px; height: 100%; background: var(--accent);
   }
-  .pw-label {
-    font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 20px;
-  }
+  .pw-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
   .pw-input {
     width: 100%; border: 1px solid var(--border);
-    padding: 10px 14px; font-size: 13px;
+    padding: 11px 14px; font-size: 14px;
     font-family: 'DM Mono', monospace; color: var(--ink);
     background: var(--surface); margin-bottom: 12px;
     outline: none; letter-spacing: 0.1em;
   }
   .pw-input:focus { border-color: var(--accent); }
   .pw-submit {
-    width: 100%; padding: 11px;
+    width: 100%; padding: 12px;
     background: var(--accent); color: #fff; border: none;
-    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
-    font-family: 'DM Mono', monospace; cursor: pointer;
-    transition: opacity 0.2s;
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    font-family: 'DM Mono', monospace; cursor: pointer; transition: opacity 0.2s;
   }
   .pw-submit:hover { opacity: 0.85; }
-  .pw-error {
-    font-size: 11px; color: var(--accent);
-    margin-top: 10px; display: none;
-    font-family: 'DM Mono', monospace;
-  }
+  .pw-error { font-size: 12px; color: var(--accent); margin-top: 10px; display: none; font-family: 'DM Mono', monospace; }
   .pw-close {
     position: absolute; top: 14px; right: 16px;
-    font-size: 11px; color: var(--ink-dim); cursor: pointer;
+    font-size: 12px; color: var(--ink-dim); cursor: pointer;
     background: none; border: none; font-family: 'DM Mono', monospace;
   }
   .pw-close:hover { color: var(--ink); }
@@ -493,13 +468,13 @@
 <div class="strip">
   <div class="strip-track">
     <span class="strip-item"><span>——</span>時系列・時空間データ解析</span>
-    <span class="strip-item"><span>——</span>時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）  </span>
+    <span class="strip-item"><span>——</span>時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）</span>
     <span class="strip-item"><span>——</span>視覚表現学習（1D・2D・3D）</span>
     <span class="strip-item"><span>——</span>潜在ダイナミクスモデリング／世界モデル</span>
     <span class="strip-item"><span>——</span>処方的モデリング</span>
     <span class="strip-item"><span>——</span>Proactive Intelligence</span>
     <span class="strip-item"><span>——</span>時系列・時空間データ解析</span>
-    <span class="strip-item"><span>——</span>時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）  </span>
+    <span class="strip-item"><span>——</span>時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）</span>
     <span class="strip-item"><span>——</span>視覚表現学習（1D・2D・3D）</span>
     <span class="strip-item"><span>——</span>潜在ダイナミクスモデリング／世界モデル</span>
     <span class="strip-item"><span>——</span>処方的モデリング</span>
@@ -549,26 +524,41 @@
   <section id="interests" class="reveal">
     <div class="section-label">Research Interests</div>
     <h2>研究<em>関心領域</em></h2>
-    <div class="interests-grid">
-      <div class="interest-card">
-        <div class="interest-num">01</div>
-        <div class="interest-name">時系列・時空間データ解析</div>
+    <div class="ri-wrap">
+      <div class="ri-card">
+        <div class="ri-num">01</div>
+        <div class="ri-body">
+          <div class="ri-label">Time &amp; Space</div>
+          <div class="ri-name">時系列・時空間データ解析</div>
+        </div>
       </div>
-      <div class="interest-card">
-        <div class="interest-num">02</div>
-        <div class="interest-name">時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析） </div>
+      <div class="ri-card">
+        <div class="ri-num">02</div>
+        <div class="ri-body">
+          <div class="ri-label">Temporal Structure</div>
+          <div class="ri-name">時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）</div>
+        </div>
       </div>
-      <div class="interest-card">
-        <div class="interest-num">03</div>
-        <div class="interest-name">視覚表現学習（1D・2D・3D）</div>
+      <div class="ri-card">
+        <div class="ri-num">03</div>
+        <div class="ri-body">
+          <div class="ri-label">Visual Representation</div>
+          <div class="ri-name">視覚表現学習（1D・2D・3D）</div>
+        </div>
       </div>
-      <div class="interest-card">
-        <div class="interest-num">04</div>
-        <div class="interest-name">潜在ダイナミクスモデリング／世界モデル</div>
+      <div class="ri-card">
+        <div class="ri-num">04</div>
+        <div class="ri-body">
+          <div class="ri-label">Latent Dynamics</div>
+          <div class="ri-name">潜在ダイナミクスモデリング／世界モデル</div>
+        </div>
       </div>
-      <div class="interest-card">
-        <div class="interest-num">05</div>
-        <div class="interest-name">統計的推論／処方的モデリング</div>
+      <div class="ri-card">
+        <div class="ri-num">05</div>
+        <div class="ri-body">
+          <div class="ri-label">Inference &amp; Prescription</div>
+          <div class="ri-name">統計的推論／処方的モデリング</div>
+        </div>
       </div>
     </div>
   </section>
@@ -583,7 +573,7 @@
         現在、<strong style="color:var(--ink);font-weight:400;">時系列データ解析・時間構造の幾何解析・位相解析</strong>を中心とした
         研究に取り組んでいます。
       </p>
-      <p style="font-size:11px;color:var(--ink-dim);font-family:'DM Mono',monospace;letter-spacing:0.05em;">
+      <p style="font-size:13px;color:var(--ink-dim);font-family:'DM Mono',monospace;letter-spacing:0.05em;">
         // 詳細は論文公開後に順次公開予定
       </p>
     </div>
@@ -618,23 +608,23 @@
       <p class="body-text">研究に関するご質問はお気軽にどうぞ。</p>
       <div class="contact-row">
         <span class="contact-label">Email</span>
-        <a class="contact-email" href="/cdn-cgi/l/email-protection#3e5f555f535f4a4d4b7e5b5f59525b104d514e56575f105f5d10544e">
+        <a class="contact-email" href="mailto:akamatsu@eagle.sophia.ac.jp">
           akamatsu [at] eagle.sophia.ac.jp
         </a>
       </div>
-      <p style="font-size:11px;color:var(--ink-dim);font-family:'DM Mono',monospace;margin-top:10px;">※ [at] を @ に置き換えてください</p>
+      <p style="font-size:13px;color:var(--ink-dim);font-family:'DM Mono',monospace;margin-top:10px;">※ [at] を @ に置き換えてください</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:12px;font-weight:300;color:var(--ink-mute);margin-left:10px;">赤松 祐治</span></div>
+    <div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:14px;font-weight:300;color:var(--ink-mute);margin-left:10px;">赤松 祐治</span></div>
     <div class="footer-copy">Sophia University · Ph.D. Student · Proactive Intelligence</div>
   </footer>
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.07 });
@@ -643,8 +633,7 @@
     obs.observe(el);
   });
 
-  // ── COMING SOON LOGIC ──
-  const ADMIN_PW = 'sophia2025'; // ← パスワードをここで変更
+  const ADMIN_PW = 'sophia2025';
   const overlay  = document.getElementById('coming-soon-overlay');
   const modal    = document.getElementById('pw-modal');
   const pwInput  = document.getElementById('pw-input');
