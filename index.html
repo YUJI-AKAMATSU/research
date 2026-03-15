@@ -646,13 +646,7 @@
   }
 
   adminBtn.addEventListener('click', () => {
-    if (sessionStorage.getItem('unlocked') === 'true') {
-      sessionStorage.removeItem('unlocked');
-      overlay.style.display = 'flex';
-      adminBtn.textContent = '管理者';
-    } else {
-      openPwModal();
-    }
+    openPwModal();
   });
 
   function openPwModal() {
