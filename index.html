@@ -87,14 +87,14 @@
   .hero { padding: 120px 0 28px; }
 
   .hero-eyebrow {
-    font-size: 13px; letter-spacing: 0.35em; text-transform: uppercase;
+    font-size: 16px; letter-spacing: 0.35em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 28px;
     opacity: 0; animation: fadeUp 0.6s ease forwards 0.1s;
   }
 
   .hero-title {
     font-family: 'Noto Sans JP', 'DM Serif Display', serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400; line-height: 1.08;
     letter-spacing: 0.02em; color: var(--ink);
     margin-bottom: 20px;
@@ -187,6 +187,7 @@
     font-weight: 400; letter-spacing: -0.010em;
     color: var(--ink); margin-bottom: 12px;
   }
+  h2 em { font-style: normal; color: var(--ink); }
 
   .body-text {
     font-family: 'Noto Sans JP', serif;
@@ -608,7 +609,7 @@
       <p class="body-text">研究に関するご質問はお気軽にどうぞ。</p>
       <div class="contact-row">
         <span class="contact-label">Email</span>
-        <a class="contact-email" href="mailto:akamatsu@eagle.sophia.ac.jp">
+        <a class="contact-email" href="/cdn-cgi/l/email-protection#4928222824283d3a3c092c282e252c673a263921202867282a672339">
           akamatsu [at] eagle.sophia.ac.jp
         </a>
       </div>
@@ -624,7 +625,7 @@
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.07 });
@@ -674,12 +675,4 @@
       adminBtn.textContent = '準備中 ON';
     } else {
       pwError.style.display = 'block';
-      pwInput.value = '';
-      pwInput.focus();
-    }
-  }
-
-  modal.addEventListener('click', e => { if (e.target === modal) closePwModal(); });
-</script>
-</body>
-</html>
+      pwInput
