@@ -364,10 +364,9 @@
   #admin-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   #pw-modal {
-    display: none;
     position: fixed; inset: 0; z-index: 10001;
-    background: rgba(247,246,243,0.92);
-    backdrop-filter: blur(8px);
+    background: rgba(247,246,243,0.95);
+    display: none;
     align-items: center; justify-content: center;
   }
   #pw-modal.open { display: flex; }
@@ -625,7 +624,7 @@
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.07 });
@@ -657,22 +656,30 @@
   });
 
   function openPwModal() {
-    modal.classList.add('open');
+    modal.style.display = 'flex';
     pwInput.value = '';
     pwError.style.display = 'none';
     setTimeout(() => pwInput.focus(), 100);
   }
 
   function closePwModal() {
-    modal.classList.remove('open');
+    modal.style.display = 'none';
   }
 
   function checkPw() {
     if (pwInput.value === ADMIN_PW) {
       sessionStorage.setItem('unlocked', 'true');
       overlay.style.display = 'none';
-      modal.classList.remove('open');
+      modal.style.display = 'none';
       adminBtn.textContent = '準備中 ON';
     } else {
       pwError.style.display = 'block';
-      pwInput
+      pwInput.value = '';
+      pwInput.focus();
+    }
+  }
+
+  modal.addEventListener('click', e => { if (e.target === modal) closePwModal(); });
+</script>
+</body>
+</html>
