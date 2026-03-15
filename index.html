@@ -366,7 +366,8 @@
   #pw-modal {
     display: none;
     position: fixed; inset: 0; z-index: 10001;
-    background: rgba(247,246,243,0.95);
+    background: rgba(247,246,243,0.92);
+    backdrop-filter: blur(8px);
     align-items: center; justify-content: center;
   }
   #pw-modal.open { display: flex; }
@@ -608,7 +609,7 @@
       <p class="body-text">研究に関するご質問はお気軽にどうぞ。</p>
       <div class="contact-row">
         <span class="contact-label">Email</span>
-        <a class="contact-email" href="/cdn-cgi/l/email-protection#4928222824283d3a3c092c282e252c673a263921202867282a672339">
+        <a class="contact-email" href="/cdn-cgi/l/email-protection#335258525e52474046735652545f561d405c435b5a521d52501d5943">
           akamatsu [at] eagle.sophia.ac.jp
         </a>
       </div>
@@ -646,22 +647,16 @@
   }
 
   adminBtn.addEventListener('click', () => {
-    const unlocked = sessionStorage.getItem('unlocked') === 'true';
-    if (unlocked) {
+    if (sessionStorage.getItem('unlocked') === 'true') {
       sessionStorage.removeItem('unlocked');
       overlay.style.display = 'flex';
       adminBtn.textContent = '管理者';
     } else {
-      modal.style.display = 'flex';
-      modal.classList.add('open');
-      pwInput.value = '';
-      pwError.style.display = 'none';
-      setTimeout(() => pwInput.focus(), 100);
+      openPwModal();
     }
   });
 
   function openPwModal() {
-    modal.style.display = 'flex';
     modal.classList.add('open');
     pwInput.value = '';
     pwError.style.display = 'none';
@@ -670,7 +665,6 @@
 
   function closePwModal() {
     modal.classList.remove('open');
-    modal.style.display = 'none';
   }
 
   function checkPw() {
@@ -678,7 +672,6 @@
       sessionStorage.setItem('unlocked', 'true');
       overlay.style.display = 'none';
       modal.classList.remove('open');
-      modal.style.display = 'none';
       adminBtn.textContent = '準備中 ON';
     } else {
       pwError.style.display = 'block';
