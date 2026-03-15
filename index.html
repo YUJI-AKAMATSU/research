@@ -195,7 +195,6 @@
     line-height: 2.1; color: var(--ink-mid);
   }
 
-  /* ── INTERESTS — 縦5段カード ── */
   .ri-wrap {
     margin-top: 28px;
     display: flex; flex-direction: column; gap: 10px;
@@ -228,7 +227,6 @@
     font-family: 'Noto Sans JP', 'DM Mono', monospace;
   }
 
-  /* ── DATA TAGS ── */
   .data-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
   .dtag {
     font-size: 12px; letter-spacing: 0.1em;
@@ -239,7 +237,6 @@
   }
   .dtag.gold { color: var(--accent3); border-color: rgba(200,16,46,0.25); background: rgba(200,16,46,0.04); }
 
-  /* ── WORK BLOCK ── */
   .work-block {
     border: 1px solid var(--border); background: var(--white);
     padding: 32px 36px; position: relative;
@@ -252,7 +249,6 @@
   .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); animation: blink 1.8s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
 
-  /* ── COLLAB ── */
   .collab-block {
     border: 1px solid rgba(200,16,46,0.22);
     background: rgba(200,16,46,0.03);
@@ -265,7 +261,6 @@
     background: var(--bg); padding: 0 8px;
   }
 
-  /* ── CONTACT ── */
   .contact-block {
     border: 1px solid var(--border); background: var(--white);
     padding: 44px 44px; position: relative;
@@ -285,7 +280,6 @@
   }
   .contact-email:hover { border-color: var(--accent); }
 
-  /* ── FOOTER ── */
   footer {
     border-top: 1px solid var(--border);
     padding: 32px 0 52px;
@@ -297,7 +291,6 @@
   .footer-logo em { font-style: italic; color: var(--accent); }
   .footer-copy { font-size: 12px; color: var(--ink-dim); letter-spacing: 0.12em; }
 
-  /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity:0; transform: translateY(18px); }
     to   { opacity:1; transform: translateY(0); }
@@ -306,7 +299,6 @@
   .reveal.animate { opacity:0; transform: translateY(20px); }
   .reveal.animate.visible { opacity:1; transform: translateY(0); }
 
-  /* ── MOBILE ── */
   @media (max-width: 640px) {
     nav { padding: 0 20px; }
     .nav-links { display: none; }
@@ -315,7 +307,6 @@
     .contact-block { padding: 28px 24px; }
   }
 
-  /* ── COMING SOON OVERLAY ── */
   #coming-soon-overlay {
     position: fixed; inset: 0; z-index: 9999;
     background: var(--bg);
@@ -369,7 +360,6 @@
     display: none;
     align-items: center; justify-content: center;
   }
-  #pw-modal.open { display: flex; }
   .pw-box {
     background: var(--white); border: 1px solid var(--border);
     padding: 40px 48px; min-width: 320px; position: relative;
@@ -405,7 +395,6 @@
 </head>
 <body>
 
-<!-- COMING SOON OVERLAY -->
 <div id="coming-soon-overlay">
   <div class="cs-inner">
     <div class="cs-label">Sophia University — Graduate School</div>
@@ -416,10 +405,8 @@
   </div>
 </div>
 
-<!-- ADMIN UNLOCK BUTTON -->
 <button id="admin-btn">管理者</button>
 
-<!-- PASSWORD MODAL -->
 <div id="pw-modal">
   <div class="pw-box">
     <button class="pw-close" onclick="closePwModal()">✕ 閉じる</button>
@@ -430,7 +417,6 @@
   </div>
 </div>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#"></a>
   <ul class="nav-links">
@@ -445,7 +431,6 @@
 
 <div class="container">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-eyebrow">上智大学大学院 博士後期課程 — Sophia University</div>
     <h1 class="hero-title">赤松 祐治 &nbsp; Yuji Akamatsu</h1>
@@ -457,8 +442,8 @@
       <div class="kw-main">Proactive Intelligence</div>
       <div class="kw-sub">
         予測などの未来生成を直接的に意思決定に接続する方法論の構築 ——<br>
-        時間構造解析や潜在ダイナミクスに関する基礎的研究と、  
-        状態・兆候・予測・介入評価を一体的に扱う分析枠組みの構築を通じて、  
+        時間構造解析や潜在ダイナミクスに関する基礎的研究と、
+        状態・兆候・予測・介入評価を一体的に扱う分析枠組みの構築を通じて、
         より確からしい未来生成を目指しています。
       </div>
     </div>
@@ -466,7 +451,6 @@
 
 </div>
 
-<!-- MARQUEE -->
 <div class="strip">
   <div class="strip-track">
     <span class="strip-item"><span>——</span>時系列・時空間データ解析</span>
@@ -486,7 +470,6 @@
 
 <div class="container">
 
-  <!-- ABOUT -->
   <section id="about" class="reveal">
     <div class="section-label">About</div>
     <h2>研究の<em>背景</em></h2>
@@ -494,7 +477,7 @@
       本研究は <strong style="color:var(--ink);font-weight:400;">Proactive Intelligence</strong> をテーマとし、
       予測など未来生成を意思決定に接続する方法の構築が目的です。
       対象は <strong style="color:var(--ink);font-weight:400;">1D時系列データ、2D視覚表現、3D空間データ</strong> など多様な観測情報であり、
-      表現学習および潜在状態モデルを統合することで、兆候・予測・介入評価を一体的に扱い、
+      表現学習および潜在状態モデルを統合することで、状態・兆候・予測・介入評価を一体的に扱い、
       より確からしい未来生成を求めます。
     </p>
     <div class="data-tags">
@@ -512,17 +495,16 @@
     </p>
   </section>
 
-  <!-- RESEARCH -->
   <section id="research" class="reveal">
     <div class="section-label">Research</div>
     <h2>未来設計のための<em>潜在状態モデリング</em></h2>
     <p class="body-text">
-      本研究では、複雑システムにおける未来生成および意思決定支援を目的として、
-      予測、潜在ダイナミクスの推定、介入分析を組み合わせた手法の研究を行っています。
+      本研究では、複雑システムにおける未来生成と意思決定支援を目的として、
+      観測データから潜在状態とダイナミクスを推定し、
+      状態・兆候・予測・介入評価を統合的に扱うモデリング手法を研究しています。
     </p>
   </section>
 
-  <!-- INTERESTS -->
   <section id="interests" class="reveal">
     <div class="section-label">Research Interests</div>
     <h2>研究<em>関心領域</em></h2>
@@ -565,7 +547,6 @@
     </div>
   </section>
 
-  <!-- CURRENT WORK -->
   <section id="current" class="reveal">
     <div class="section-label">Current Work</div>
     <h2>現在の<em>取り組み</em></h2>
@@ -581,7 +562,6 @@
     </div>
   </section>
 
-  <!-- COLLABORATION -->
   <section id="collaboration" class="reveal">
     <div class="section-label">Collaboration</div>
     <h2>共創研究の<em>ご提案</em></h2>
@@ -602,7 +582,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="reveal">
     <div class="section-label">Contact</div>
     <div class="contact-block">
@@ -610,7 +589,7 @@
       <p class="body-text">研究に関するご質問はお気軽にどうぞ。</p>
       <div class="contact-row">
         <span class="contact-label">Email</span>
-        <a class="contact-email" href="/cdn-cgi/l/email-protection#335258525e52474046735652545f561d405c435b5a521d52501d5943">
+        <a class="contact-email" href="mailto:akamatsu@eagle.sophia.ac.jp">
           akamatsu [at] eagle.sophia.ac.jp
         </a>
       </div>
@@ -618,7 +597,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:14px;font-weight:300;color:var(--ink-mute);margin-left:10px;">赤松 祐治</span></div>
     <div class="footer-copy">Sophia University · Ph.D. Student · Proactive Intelligence</div>
@@ -635,28 +613,25 @@
     obs.observe(el);
   });
 
-  const ADMIN_PW = 'sophia2025';
-  const overlay  = document.getElementById('coming-soon-overlay');
-  const modal    = document.getElementById('pw-modal');
-  const pwInput  = document.getElementById('pw-input');
-  const pwError  = document.getElementById('pw-error');
-  const adminBtn = document.getElementById('admin-btn');
+  var ADMIN_PW = 'sophia2025';
+  var overlay  = document.getElementById('coming-soon-overlay');
+  var modal    = document.getElementById('pw-modal');
+  var pwInput  = document.getElementById('pw-input');
+  var pwError  = document.getElementById('pw-error');
+  var adminBtn = document.getElementById('admin-btn');
 
   if (sessionStorage.getItem('unlocked') === 'true') {
     overlay.style.display = 'none';
-    adminBtn.textContent = '準備中 ON';
   }
 
-  adminBtn.addEventListener('click', () => {
-    openPwModal();
-  });
-
-  function openPwModal() {
+  adminBtn.onclick = function() {
     modal.style.display = 'flex';
+    modal.style.alignItems = 'center';
+    modal.style.justifyContent = 'center';
     pwInput.value = '';
     pwError.style.display = 'none';
-    setTimeout(() => pwInput.focus(), 100);
-  }
+    pwInput.focus();
+  };
 
   function closePwModal() {
     modal.style.display = 'none';
@@ -667,7 +642,6 @@
       sessionStorage.setItem('unlocked', 'true');
       overlay.style.display = 'none';
       modal.style.display = 'none';
-      adminBtn.textContent = '準備中 ON';
     } else {
       pwError.style.display = 'block';
       pwInput.value = '';
@@ -675,7 +649,9 @@
     }
   }
 
-  modal.addEventListener('click', e => { if (e.target === modal) closePwModal(); });
+  modal.onclick = function(e) {
+    if (e.target === modal) closePwModal();
+  };
 </script>
 </body>
 </html>
