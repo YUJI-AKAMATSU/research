@@ -1,4 +1,4 @@
-更新中# 
+更新作業中# 
 
 HP
 https://yuji-akamatsu.github.io/research/
