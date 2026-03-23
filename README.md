@@ -1,4 +1,4 @@
-４月中旬まで更新作業中# 
+４月いっぱい更新作業中# 
 
 HP
 https://yuji-akamatsu.github.io/research/
