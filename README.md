@@ -68,6 +68,7 @@ Ph.D. Student / Research Scientist
 ### Collaboration
 
 製造業、サプライチェーン、社会インフラ分野を中心に、産業データを用いた共創研究を歓迎します。  
+時間的変化を持つ多様な観測データを希望します。
 
 対象データ例：
 
@@ -78,7 +79,7 @@ Ph.D. Student / Research Scientist
 - 画像データ  
 - 点群データ  
 
-時間的変化を持つ多様な観測データに対応可能です。
+
 
 ---
 
