@@ -36,7 +36,7 @@ Ph.D. Student / Researcher
 
 ## Research
 
-# Proactive Intelligence：未来設計のための潜在状態モデリング
+#### Proactive Intelligence：未来設計のための潜在状態モデリング
 
 複雑システムにおける未来生成および意思決定支援を目的として、  
 観測予測モデリング、潜在ダイナミクス推定、処方的分析などの
