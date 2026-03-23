@@ -15,7 +15,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-## About
+### About
 
 本研究は **Proactive Intelligence** をテーマとし、  
 予測などの未来生成を意思決定に接続するための方法論の構築を目的としています。
@@ -34,7 +34,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-## Research
+### Research
 
 #### Proactive Intelligence：未来設計のための潜在状態モデリング
 
@@ -44,7 +44,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-## Research Interests
+### Research Interests
 
 - 時系列・時空間データ解析  
 - 時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）  
@@ -54,14 +54,14 @@ Ph.D. Student / Research Scientist
 
 ---
 
-## Current Work
+### Current Work
 
 現在、時系列データ解析, 時間構造の解析（幾何解析/位相解析）, 視覚表現学習（1D・2D）を中心とした研究に取り組んでいます。  
 詳細は論文公開後に順次公開予定です。（25年末現在）
 
 ---
 
-## Collaboration
+### Collaboration
 
 製造業、サプライチェーン、社会インフラ分野を中心に、産業データを用いた共創研究を歓迎します。  
 
