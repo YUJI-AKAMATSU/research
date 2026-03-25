@@ -216,53 +216,53 @@ body.intro-active{overflow:hidden;}
 </div>
 
 function startFrom(e){
+  const frameWrap = document.getElementById('researcherFrameWrap');
 
   // 管理者ページ表示中なら戻らない
-  const frameWrap = document.getElementById('researcherFrameWrap');
-  if(frameWrap && frameWrap.style.display === 'block'){
+  if (frameWrap && getComputedStyle(frameWrap).display !== 'none') {
     return;
   }
 
   cancelAnimationFrame(rafId);
   resetText();
   clearTimers();
-  paused=false;
-  rings=0;
+  paused = false;
+  rings = 0;
 
-  const coreCell=Math.min(W,H)*0.055;
-  const diagHalf=Math.hypot(W/2,H/2);
-  const maxRings=Math.ceil(diagHalf/coreCell)+2;
-  buildPulses(maxRings,coreCell);
+  const coreCell = Math.min(W, H) * 0.055;
+  const diagHalf = Math.hypot(W / 2, H / 2);
+  const maxRings = Math.ceil(diagHalf / coreCell) + 2;
+  buildPulses(maxRings, coreCell);
 
-  startTime=performance.now()-e*1000;
-  pausedAt=e;
+  startTime = performance.now() - e * 1000;
+  pausedAt = e;
 
-  const btnPP=document.getElementById('btnPP');
-  if(btnPP) btnPP.textContent='⏸';
+  const btnPP = document.getElementById('btnPP');
+  if (btnPP) btnPP.textContent = '⏸';
 
   scheduleText(e);
 
-  const adminBtn=document.getElementById('admin-btn');
-  if(adminBtn){
+  const adminBtn = document.getElementById('admin-btn');
+  if (adminBtn) {
     adminBtn.classList.remove('show');
-    adminBtn.style.display='none';
+    adminBtn.style.display = 'none';
   }
 
-  document.getElementById('pw-modal').style.display='none';
-  document.getElementById('researcherFrameWrap').style.display='none';
+  document.getElementById('pw-modal').style.display = 'none';
+  document.getElementById('researcherFrameWrap').style.display = 'none';
 
-  document.getElementById('introWrap').style.transition='none';
-  document.getElementById('introWrap').style.display='block';
-  document.getElementById('introWrap').style.opacity='1';
+  document.getElementById('introWrap').style.transition = 'none';
+  document.getElementById('introWrap').style.display = 'block';
+  document.getElementById('introWrap').style.opacity = '1';
 
-  document.getElementById('researcher-shell').style.display='none';
-  document.getElementById('researcher-shell').style.opacity='0';
+  document.getElementById('researcher-shell').style.display = 'none';
+  document.getElementById('researcher-shell').style.opacity = '0';
 
-  document.getElementById('researcherPage').style.display='none';
-  document.getElementById('researcherPage').style.opacity='0';
+  document.getElementById('researcherPage').style.display = 'none';
+  document.getElementById('researcherPage').style.opacity = '0';
 
   scheduleTransition(e);
-  rafId=requestAnimationFrame(loop);
+  rafId = requestAnimationFrame(loop);
 }
 
 <template id="researcher-template"><!DOCTYPE html>
