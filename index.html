@@ -214,6 +214,7 @@ body.intro-active{overflow:hidden;}
 <div id="researcherFrameWrap">
   <iframe id="researcherFrame" title="Researcher Introduction Page"></iframe>
 </div>
+<script>
 
 function startFrom(e){
   const frameWrap = document.getElementById('researcherFrameWrap');
@@ -264,7 +265,7 @@ function startFrom(e){
   scheduleTransition(e);
   rafId = requestAnimationFrame(loop);
 }
-
+</script>
 <template id="researcher-template"><!DOCTYPE html>
 <!DOCTYPE html>
 
