@@ -1,4 +1,4 @@
-４月下旬まで更新作業中# 
+<img width="74" height="49" alt="image" src="https://github.com/user-attachments/assets/720795fd-b55d-4bd0-8636-d0222072cebd" />４月下旬まで更新作業中# 
 
 HP
 https://yuji-akamatsu.github.io/research/
@@ -84,11 +84,11 @@ Ph.D. Student / Research Scientist
 
 対象データ例：
 
-- センサーログ  
-- 運用履歴  
-- 需要・計画・在庫データ  
+- 需要・計画・在庫データ
+- センサーデータ
+- トランザクションデータ
 - 工程情報  
-- 画像データ  
+- 画像データ（通常、医療、衛星、多視点）
 - 点群データ  
 
 ### 企業様側に提供できる価値
