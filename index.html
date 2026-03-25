@@ -147,32 +147,196 @@ body.intro-active{overflow:hidden;}
 <div id="researcherPage" style="display:none;opacity:0;transition:opacity 1.4s ease;position:relative;z-index:1;">
 <style>
   :root {
-    --bg:#f7f6f3; --white:#ffffff; --surface:#f0efe9;
+    --bg:#f7f6f3;
+    --white:#ffffff;
+    --surface:#f0efe9;
     --border:rgba(30,50,100,0.09);
     --accent:#C8102E;
-    --ink:#14181f; --ink-mid:#3d4a5c; --ink-mute:#7a8898; --ink-dim:#b8c2cc;
+    --ink:#14181f;
+    --ink-mid:#3d4a5c;
+    --ink-mute:#7a8898;
+    --ink-dim:#b8c2cc;
     --grid:rgba(200,16,46,0.025);
   }
-  #researcherPage { background:var(--bg); color:var(--ink); font-family:'DM Mono',monospace; line-height:1.6; min-height:100vh; }
-  #rp-nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(247,246,243,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 48px; height:64px; display:flex; align-items:center; justify-content:space-between; }
-  .rp-nav-logo { font-family:'DM Serif Display',serif; font-size:20px; color:var(--ink); text-decoration:none; }
-  .rp-nav-logo em { font-style:italic; color:var(--accent); }
-  .rp-nav-links { display:flex; gap:40px; list-style:none; }
-  .rp-nav-links a { font-size:14px; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-mute); text-decoration:none; transition:color 0.2s; }
-  .rp-nav-links a:hover { color:var(--accent); }
-  .rp-nav-cta { font-size:12px; letter-spacing:0.15em; text-transform:uppercase; padding:9px 20px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; transition:background 0.2s,color 0.2s; }
-  .rp-nav-cta:hover { background:var(--accent); color:#fff; }
-  #rp-main { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:100vh; }
-  #rp-main::before { content:''; position:fixed; inset:0; background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px); background-size:52px 52px; pointer-events:none; z-index:0; }
-  .rp-cs-inner { position:relative; z-index:1; text-align:center; padding:48px; animation:rpFadeUp 0.8s ease forwards 0.2s; opacity:0; }
-  .rp-cs-label { font-size:12px; letter-spacing:0.38em; text-transform:uppercase; color:var(--accent); margin-bottom:20px; display:flex; align-items:center; justify-content:center; gap:10px; }
-  .rp-cs-label::before,.rp-cs-label::after { content:'——'; opacity:0.4; }
-  .rp-cs-title { font-family:'DM Serif Display',serif; font-size:clamp(14px,2vw,26px); font-weight:400; color:var(--ink); letter-spacing:-0.02em; margin-bottom:10px; }
-  .rp-cs-sub { font-family:'Noto Sans JP',serif; font-size:15px; font-weight:300; color:var(--ink-mute); margin-bottom:40px; line-height:1.9; }
-  .rp-cs-divider { width:40px; height:1px; background:var(--accent); margin:0 auto 40px; }
-  @keyframes rpFadeUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
-  @media(max-width:640px){ #rp-nav{padding:0 20px;} .rp-nav-links{display:none;} }
+
+  #researcherPage{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'DM Mono',monospace;
+    line-height:1.6;
+    min-height:100vh;
+  }
+
+  #rp-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    background:rgba(247,246,243,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+    padding:0 48px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .rp-nav-logo{
+    font-family:'DM Serif Display',serif;
+    font-size:20px;
+    color:var(--ink);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    min-height:64px;
+  }
+
+  .rp-nav-logo em{
+    font-style:italic;
+    color:var(--accent);
+  }
+
+  .rp-nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    align-items:center;
+  }
+
+  .rp-nav-links li{
+    margin:0;
+    padding:0;
+  }
+
+  .rp-nav-links span{
+    display:inline-flex;
+    align-items:center;
+    height:64px;
+    font-size:14px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--ink-mute);
+    text-decoration:none;
+    cursor:default;
+    user-select:none;
+    pointer-events:none;
+  }
+
+  .rp-nav-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    padding:9px 20px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    text-decoration:none;
+    cursor:default;
+    user-select:none;
+    pointer-events:none;
+  }
+
+  #rp-main{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+  }
+
+  #rp-main::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:52px 52px;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  .rp-cs-inner{
+    position:relative;
+    z-index:1;
+    text-align:center;
+    padding:48px;
+    animation:rpFadeUp 0.8s ease forwards 0.2s;
+    opacity:0;
+  }
+
+  .rp-cs-label{
+    font-size:12px;
+    letter-spacing:0.38em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+  }
+
+  .rp-cs-label::before,
+  .rp-cs-label::after{
+    content:'——';
+    opacity:0.4;
+  }
+
+  .rp-cs-title{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(14px,2vw,26px);
+    font-weight:400;
+    color:var(--ink);
+    letter-spacing:-0.02em;
+    margin-bottom:10px;
+  }
+
+  .rp-cs-sub{
+    font-family:'Noto Sans JP',serif;
+    font-size:15px;
+    font-weight:300;
+    color:var(--ink-mute);
+    margin-bottom:40px;
+    line-height:1.9;
+  }
+
+  .rp-cs-divider{
+    width:40px;
+    height:1px;
+    background:var(--accent);
+    margin:0 auto 40px;
+  }
+
+  @keyframes rpFadeUp{
+    from{
+      opacity:0;
+      transform:translateY(20px);
+    }
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+
+  @media (max-width:640px){
+    #rp-nav{
+      padding:0 20px;
+    }
+    .rp-nav-links{
+      display:none;
+    }
+  }
 </style>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
 <nav id="rp-nav">
@@ -193,25 +357,13 @@ body.intro-active{overflow:hidden;}
   <div class="rp-cs-inner">
     <div class="rp-cs-label">Sophia University</div>
     <div class="rp-cs-title">赤松 祐治</div>
-    <div class="rp-cs-sub">Yuji Akamatsu — Ph.D. Student <br>Research Scientist <br>Proactive Intelligence</div>
+    <div class="rp-cs-sub">
+      Yuji Akamatsu — Ph.D. Student <br>
+      Research Scientist <br>
+      Proactive Intelligence
+    </div>
     <div class="rp-cs-divider"></div>
     <div class="rp-cs-sub">更新中 / Coming Soon</div>
-  </div>
-</div>
-</div><!-- end researcherPage -->
-
-</div>
-
-
-<button id="admin-btn">管理者</button>
-
-<div id="pw-modal">
-  <div class="pw-box">
-    <button class="pw-close" onclick="closePwModal()">✕ 閉じる</button>
-    <div class="pw-label">Admin Access</div>
-    <input class="pw-input" type="password" id="pw-input" placeholder="パスワードを入力" onkeydown="if(event.key==='Enter')checkPw()">
-    <button class="pw-submit" onclick="checkPw()">認証 →</button>
-    <div class="pw-error" id="pw-error">// パスワードが違います</div>
   </div>
 </div>
 
