@@ -175,18 +175,15 @@ body.intro-active{overflow:hidden;}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 
-<nav id="rp-nav">
-  <a class="rp-nav-logo" href="#"></a>
-  <ul class="rp-nav-links">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Research</a></li>
-    <li><a href="#">Interests</a></li>
-    <li><a href="#">Current Work</a></li>
-    <li><a href="#">Collaboration</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-  <a class="rp-nav-cta" href="#">Contact</a>
-</nav>
+<ul class="rp-nav-links">
+  <li><a href="javascript:void(0)">About</a></li>
+  <li><a href="javascript:void(0)">Research</a></li>
+  <li><a href="javascript:void(0)">Interests</a></li>
+  <li><a href="javascript:void(0)">Current Work</a></li>
+  <li><a href="javascript:void(0)">Collaboration</a></li>
+  <li><a href="javascript:void(0)">Contact</a></li>
+</ul>
+<a class="rp-nav-cta" href="javascript:void(0)">Contact</a>
 
 <div id="rp-main">
   <div class="rp-cs-inner">
@@ -218,52 +215,55 @@ body.intro-active{overflow:hidden;}
   <iframe id="researcherFrame" title="Researcher Introduction Page"></iframe>
 </div>
 
-<script>
-(function(){
-document.body.classList.add('intro-active');
-const canvas = document.getElementById('c');
-const ctx = canvas.getContext('2d');
-let W,H;
-function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-resize();
-window.addEventListener('resize',()=>{resize();startFrom(0);});
-const T_IN=1.4;
-const T_EXP=5.0;
-const T_FLOW_END=4.2;
-const T_FADE=6.0;
-const T_TEXT=5.6;
-const T_TOTAL=9.5;
-const T_FADE_START=3.4;
-function easeOut(t){return 1-Math.pow(1-t,3);}
-function easeOut2(t){return 1-Math.pow(1-t,2);}
-function easeInOut(t){return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
-function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
-const STARS=Array.from({length:200},()=>({x:Math.random(),y:Math.random(),r:Math.random()*0.8+0.2,o:Math.random()*0.45+0.1}));
-function drawStars(a){for(const s of STARS){ctx.fillStyle=`rgba(220,215,255,${s.o*a})`;ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);ctx.fill();}}
-function drawGrid(cx,cy,cell,n,alpha){if(alpha<0.005||cell<0.5)return;const gw=cell*n,gh=cell*n;const ox=cx-gw/2,oy=cy-gh/2;ctx.fillStyle=`rgba(25,14,65,${alpha*0.18})`;ctx.fillRect(ox,oy,gw,gh);ctx.strokeStyle=`rgba(120,100,200,${alpha*0.42})`;ctx.lineWidth=0.3;for(let i=1;i<n;i++){ctx.beginPath();ctx.moveTo(ox+i*cell,oy);ctx.lineTo(ox+i*cell,oy+gh);ctx.stroke();ctx.beginPath();ctx.moveTo(ox,oy+i*cell);ctx.lineTo(ox+gw,oy+i*cell);ctx.stroke();}ctx.strokeStyle=`rgba(160,138,248,${alpha*0.72})`;ctx.lineWidth=0.55;ctx.strokeRect(ox+0.3,oy+0.3,gw-0.6,gh-0.6);}
-function drawLineFlow(cx,cy,cell,n,alpha,elapsed){if(alpha<0.01||cell<0.5)return;const gw=cell*n,gh=cell*n;const ox=cx-gw/2,oy=cy-gh/2;const period=1.2;const phase=(elapsed%period)/period;const tailLen=0.22;const colors=[[180,155,255],[140,200,255],[200,145,255],[155,235,215]];ctx.lineCap='round';for(let i=1;i<n;i++){const linePhase=(phase+i*0.07)%1;const c=colors[i%colors.length];const la=alpha*0.55;const ly=oy+i*cell;const halfW=gw/2;{const head=linePhase;const tail=Math.max(0,head-tailLen);const x0=cx+tail*halfW;const x1=cx+head*halfW;if(x1>x0+0.5){const g=ctx.createLinearGradient(x0,ly,x1,ly);g.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},0)`);g.addColorStop(1,`rgba(${c[0]},${c[1]},${c[2]},${la})`);ctx.strokeStyle=g;ctx.lineWidth=0.7;ctx.beginPath();ctx.moveTo(x0,ly);ctx.lineTo(x1,ly);ctx.stroke();const gr=ctx.createRadialGradient(x1,ly,0,x1,ly,3);gr.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},${la*0.9})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(x1,ly,3,0,Math.PI*2);ctx.fill();}}{const head=linePhase;const tail=Math.max(0,head-tailLen);const x0=cx-tail*halfW;const x1=cx-head*halfW;if(x0>x1+0.5){const g=ctx.createLinearGradient(x0,ly,x1,ly);g.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},0)`);g.addColorStop(1,`rgba(${c[0]},${c[1]},${c[2]},${la})`);ctx.strokeStyle=g;ctx.lineWidth=0.7;ctx.beginPath();ctx.moveTo(x0,ly);ctx.lineTo(x1,ly);ctx.stroke();const gr=ctx.createRadialGradient(x1,ly,0,x1,ly,3);gr.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},${la*0.9})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(x1,ly,3,0,Math.PI*2);ctx.fill();}}const lx=ox+i*cell;const halfH=gh/2;const vPhase=(phase+i*0.11)%1;const cv=colors[(i+2)%colors.length];{const head=vPhase;const tail=Math.max(0,head-tailLen);const y0=cy+tail*halfH;const y1=cy+head*halfH;if(y1>y0+0.5){const g=ctx.createLinearGradient(lx,y0,lx,y1);g.addColorStop(0,`rgba(${cv[0]},${cv[1]},${cv[2]},0)`);g.addColorStop(1,`rgba(${cv[0]},${cv[1]},${cv[2]},${la})`);ctx.strokeStyle=g;ctx.lineWidth=0.7;ctx.beginPath();ctx.moveTo(lx,y0);ctx.lineTo(lx,y1);ctx.stroke();const gr=ctx.createRadialGradient(lx,y1,0,lx,y1,3);gr.addColorStop(0,`rgba(${cv[0]},${cv[1]},${cv[2]},${la*0.9})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(lx,y1,3,0,Math.PI*2);ctx.fill();}}{const head=vPhase;const tail=Math.max(0,head-tailLen);const y0=cy-tail*halfH;const y1=cy-head*halfH;if(y0>y1+0.5){const g=ctx.createLinearGradient(lx,y0,lx,y1);g.addColorStop(0,`rgba(${cv[0]},${cv[1]},${cv[2]},0)`);g.addColorStop(1,`rgba(${cv[0]},${cv[1]},${cv[2]},${la})`);ctx.strokeStyle=g;ctx.lineWidth=0.7;ctx.beginPath();ctx.moveTo(lx,y0);ctx.lineTo(lx,y1);ctx.stroke();const gr=ctx.createRadialGradient(lx,y1,0,lx,y1,3);gr.addColorStop(0,`rgba(${cv[0]},${cv[1]},${cv[2]},${la*0.9})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(lx,y1,3,0,Math.PI*2);ctx.fill();}}}}
-let pulses=[];function buildPulses(maxRings,coreCell){pulses=[];for(let r=1;r<=maxRings;r++){const targetP=r/maxRings;let lo=0,hi=1,mid=0.5;for(let k=0;k<24;k++){mid=(lo+hi)/2;if(easeInOut(mid)<targetP)lo=mid;else hi=mid;}const t=T_IN+mid*(T_EXP-T_IN);pulses.push({time:t,ringN:r,coreCell});}}
-function drawPulse(pulse,elapsed,cx,cy){const age=elapsed-pulse.time;if(age<0)return;const dur=0.55,numRays=5,cell=pulse.coreCell,n=9+pulse.ringN*2,gw=cell*n,gh=cell*n,ox=cx-gw/2,oy=cy-gh/2;const fadeBoard=clamp((T_FADE-elapsed)/(T_FADE-T_FADE_START),0,1);if(fadeBoard<=0)return;const rayColors=[[190,160,255],[140,195,255],[210,160,255],[160,235,220],[230,200,255]];const sides=[{edge:oy,start:ox,len:gw,dir:-1,isH:true},{edge:oy+gh,start:ox,len:gw,dir:+1,isH:true},{edge:ox,start:oy,len:gh,dir:-1,isH:false},{edge:ox+gw,start:oy,len:gh,dir:+1,isH:false}];for(let si=0;si<sides.length;si++){const side=sides[si];for(let ri=0;ri<numRays;ri++){const seed=pulse.ringN*100+si*10+ri;const offset=((seed*137.508)%1)*side.len;const delay=((seed*53.7)%1)*0.18;const rayAge=age-delay;if(rayAge<=0)continue;const prog=clamp(rayAge/dur,0,1);if(prog>=1)continue;const ep=easeOut2(prog);const rayLen=cell*(2.5+((seed*7)%1)*1.8);const dist=ep*rayLen;const alpha=(1-easeOut(prog))*0.85*fadeBoard;if(alpha<0.005)continue;const c=rayColors[(seed*3)%rayColors.length];let x0,y0,x1,y1;if(side.isH){const x=side.start+offset;x0=x;y0=side.edge;x1=x;y1=side.edge+side.dir*dist;}else{const y=side.start+offset;x0=side.edge;y0=y;x1=side.edge+side.dir*dist;y1=y;}const grad=ctx.createLinearGradient(x0,y0,x1,y1);grad.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},0)`);grad.addColorStop(0.3,`rgba(${c[0]},${c[1]},${c[2]},${alpha*0.4})`);grad.addColorStop(1,`rgba(${c[0]},${c[1]},${c[2]},${alpha})`);ctx.strokeStyle=grad;ctx.lineWidth=0.8+((seed*11)%1)*0.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x1,y1);ctx.stroke();const gr=ctx.createRadialGradient(x1,y1,0,x1,y1,3.5);gr.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},${alpha*0.9})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(x1,y1,3.5,0,Math.PI*2);ctx.fill();}}}
-let rings=0;
-function render(elapsed){ctx.clearRect(0,0,W,H);const bg=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*0.75);bg.addColorStop(0,'#0d0820');bg.addColorStop(0.5,'#060412');bg.addColorStop(1,'#03020a');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);drawStars(clamp(elapsed/2,0,1)*0.82);const cx=W/2,cy=H/2;const coreCell=Math.min(W,H)*0.055;const diagHalf=Math.hypot(W/2,H/2);const maxRings=Math.ceil(diagHalf/coreCell)+2;let ba=0;if(elapsed<T_IN)ba=easeOut(elapsed/T_IN);else if(elapsed<T_FADE_START)ba=1;else if(elapsed<T_FADE)ba=1-Math.pow(clamp((elapsed-T_FADE_START)/(T_FADE-T_FADE_START),0,1),1.5);if(elapsed>T_IN&&elapsed<=T_EXP)rings=easeInOut(clamp((elapsed-T_IN)/(T_EXP-T_IN),0,1))*maxRings;else if(elapsed>T_EXP)rings=maxRings;else rings=0;if(ba>0.005){for(let r=Math.ceil(rings);r>=1;r--){const reveal=clamp(rings-(r-1),0,1);const ra=easeOut(reveal)*Math.pow(0.78,r)*ba;if(ra>0.005)drawGrid(cx,cy,coreCell,9+r*2,ra);}drawGrid(cx,cy,coreCell,9,ba);if(elapsed>T_IN&&elapsed<T_FLOW_END){const flowA=ba*clamp((elapsed-T_IN)/1.0,0,1)*(1-clamp((elapsed-(T_FLOW_END-0.6))/0.6,0,1));const curN=9+Math.round(rings)*2;drawLineFlow(cx,cy,coreCell,Math.max(9,curN),flowA,elapsed);}for(const p of pulses)drawPulse(p,elapsed,cx,cy);for(const p of pulses){const age=elapsed-p.time;if(age<0||age>1.5)continue;const fadeBoard=clamp((T_FADE-elapsed)/(T_FADE-T_FADE_START),0,1);const n=9+p.ringN*2,gw=p.coreCell*n,gh=p.coreCell*n,ox=cx-gw/2,oy=cy-gh/2;const flash1=age<0.35?Math.pow(1-age/0.35,1.8):0;const flash2=age>0.45&&age<0.95?Math.pow(1-(age-0.45)/0.50,1.8):0;const flash3=age>1.05&&age<1.45?Math.pow(1-(age-1.05)/0.40,1.8):0;const flashA=Math.max(flash1,flash2,flash3)*fadeBoard;if(flashA<0.005)continue;ctx.strokeStyle=`rgba(200,175,255,${flashA*0.9})`;ctx.lineWidth=3.5;ctx.strokeRect(ox,oy,gw,gh);ctx.strokeStyle=`rgba(160,130,255,${flashA*0.4})`;ctx.lineWidth=7;ctx.strokeRect(ox,oy,gw,gh);const slowA=Math.pow(1-Math.min(age/1.5,1),0.6)*fadeBoard;ctx.strokeStyle=`rgba(120,90,220,${slowA*0.18})`;ctx.lineWidth=14;ctx.strokeRect(ox,oy,gw,gh);for(const [cx2,cy2] of [[ox,oy],[ox+gw,oy],[ox+gw,oy+gh],[ox,oy+gh]]){const cg=ctx.createRadialGradient(cx2,cy2,0,cx2,cy2,10);cg.addColorStop(0,`rgba(220,200,255,${flashA*0.9})`);cg.addColorStop(0.4,`rgba(170,140,255,${flashA*0.4})`);cg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=cg;ctx.beginPath();ctx.arc(cx2,cy2,10,0,Math.PI*2);ctx.fill();}}}if(ba>0.005){const g1=ctx.createRadialGradient(cx,cy,0,cx,cy,Math.min(W,H)*0.38);g1.addColorStop(0,`rgba(100,60,200,${0.28*ba})`);g1.addColorStop(0.4,`rgba(60,30,130,${0.14*ba})`);g1.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=g1;ctx.fillRect(0,0,W,H);}const vig=ctx.createRadialGradient(cx,cy,Math.min(W,H)*0.12,cx,cy,Math.min(W,H)*0.78);vig.addColorStop(0,'rgba(0,0,0,0)');vig.addColorStop(1,'rgba(2,1,10,0.88)');ctx.fillStyle=vig;ctx.fillRect(0,0,W,H);document.getElementById('progBar').style.width=(clamp(elapsed/T_TOTAL,0,1)*100)+'%';}
-let rafId,startTime=null,pausedAt=0,paused=false,timers=[];
-function loop(ts){if(!startTime)startTime=ts;if(!paused){const e=(ts-startTime)/1000;pausedAt=e;render(e);}rafId=requestAnimationFrame(loop);}
-function clearTimers(){timers.forEach(clearTimeout);timers=[];}
-function scheduleText(e){clearTimers();timers.push(setTimeout(()=>document.getElementById('mainText').classList.add('show'),Math.max(0,T_TEXT*1000-e*1000)));timers.push(setTimeout(()=>document.getElementById('line2').classList.add('show'),Math.max(0,(T_TEXT+0.8)*1000-e*1000)));}
-function resetText(){document.getElementById('mainText').classList.remove('show');document.getElementById('line2').classList.remove('show');}
-function finishIntro(){const introWrap=document.getElementById('introWrap');const shell=document.getElementById('researcher-shell');const page=document.getElementById('researcherPage');const adminBtn=document.getElementById('admin-btn');introWrap.style.transition='opacity 1.2s ease';introWrap.style.opacity='0';setTimeout(()=>{introWrap.style.display='none';cancelAnimationFrame(rafId);shell.style.display='block';page.style.display='block';requestAnimationFrame(()=>{shell.style.opacity='1';page.style.opacity='1';document.body.classList.remove('intro-active');window.scrollTo(0,0);adminBtn.style.display='block';setTimeout(()=>adminBtn.classList.add('show'),800);});},1200);}
-function scheduleTransition(startedAt){setTimeout(finishIntro,Math.max(0,T_TOTAL*1000-startedAt*1000));}
-function startFrom(e){cancelAnimationFrame(rafId);resetText();clearTimers();paused=false;rings=0;const coreCell=Math.min(W,H)*0.055;const diagHalf=Math.hypot(W/2,H/2);const maxRings=Math.ceil(diagHalf/coreCell)+2;buildPulses(maxRings,coreCell);startTime=performance.now()-e*1000;pausedAt=e;const btnPP=document.getElementById('btnPP'); if(btnPP) btnPP.textContent='⏸';scheduleText(e);const adminBtn=document.getElementById('admin-btn');if(adminBtn){adminBtn.classList.remove('show');adminBtn.style.display='none';}document.getElementById('pw-modal').style.display='none';document.getElementById('researcherFrameWrap').style.display='none';document.getElementById('introWrap').style.transition='none';document.getElementById('introWrap').style.display='block';document.getElementById('introWrap').style.opacity='1';document.getElementById('researcher-shell').style.display='none';document.getElementById('researcher-shell').style.opacity='0';document.getElementById('researcherPage').style.display='none';document.getElementById('researcherPage').style.opacity='0';scheduleTransition(e);rafId=requestAnimationFrame(loop);}
-const btnReplay=document.getElementById('btnReplay');
-if(btnReplay){btnReplay.addEventListener('click',()=>startFrom(0));}
-const btnPP=document.getElementById('btnPP');
-if(btnPP){btnPP.addEventListener('click',function(){if(paused){paused=false;startTime=performance.now()-pausedAt*1000;scheduleText(pausedAt);this.textContent='⏸';}else{paused=true;clearTimers();this.textContent='▶';}});}
-startFrom(0);
-})();
-</script>
-</body>
-</html>
+function startFrom(e){
 
+  // 管理者ページ表示中なら戻らない
+  const frameWrap = document.getElementById('researcherFrameWrap');
+  if(frameWrap && frameWrap.style.display === 'block'){
+    return;
+  }
+
+  cancelAnimationFrame(rafId);
+  resetText();
+  clearTimers();
+  paused=false;
+  rings=0;
+
+  const coreCell=Math.min(W,H)*0.055;
+  const diagHalf=Math.hypot(W/2,H/2);
+  const maxRings=Math.ceil(diagHalf/coreCell)+2;
+  buildPulses(maxRings,coreCell);
+
+  startTime=performance.now()-e*1000;
+  pausedAt=e;
+
+  const btnPP=document.getElementById('btnPP');
+  if(btnPP) btnPP.textContent='⏸';
+
+  scheduleText(e);
+
+  const adminBtn=document.getElementById('admin-btn');
+  if(adminBtn){
+    adminBtn.classList.remove('show');
+    adminBtn.style.display='none';
+  }
+
+  document.getElementById('pw-modal').style.display='none';
+  document.getElementById('researcherFrameWrap').style.display='none';
+
+  document.getElementById('introWrap').style.transition='none';
+  document.getElementById('introWrap').style.display='block';
+  document.getElementById('introWrap').style.opacity='1';
+
+  document.getElementById('researcher-shell').style.display='none';
+  document.getElementById('researcher-shell').style.opacity='0';
+
+  document.getElementById('researcherPage').style.display='none';
+  document.getElementById('researcherPage').style.opacity='0';
+
+  scheduleTransition(e);
+  rafId=requestAnimationFrame(loop);
+}
 
 <template id="researcher-template"><!DOCTYPE html>
 <!DOCTYPE html>
@@ -426,17 +426,17 @@ startFrom(0);
 <nav>
 <a class="nav-logo" href="#"></a>
 <ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#interests">Interests</a></li>
-<li><a href="#Current Work">Current Work</a></li>  
+<li><a href="#about">about</a></li>
+<li><a href="#research">research</a></li>
+<li><a href="#interests">interests</a></li>
+<li><a href="#current">current Work</a></li>  
 <li><a href="#collaboration">Collaboration</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 <a class="nav-cta" href="#contact">Contact</a>
 </nav>
 <div class="container">
-<section class="hero">
+<section id="about" class="hero">
 
 <div class="hero-eyebrow">上智大学大学院 — Sophia University</div>
 <div class="hero-eyebrow-sub">博士後期課程</div>  
