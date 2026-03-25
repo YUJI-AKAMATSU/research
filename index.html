@@ -53,8 +53,6 @@ canvas { display:block; position:fixed; top:0; left:0; width:100%; height:100%; 
   color:rgba(180,165,240,0.55); letter-spacing:0.45em;
   text-transform:uppercase;
 }
-
-#controls {
   position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
   z-index:20; display:flex; align-items:center; gap:12px;
 }
@@ -191,6 +189,9 @@ body.intro-active{overflow:hidden;}
   <a class="rp-nav-cta" href="javascript:void(0)">Contact</a>
 </nav>
 
+  <a class="rp-nav-cta" href="javascript:void(0)">Contact</a>
+</nav>
+
 <div id="rp-main">
   <div class="rp-cs-inner">
     <div class="rp-cs-label">Sophia University</div>
@@ -251,54 +252,24 @@ let pulses=[];function buildPulses(maxRings,coreCell){pulses=[];for(let r=1;r<=m
 function drawPulse(pulse,elapsed,cx,cy){const age=elapsed-pulse.time;if(age<0)return;const dur=0.55,numRays=5,cell=pulse.coreCell,n=9+pulse.ringN*2,gw=cell*n,gh=cell*n,ox=cx-gw/2,oy=cy-gh/2;const fadeBoard=clamp((T_FADE-elapsed)/(T_FADE-T_FADE_START),0,1);if(fadeBoard<=0)return;const rayColors=[[190,160,255],[140,195,255],[210,160,255],[160,235,220],[230,200,255]];const sides=[{edge:oy,start:ox,len:gw,dir:-1,isH:true},{edge:oy+gh,start:ox,len:gw,dir:+1,isH:true},{edge:ox,start:oy,len:gh,dir:-1,isH:false},{edge:ox+gw,start:oy,len:gh,dir:+1,isH:false}];for(let si=0;si<sides.length;si++){const side=sides[si];for(let ri=0;ri<numRays;ri++){const seed=pulse.ringN*100+si*10+ri;const offset=((seed*137.508)%1)*side.len;const delay=((seed*53.7)%1)*0.18;const rayAge=age-delay;if(rayAge<=0)continue;const prog=clamp(rayAge/dur,0,1);if(prog>=1)continue;const ep=easeOut2(prog);const rayLen=cell*(2.5+((seed*7)%1)*1.8);const dist=ep*rayLen;const alpha=(1-easeOut(prog))*0.85*fadeBoard;if(alpha<0.005)continue;const c=rayColors[(seed*3)%rayColors.length];let x0,y0,x1,y1;if(side.isH){const x=side.start+offset;x0=x;y0=side.edge;x1=x;y1=side.edge+side.dir*dist;}else{const y=side.start+offset;x0=side.edge;y0=y;x1=side.edge+side.dir*dist;y1=y;}const grad=ctx.createLinearGradient(x0,y0,x1,y1);grad.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},0)`);grad.addColorStop(0.3,`rgba(${c[0]},${c[1]},${c[2]},${alpha*0.4})`);grad.addColorStop(1,`rgba(${c[0]},${c[1]},${c[2]},${alpha})`);ctx.strokeStyle=grad;ctx.lineWidth=0.8+((seed*11)%1)*0.6;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x1,y1);ctx.stroke();const gr=ctx.createRadialGradient(x1,y1,0,x1,y1,3.5);gr.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},${alpha*0.9})`);gr.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=gr;ctx.beginPath();ctx.arc(x1,y1,3.5,0,Math.PI*2);ctx.fill();}}}
 let rings=0;
 function render(elapsed){ctx.clearRect(0,0,W,H);const bg=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*0.75);bg.addColorStop(0,'#0d0820');bg.addColorStop(0.5,'#060412');bg.addColorStop(1,'#03020a');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);drawStars(clamp(elapsed/2,0,1)*0.82);const cx=W/2,cy=H/2;const coreCell=Math.min(W,H)*0.055;const diagHalf=Math.hypot(W/2,H/2);const maxRings=Math.ceil(diagHalf/coreCell)+2;let ba=0;if(elapsed<T_IN)ba=easeOut(elapsed/T_IN);else if(elapsed<T_FADE_START)ba=1;else if(elapsed<T_FADE)ba=1-Math.pow(clamp((elapsed-T_FADE_START)/(T_FADE-T_FADE_START),0,1),1.5);if(elapsed>T_IN&&elapsed<=T_EXP)rings=easeInOut(clamp((elapsed-T_IN)/(T_EXP-T_IN),0,1))*maxRings;else if(elapsed>T_EXP)rings=maxRings;else rings=0;if(ba>0.005){for(let r=Math.ceil(rings);r>=1;r--){const reveal=clamp(rings-(r-1),0,1);const ra=easeOut(reveal)*Math.pow(0.78,r)*ba;if(ra>0.005)drawGrid(cx,cy,coreCell,9+r*2,ra);}drawGrid(cx,cy,coreCell,9,ba);if(elapsed>T_IN&&elapsed<T_FLOW_END){const flowA=ba*clamp((elapsed-T_IN)/1.0,0,1)*(1-clamp((elapsed-(T_FLOW_END-0.6))/0.6,0,1));const curN=9+Math.round(rings)*2;drawLineFlow(cx,cy,coreCell,Math.max(9,curN),flowA,elapsed);}for(const p of pulses)drawPulse(p,elapsed,cx,cy);for(const p of pulses){const age=elapsed-p.time;if(age<0||age>1.5)continue;const fadeBoard=clamp((T_FADE-elapsed)/(T_FADE-T_FADE_START),0,1);const n=9+p.ringN*2,gw=p.coreCell*n,gh=p.coreCell*n,ox=cx-gw/2,oy=cy-gh/2;const flash1=age<0.35?Math.pow(1-age/0.35,1.8):0;const flash2=age>0.45&&age<0.95?Math.pow(1-(age-0.45)/0.50,1.8):0;const flash3=age>1.05&&age<1.45?Math.pow(1-(age-1.05)/0.40,1.8):0;const flashA=Math.max(flash1,flash2,flash3)*fadeBoard;if(flashA<0.005)continue;ctx.strokeStyle=`rgba(200,175,255,${flashA*0.9})`;ctx.lineWidth=3.5;ctx.strokeRect(ox,oy,gw,gh);ctx.strokeStyle=`rgba(160,130,255,${flashA*0.4})`;ctx.lineWidth=7;ctx.strokeRect(ox,oy,gw,gh);const slowA=Math.pow(1-Math.min(age/1.5,1),0.6)*fadeBoard;ctx.strokeStyle=`rgba(120,90,220,${slowA*0.18})`;ctx.lineWidth=14;ctx.strokeRect(ox,oy,gw,gh);for(const [cx2,cy2] of [[ox,oy],[ox+gw,oy],[ox+gw,oy+gh],[ox,oy+gh]]){const cg=ctx.createRadialGradient(cx2,cy2,0,cx2,cy2,10);cg.addColorStop(0,`rgba(220,200,255,${flashA*0.9})`);cg.addColorStop(0.4,`rgba(170,140,255,${flashA*0.4})`);cg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=cg;ctx.beginPath();ctx.arc(cx2,cy2,10,0,Math.PI*2);ctx.fill();}}}if(ba>0.005){const g1=ctx.createRadialGradient(cx,cy,0,cx,cy,Math.min(W,H)*0.38);g1.addColorStop(0,`rgba(100,60,200,${0.28*ba})`);g1.addColorStop(0.4,`rgba(60,30,130,${0.14*ba})`);g1.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=g1;ctx.fillRect(0,0,W,H);}const vig=ctx.createRadialGradient(cx,cy,Math.min(W,H)*0.12,cx,cy,Math.min(W,H)*0.78);vig.addColorStop(0,'rgba(0,0,0,0)');vig.addColorStop(1,'rgba(2,1,10,0.88)');ctx.fillStyle=vig;ctx.fillRect(0,0,W,H);document.getElementById('progBar').style.width=(clamp(elapsed/T_TOTAL,0,1)*100)+'%';}
-let rafId,startTime=null,pausedAt=0,paused=false,timers=[],introDone=false,transitionTimer=null;
-function loop(ts){
-  if(!startTime)startTime=ts;
-  if(!paused){
-    const e=(ts-startTime)/1000;
-    pausedAt=e;
-    render(e);
-
-    if(e>=T_TOTAL && !introDone){
-      introDone=true;
-      finishIntro();
-      return;
-    }
-  }
-  rafId=requestAnimationFrame(loop);
-}
+let rafId,startTime=null,pausedAt=0,paused=false,timers=[];
+function loop(ts){if(!startTime)startTime=ts;if(!paused){const e=(ts-startTime)/1000;pausedAt=e;render(e);}rafId=requestAnimationFrame(loop);}
+function clearTimers(){timers.forEach(clearTimeout);timers=[];}
 function scheduleText(e){clearTimers();timers.push(setTimeout(()=>document.getElementById('mainText').classList.add('show'),Math.max(0,T_TEXT*1000-e*1000)));timers.push(setTimeout(()=>document.getElementById('line2').classList.add('show'),Math.max(0,(T_TEXT+0.8)*1000-e*1000)));}
 function resetText(){document.getElementById('mainText').classList.remove('show');document.getElementById('line2').classList.remove('show');}
 function finishIntro(){const introWrap=document.getElementById('introWrap');const shell=document.getElementById('researcher-shell');const page=document.getElementById('researcherPage');const adminBtn=document.getElementById('admin-btn');introWrap.style.transition='opacity 1.2s ease';introWrap.style.opacity='0';setTimeout(()=>{introWrap.style.display='none';cancelAnimationFrame(rafId);shell.style.display='block';page.style.display='block';requestAnimationFrame(()=>{shell.style.opacity='1';page.style.opacity='1';document.body.classList.remove('intro-active');window.scrollTo(0,0);adminBtn.style.display='block';setTimeout(()=>adminBtn.classList.add('show'),800);});},1200);}
-function scheduleTransition(startedAt){
-  if(transitionTimer) clearTimeout(transitionTimer);
-  transitionTimer=setTimeout(()=>{
-    if(!introDone){
-      introDone=true;
-      finishIntro();
-    }
-  },Math.max(0,T_TOTAL*1000-startedAt*1000));
-}
-function startFrom(e){cancelAnimationFrame(rafId);resetText();clearTimers();paused=false;rings=0;introDone=false;
+function scheduleTransition(startedAt){setTimeout(finishIntro,Math.max(0,T_TOTAL*1000-startedAt*1000));}
+function startFrom(e){cancelAnimationFrame(rafId);resetText();clearTimers();paused=false;rings=0;const coreCell=Math.min(W,H)*0.055;const diagHalf=Math.hypot(W/2,H/2);const maxRings=Math.ceil(diagHalf/coreCell)+2;buildPulses(maxRings,coreCell);startTime=performance.now()-e*1000;pausedAt=e;const btnPP=document.getElementById('btnPP'); if(btnPP) btnPP.textContent='⏸';scheduleText(e);const adminBtn=document.getElementById('admin-btn');if(adminBtn){adminBtn.classList.remove('show');adminBtn.style.display='none';}document.getElementById('pw-modal').style.display='none';document.getElementById('researcherFrameWrap').style.display='none';document.getElementById('introWrap').style.transition='none';document.getElementById('introWrap').style.display='block';document.getElementById('introWrap').style.opacity='1';document.getElementById('researcher-shell').style.display='none';document.getElementById('researcher-shell').style.opacity='0';document.getElementById('researcherPage').style.display='none';document.getElementById('researcherPage').style.opacity='0';scheduleTransition(e);rafId=requestAnimationFrame(loop);}
 const btnReplay=document.getElementById('btnReplay');
 if(btnReplay){btnReplay.addEventListener('click',()=>startFrom(0));}
 const btnPP=document.getElementById('btnPP');
 if(btnPP){btnPP.addEventListener('click',function(){if(paused){paused=false;startTime=performance.now()-pausedAt*1000;scheduleText(pausedAt);this.textContent='⏸';}else{paused=true;clearTimers();this.textContent='▶';}});}
-startTime = performance.now() - e * 1000;
-rafId = requestAnimationFrame(loop);
-scheduleText(e);
-scheduleTransition(e);
-}
-function clearTimers(){
-  timers.forEach(t => clearTimeout(t));
-  timers = [];
-}
-  
-// 初回起動
-buildPulses(20, Math.min(window.innerWidth, window.innerHeight) * 0.055);
 startFrom(0);
 })();
-</script> 
+</script>
+</body>
+</html>
+
 
 <template id="researcher-template"><!DOCTYPE html>
 <!DOCTYPE html>
