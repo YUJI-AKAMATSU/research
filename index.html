@@ -287,7 +287,11 @@ rafId = requestAnimationFrame(loop);
 scheduleText(e);
 scheduleTransition(e);
 }
-
+function clearTimers(){
+  timers.forEach(t => clearTimeout(t));
+  timers = [];
+}
+  
 // 初回起動
 buildPulses(20, Math.min(window.innerWidth, window.innerHeight) * 0.055);
 startFrom(0);
