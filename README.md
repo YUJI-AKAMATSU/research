@@ -11,7 +11,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-### Proactive Intelligence  “ 見えない未来（もの）を観ようとして ”
+### Proactive Intelligence  “ 見えない未来を観ようとして ”
 
 ---
 
