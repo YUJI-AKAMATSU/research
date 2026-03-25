@@ -23,6 +23,15 @@ canvas { display:block; position:fixed; top:0; left:0; width:100%; height:100%; 
   font-size:clamp(14px,4vw,28px); font-weight:300;
   color:#e8e4f8; letter-spacing:0.35em;
 }
+#line1 rt {
+  font-size:0.45em;
+  letter-spacing:0.25em;
+  color:rgba(232,228,248,0.75);
+  font-family:'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP',serif;
+  position:relative;
+  left:-0.2em;
+  top:-0.3em;
+}
 #line2 {
   display:block; font-size:24px; font-weight:300;
   font-family:'Hiragino Sans','Noto Sans JP',sans-serif;
@@ -78,7 +87,6 @@ body.intro-active{overflow:hidden;}
 #researcher-shell{display:none;opacity:0;transition:opacity 1.4s ease;}
 </style>
 
-
 <style>
 #admin-btn{
   position:fixed;bottom:24px;right:24px;z-index:30000;
@@ -125,7 +133,7 @@ body.intro-active{overflow:hidden;}
 <canvas id="c"></canvas>
 <div id="textLayer">
   <div id="mainText">
-    <span id="line1">見えない未来（もの）を観ようとして</span>
+    <span id="line1">見えない<ruby>未来<rt>もの</rt></ruby>を観ようとして</span>
     <span id="line2">Proactive Intelligence</span>
   </div>
 </div>
@@ -251,6 +259,8 @@ if(btnPP){btnPP.addEventListener('click',function(){if(paused){paused=false;star
 startFrom(0);
 })();
 </script>
+</body>
+</html>
 
 
 <template id="researcher-template"><!DOCTYPE html>
