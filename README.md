@@ -1,4 +1,4 @@
-<img width="74" height="49" alt="image" src="https://github.com/user-attachments/assets/720795fd-b55d-4bd0-8636-d0222072cebd" />４月下旬まで更新作業中# 
+４月下旬まで更新作業中# 
 
 HP
 https://yuji-akamatsu.github.io/research/
