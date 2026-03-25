@@ -282,11 +282,16 @@ const btnReplay=document.getElementById('btnReplay');
 if(btnReplay){btnReplay.addEventListener('click',()=>startFrom(0));}
 const btnPP=document.getElementById('btnPP');
 if(btnPP){btnPP.addEventListener('click',function(){if(paused){paused=false;startTime=performance.now()-pausedAt*1000;scheduleText(pausedAt);this.textContent='⏸';}else{paused=true;clearTimers();this.textContent='▶';}});}
+startTime = performance.now() - e * 1000;
+rafId = requestAnimationFrame(loop);
+scheduleText(e);
+scheduleTransition(e);
+}
+
+// 初回起動
+buildPulses(20, Math.min(window.innerWidth, window.innerHeight) * 0.055);
 startFrom(0);
 })();
-</script>
-</body>
-</html>
 
 
 <template id="researcher-template"><!DOCTYPE html>
