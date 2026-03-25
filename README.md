@@ -1,4 +1,4 @@
-４月いっぱい更新作業中# 
+４月下旬まで更新作業中# 
 
 HP
 https://yuji-akamatsu.github.io/research/
@@ -34,7 +34,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-### Research
+### Research 
 
 #### Proactive Intelligence：未来設計のための潜在状態モデリング
 
@@ -44,7 +44,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-### Research Interests
+### Research Interests 研究関心領域
 
 - 時系列・時空間データ解析  
 - 時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）  
@@ -54,7 +54,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-### Current Work
+### Activities 現在の取り組み
 
 所属研究室にて現在、時間構造の解析（幾何解析／位相解析）、
 視覚表現学習（1D・2D）を中心とした研究に取り組んでいます。
@@ -64,8 +64,21 @@ Ph.D. Student / Research Scientist
 
 
 ---
+### Achievements 研究・活動特記事項
 
-### Collaboration
+科学技術情報の発信および専門教育の履修を通じて、 画像解析・数値解析・統計および新技術に関する知見を継続的に蓄積しています。 
+また、大学院講座の通じて、理論・実装の両面から研究基盤の強化を進めています。
+
+J-Global 画像解析・数値解析 6件執筆
+CiNii Research 画像解析・数値解析 2件執筆
+東京大学大学院工学系研究科 Physical AI・知能ロボティクス 修了認定
+東京大学大学院工学系研究科 深層学習（Deep Learning）修了認定
+東京大学大学院工学系研究科 深層生成モデル 修了認定
+
+※ 長期的な視点で継続的に研究をご支援いただける企業様を募集しております。
+
+---
+### Collaboration 共創研究のご提案
 
 製造業、サプライチェーン、社会インフラ分野を中心に、産業データを用いた共創研究を歓迎します。  
 時間的変化を持つ多様な観測データを希望します。
