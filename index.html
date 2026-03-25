@@ -223,7 +223,9 @@ const ctx = canvas.getContext('2d');
 let W,H;
 function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
 resize();
-window.addEventListener('resize',()=>{resize();startFrom(0);});
+window.addEventListener('resize', () => {
+  resize();
+});
 const T_IN=1.4;
 const T_EXP=5.0;
 const T_FLOW_END=4.2;
