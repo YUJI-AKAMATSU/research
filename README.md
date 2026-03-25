@@ -15,7 +15,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-### About
+### About はじめに
 
 本研究は **Proactive Intelligence** をテーマとし、  
 予測などの未来生成を意思決定に接続するための方法論の構築を目的としています。
@@ -34,7 +34,7 @@ Ph.D. Student / Research Scientist
 
 ---
 
-### Research 
+### Research 研究
 
 #### Proactive Intelligence：未来設計のための潜在状態モデリング
 
@@ -91,7 +91,7 @@ Ph.D. Student / Research Scientist
 - 画像データ  
 - 点群データ  
 
-#### 企業様側に提供できる価値
+### 企業様側に提供できる価値
 
 - 研究成果の学会発表・論文化（研究成果は企業様と合意のうえ公開）
 - 企業様の取り組みを研究事例として学会・技術コミュニティへ発信
