@@ -1,4 +1,4 @@
-４月下旬まで更新作業中
+４月下旬まで更新作業中<br>
 HP : https://yuji-akamatsu.github.io/research/
 
 <span style="font-size:14px;">
