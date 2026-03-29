@@ -1,5 +1,4 @@
 ４月下旬まで更新作業中<br>
-HP : https://yuji-akamatsu.github.io/research/
 
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
