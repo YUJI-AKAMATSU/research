@@ -5,7 +5,7 @@
 赤松 祐治 / Yuji Akamatsu<br>  
 Ph.D. Student / Research Scientist<br><br>
 
-Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models<br>  
+Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models
 Representation Learning / Prescriptive Modeling
 
 </span>
