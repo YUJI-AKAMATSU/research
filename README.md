@@ -5,8 +5,8 @@ HP : https://yuji-akamatsu.github.io/research/
 上智大学大学院 博士後期課程<br>
 赤松 祐治 / Yuji Akamatsu<br>  
 Ph.D. Student / Research Scientist
-Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models
-Representation Learning / Optical Flow / Prescriptive Modeling
+Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models<br>  
+Representation Learning / Scene Flow / Prescriptive Modeling
 
 </span>
 
