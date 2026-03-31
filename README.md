@@ -3,7 +3,7 @@
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
 赤松 祐治 / Yuji Akamatsu<br>  
-Ph.D. Student, Sophia University<br>
+Ph.D. Student, Sophia University<br><br>
 
 Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models<br>
 Representation Learning / Prescriptive Modeling
