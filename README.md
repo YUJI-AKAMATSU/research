@@ -5,7 +5,6 @@
 赤松 祐治 / Yuji Akamatsu<br>  
 Ph.D. Student, Sophia University<br>
 
-
 Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models<br>
 Representation Learning / Prescriptive Modeling
 
