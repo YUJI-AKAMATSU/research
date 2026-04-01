@@ -6,7 +6,8 @@
 Ph.D. Student, Sophia University<br><br>
 
 Interdisciplinary Research<br>
-Spatiotemporal Analysis / Temporal Structure Analysis / Latent Dynamics / World Models<br>
+Spatiotemporal Analysis / Temporal Structure Analysis<br>
+Latent Dynamics / World Models<br>
 Representation Learning / Prescriptive Modeling
 
 </span>
