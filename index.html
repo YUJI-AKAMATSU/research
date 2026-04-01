@@ -97,26 +97,7 @@ body.intro-active{overflow:hidden;}
   display:none;opacity:0;
   transition:opacity 0.8s ease,border-color 0.2s,color 0.2s;
 }
-#admin-btn.show{opacity:1;}
-#admin-btn:hover{border-color:#C8102E;color:#C8102E;}
-#pw-modal{position:fixed;inset:0;z-index:31000;background:rgba(247,246,243,0.95);display:none;align-items:center;justify-content:center;}
-.pw-box{background:#ffffff;border:1px solid rgba(30,50,100,0.09);padding:40px 48px;min-width:320px;position:relative;}
-.pw-box::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:#C8102E;}
-.pw-label{font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:#C8102E;margin-bottom:20px;font-family:'DM Mono',monospace;}
-.pw-input{width:100%;border:1px solid rgba(30,50,100,0.09);padding:11px 14px;font-size:14px;font-family:'DM Mono',monospace;color:#14181f;background:#f0efe9;margin-bottom:12px;outline:none;letter-spacing:0.1em;}
-.pw-input:focus{border-color:#C8102E;}
-.pw-submit{width:100%;padding:12px;background:#C8102E;color:#fff;border:none;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;font-family:'DM Mono',monospace;cursor:pointer;transition:opacity 0.2s;}
-.pw-submit:hover{opacity:0.85;}
-.pw-error{font-size:12px;color:#C8102E;margin-top:10px;display:none;font-family:'DM Mono',monospace;}
-.pw-close{position:absolute;top:14px;right:16px;font-size:12px;color:#b8c2cc;cursor:pointer;background:none;border:none;font-family:'DM Mono',monospace;}
-.pw-close:hover{color:#14181f;}
-#researcherFrameWrap{
-  display:none;position:relative;z-index:1;width:100%;height:100vh;background:#f7f6f3;
-}
-#researcherFrame{
-  width:100%;height:100%;border:none;display:block;background:#f7f6f3;
-}
-</style>
+
 <style>
 @media (max-width: 600px){
   #line1{
@@ -205,21 +186,7 @@ body.intro-active{overflow:hidden;}
 </div>
 
 
-<button id="admin-btn">管理者</button>
 
-<div id="pw-modal">
-  <div class="pw-box">
-    <button class="pw-close" onclick="closePwModal()">✕ 閉じる</button>
-    <div class="pw-label">Admin Access</div>
-    <input class="pw-input" type="password" id="pw-input" placeholder="パスワードを入力" onkeydown="if(event.key==='Enter')checkPw()">
-    <button class="pw-submit" onclick="checkPw()">認証 →</button>
-    <div class="pw-error" id="pw-error">// パスワードが違います</div>
-  </div>
-</div>
-
-<div id="researcherFrameWrap">
-  <iframe id="researcherFrame" title="Researcher Introduction Page"></iframe>
-</div>
 
 <script>
 (function(){
@@ -256,7 +223,30 @@ function loop(ts){if(!startTime)startTime=ts;if(!paused){const e=(ts-startTime)/
 function clearTimers(){timers.forEach(clearTimeout);timers=[];}
 function scheduleText(e){clearTimers();timers.push(setTimeout(()=>document.getElementById('mainText').classList.add('show'),Math.max(0,T_TEXT*1000-e*1000)));timers.push(setTimeout(()=>document.getElementById('line2').classList.add('show'),Math.max(0,(T_TEXT+0.8)*1000-e*1000)));}
 function resetText(){document.getElementById('mainText').classList.remove('show');document.getElementById('line2').classList.remove('show');}
-function finishIntro(){const introWrap=document.getElementById('introWrap');const shell=document.getElementById('researcher-shell');const page=document.getElementById('researcherPage');const adminBtn=document.getElementById('admin-btn');introWrap.style.transition='opacity 1.2s ease';introWrap.style.opacity='0';setTimeout(()=>{introWrap.style.display='none';cancelAnimationFrame(rafId);shell.style.display='block';page.style.display='block';requestAnimationFrame(()=>{shell.style.opacity='1';page.style.opacity='1';document.body.classList.remove('intro-active');window.scrollTo(0,0);adminBtn.style.display='block';setTimeout(()=>adminBtn.classList.add('show'),800);});},1200);}
+function finishIntro(){
+const introWrap=document.getElementById('introWrap');
+const shell=document.getElementById('researcher-shell');
+const page=document.getElementById('researcherPage');
+
+introWrap.style.transition='opacity 1.2s ease';
+introWrap.style.opacity='0';
+
+setTimeout(()=>{
+  introWrap.style.display='none';
+  cancelAnimationFrame(rafId);
+
+  shell.style.display='block';
+  page.style.display='block';
+
+  requestAnimationFrame(()=>{
+    shell.style.opacity='1';
+    page.style.opacity='1';
+    document.body.classList.remove('intro-active');
+    window.scrollTo(0,0);
+  });
+
+},1200);
+}
 function scheduleTransition(startedAt){setTimeout(finishIntro,Math.max(0,T_TOTAL*1000-startedAt*1000));}
 function startFrom(e){cancelAnimationFrame(rafId);resetText();clearTimers();paused=false;rings=0;const coreCell=Math.min(W,H)*0.055;const diagHalf=Math.hypot(W/2,H/2);const maxRings=Math.ceil(diagHalf/coreCell)+2;buildPulses(maxRings,coreCell);startTime=performance.now()-e*1000;pausedAt=e;const btnPP=document.getElementById('btnPP'); if(btnPP) btnPP.textContent='⏸';scheduleText(e);const adminBtn=document.getElementById('admin-btn');if(adminBtn){adminBtn.classList.remove('show');adminBtn.style.display='none';}document.getElementById('pw-modal').style.display='none';document.getElementById('researcherFrameWrap').style.display='none';document.getElementById('introWrap').style.transition='none';document.getElementById('introWrap').style.display='block';document.getElementById('introWrap').style.opacity='1';document.getElementById('researcher-shell').style.display='none';document.getElementById('researcher-shell').style.opacity='0';document.getElementById('researcherPage').style.display='none';document.getElementById('researcherPage').style.opacity='0';scheduleTransition(e);rafId=requestAnimationFrame(loop);}
 const btnReplay=document.getElementById('btnReplay');
