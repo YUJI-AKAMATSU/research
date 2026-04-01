@@ -3,7 +3,8 @@
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
 赤松 祐治<br>  学際的研究推進<br>  
-Yuji Akamatsu, Ph.D. Student / Interdisciplinary Researcher, Sophia University<br><br>
+Yuji Akamatsu<br>  
+Ph.D. Student / Interdisciplinary Researcher, Sophia University<br><br>
 
 Interdisciplinary Research<br>
 Spatiotemporal Analysis / Temporal Structure Analysis<br>
