@@ -715,12 +715,7 @@ function ensureResearcherFrameLoaded(){
 }
 
 document.getElementById('admin-btn').addEventListener('click',function(){
-  var modal=document.getElementById('pw-modal');
-  var input=document.getElementById('pw-input');
-  document.getElementById('pw-error').style.display='none';
-  input.value='';
-  modal.style.display='flex';
-  setTimeout(function(){ input.focus(); }, 30);
+  checkPw();  // 直接遷移
 });
 
 function closePwModal(){
