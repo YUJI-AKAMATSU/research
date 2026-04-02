@@ -118,21 +118,12 @@ body.intro-active{overflow:hidden;}
 <div id="researcherPage" style="display:none;opacity:0;transition:opacity 1.4s ease;position:relative;z-index:1;">
 <style>
   :root {
-  --bg:#f7f6f3;
-  --white:#ffffff;
-  --surface:#f3f3f1;
-
-  --border:rgba(0,0,0,0.08);
-
-  --accent:#C8102E;
-
-  --ink:#111111;
-  --ink-mid:#333333;
-  --ink-mute:#555555;
-  --ink-dim:#777777;
-
-  --grid:rgba(0,0,0,0.025);
-}
+    --bg:#f7f6f3; --white:#ffffff; --surface:#f0efe9;
+    --border:rgba(30,50,100,0.09);
+    --accent:#C8102E;
+    --ink:#14181f; --ink-mid:#3d4a5c; --ink-mute:#7a8898; --ink-dim:#b8c2cc;
+    --grid:rgba(200,16,46,0.025);
+  }
   #researcherPage { background:var(--bg); color:var(--ink); font-family:'DM Mono',monospace; line-height:1.6; min-height:100vh; }
   #rp-nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(247,246,243,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 48px; height:64px; display:flex; align-items:center; justify-content:space-between; }
   .rp-nav-logo { font-family:'DM Serif Display',serif; font-size:20px; color:var(--ink); text-decoration:none; }
@@ -249,21 +240,12 @@ startFrom(0);
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Mono:wght@300;400;500&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
-  --bg:#f7f6f3;
-  --white:#ffffff;
-  --surface:#f3f3f1;
-
-  --border:rgba(0,0,0,0.08);
-
-  --accent:#C8102E;
-
-  --ink:#111111;
-  --ink-mid:#333333;
-  --ink-mute:#555555;
-  --ink-dim:#777777;
-
-  --grid:rgba(0,0,0,0.025);
-}
+    --bg:#f7f6f3; --white:#ffffff; --surface:#f0efe9;
+    --border:rgba(30,50,100,0.09);
+    --accent:#C8102E; --accent2:#C8102E; --accent3:#C8102E;
+    --ink:#14181f; --ink-mid:#3d4a5c; --ink-mute:#7a8898; --ink-dim:#b8c2cc;
+    --grid:rgba(200,16,46,0.025);
+  }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;overflow-x:hidden;}
@@ -298,7 +280,7 @@ startFrom(0);
   .hero-top-left{display:flex;flex-direction:column;gap:14px;flex:1;min-width:0;}
   .hero-title{font-family:'Noto Sans JP','DM Serif Display',serif;font-size:16px;font-weight:400;line-height:1.08;letter-spacing:0.02em;color:var(--ink);}
   .hero-badges{display:flex;flex-wrap:wrap;gap:10px;}
-  .badge{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;padding:7px 16px;border:1px solid var(--border);color:#555;background:var(--white);}
+  .badge{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;padding:7px 16px;border:1px solid var(--border);color:var(--ink-mute);background:var(--white);}
   .badge.hl{border-color:rgba(200,16,46,0.3);color:var(--accent);background:rgba(200,16,46,0.04);}
 
   /* 顔写真 */
@@ -334,7 +316,7 @@ startFrom(0);
   .ri-name{font-size:16px;font-weight:400;color:var(--ink);line-height:1.4;font-family:'Noto Sans JP','DM Mono',monospace;}
 
   .data-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-  .dtag{font-size:12px;letter-spacing:0.1em;padding:6px 14px;border:1px solid var(--border);color:#555;background:var(--white);font-family:'DM Mono',monospace;}
+  .dtag{font-size:12px;letter-spacing:0.1em;padding:6px 14px;border:1px solid var(--border);color:var(--ink-mute);background:var(--white);font-family:'DM Mono',monospace;}
   .dtag.gold{color:var(--accent3);border-color:rgba(200,16,46,0.25);background:rgba(200,16,46,0.04);}
 
   .work-block{border:1px solid var(--border);background:var(--white);padding:32px 36px;position:relative;}
@@ -383,7 +365,7 @@ startFrom(0);
   .cs-label{font-size:12px;letter-spacing:0.38em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:10px;}
   .cs-label::before,.cs-label::after{content:'——';opacity:0.4;}
   .cs-title{font-family:'DM Serif Display',serif;font-size:clamp(18px,3vw,32px);font-weight:400;color:var(--ink);letter-spacing:-0.02em;margin-bottom:8px;}
-  .cs-sub{font-family:'Noto Sans JP',serif;font-size:15px;font-weight:300;color:#555;margin-bottom:40px;line-height:1.9;}
+  .cs-sub{font-family:'Noto Sans JP',serif;font-size:15px;font-weight:300;color:var(--ink-mute);margin-bottom:40px;line-height:1.9;}
   .cs-divider{width:40px;height:1px;background:var(--accent);margin:0 auto 40px;}
 </style>
 </head>
@@ -632,7 +614,7 @@ startFrom(0);
 </div>
 </section>
 <footer>
-<div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:14px;font-weight:300;color:#555;margin-left:10px;">赤松 祐治</span></div>
+<div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:14px;font-weight:300;color:var(--ink-mute);margin-left:10px;">赤松 祐治</span></div>
 <div class="footer-copy">Sophia University · Ph.D. Student · Interdisciplinary Research Scientist · Proactive Intelligence</div>
 </footer>
 </div>
