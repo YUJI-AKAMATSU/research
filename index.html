@@ -286,7 +286,7 @@ startFrom(0);
   /* 顔写真 */
   .hero-photo-wrap{flex-shrink:0;}
   .hero-photo{width:120px;height:120px;object-fit:cover;object-position:center top;border:1px solid var(--border);display:block;}
-  .hero-photo-label{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-dim);margin-top:7px;text-align:center;font-family:'DM Mono',monospace;}
+  .hero-photo-label{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#555;margin-top:7px;text-align:center;font-family:'DM Mono',monospace;}
 
   /* CORE THEME — 全幅、元のスタイルのまま */
   .keyword-block{border:1px solid var(--border);background:var(--white);padding:32px 36px;position:relative;margin-bottom:0;opacity:0;animation:fadeUp 0.6s ease forwards 0.45s;}
@@ -297,7 +297,7 @@ startFrom(0);
 
   .strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 0;overflow:hidden;background:var(--white);margin:40px 0 20px;position:relative;z-index:1;}
   .strip-track{display:flex;animation:marquee 30s linear infinite;white-space:nowrap;}
-  .strip-item{font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-dim);padding:0 36px;flex-shrink:0;}
+  .strip-item{font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#555;padding:0 36px;flex-shrink:0;}
   .strip-item span{color:var(--accent);margin-right:14px;}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
@@ -312,7 +312,7 @@ startFrom(0);
   .ri-card{display:flex;align-items:stretch;height:84px;background:var(--white);border:1px solid var(--border);overflow:hidden;}
   .ri-num{display:flex;align-items:center;justify-content:center;min-width:60px;background:var(--accent);font-size:15px;font-weight:500;letter-spacing:0.08em;color:#fff;flex-shrink:0;}
   .ri-body{padding:0 28px;display:flex;flex-direction:column;justify-content:center;gap:4px;}
-  .ri-label{font-size:13px;letter-spacing:0.32em;text-transform:uppercase;color:var(--ink-dim);}
+  .ri-label{font-size:13px;letter-spacing:0.32em;text-transform:uppercase;color:#555;}
   .ri-name{font-size:16px;font-weight:400;color:var(--ink);line-height:1.4;font-family:'Noto Sans JP','DM Mono',monospace;}
 
   .data-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
@@ -331,19 +331,19 @@ startFrom(0);
   .value-list{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-direction:column;gap:8px;}
   .value-list li{font-size:14px;line-height:1.6;padding-left:1.25rem;position:relative;color:var(--ink);font-family:'Noto Sans JP',serif;}
   .value-list li::before{content:"✓";position:absolute;left:0;color:var(--accent2);font-size:12px;}
-  .value-note{font-size:13px;color:var(--ink-dim);}
-  .value-disclaimer{font-size:13px;color:var(--ink-dim);line-height:1.7;border-left:2px solid rgba(200,16,46,0.2);padding-left:12px;margin:0;font-family:'DM Mono',monospace;}
+  .value-note{font-size:13px;color:#555;}
+  .value-disclaimer{font-size:13px;color:#555;line-height:1.7;border-left:2px solid rgba(200,16,46,0.2);padding-left:12px;margin:0;font-family:'DM Mono',monospace;}
   .contact-block{border:1px solid var(--border);background:var(--white);padding:44px;position:relative;}
   .contact-block::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
   .contact-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px;}
-  .contact-label{font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:var(--ink-dim);}
+  .contact-label{font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#555}
   .contact-email{font-size:15px;color:var(--accent);font-family:'DM Mono',monospace;letter-spacing:0.04em;text-decoration:none;border-bottom:1px solid rgba(200,16,46,0.3);padding-bottom:1px;transition:border-color 0.2s;}
   .contact-email:hover{border-color:var(--accent);}
 
   footer{border-top:1px solid var(--border);padding:32px 0 52px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;position:relative;z-index:1;}
   .footer-logo{font-family:'DM Serif Display',serif;font-size:18px;color:var(--ink);}
   .footer-logo em{font-style:italic;color:var(--accent);}
-  .footer-copy{font-size:12px;color:var(--ink-dim);letter-spacing:0.12em;}
+  .footer-copy{font-size:12px;color:#555;letter-spacing:0.12em;}
 
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
   .reveal{opacity:1;transform:translateY(0);transition:opacity 0.65s ease,transform 0.65s ease;}
@@ -610,7 +610,7 @@ startFrom(0);
 <span class="contact-label">Email</span>
 <a class="contact-email" href="mailto:akamatsu@eagle.sophia.ac.jp">akamatsu [at] eagle.sophia.ac.jp</a>
 </div>
-<p style="font-size:13px;color:var(--ink-dim);font-family:'DM Mono',monospace;margin-top:10px;">※ [at] を @ に置き換えてください</p>
+<p style="font-size:13px;color:#555;font-family:'DM Mono',monospace;margin-top:10px;">※ [at] を @ に置き換えてください</p>
 </div>
 </section>
 <footer>
