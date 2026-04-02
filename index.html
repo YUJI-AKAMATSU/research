@@ -118,12 +118,21 @@ body.intro-active{overflow:hidden;}
 <div id="researcherPage" style="display:none;opacity:0;transition:opacity 1.4s ease;position:relative;z-index:1;">
 <style>
   :root {
---bg:#1B293E;
---ink:#ffffff;
---ink-mid:rgba(255,255,255,0.85);
---ink-mute:rgba(255,255,255,0.65);
---ink-dim:rgba(255,255,255,0.45);
-  }
+  --bg:#1B293E;
+  --white:#ffffff;
+  --surface:#f0efe9;
+  --border:rgba(255,255,255,0.08);
+  --accent:#C8102E;
+  --accent2:#C8102E;
+  --accent3:#C8102E;
+
+  --ink:#ffffff;
+  --ink-mid:rgba(255,255,255,0.85);
+  --ink-mute:rgba(255,255,255,0.65);
+  --ink-dim:rgba(255,255,255,0.45);
+
+  --grid:rgba(255,255,255,0.03);
+}
   #researcherPage { background:var(--bg); color:var(--ink); font-family:'DM Mono',monospace; line-height:1.6; min-height:100vh; }
   #rp-nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(247,246,243,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 48px; height:64px; display:flex; align-items:center; justify-content:space-between; }
   .rp-nav-logo { font-family:'DM Serif Display',serif; font-size:20px; color:var(--ink); text-decoration:none; }
@@ -240,12 +249,21 @@ startFrom(0);
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Mono:wght@300;400;500&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
---bg:#1B293E;
---ink:#ffffff;
---ink-mid:rgba(255,255,255,0.85);
---ink-mute:rgba(255,255,255,0.65);
---ink-dim:rgba(255,255,255,0.45);
-  }
+  --bg:#1B293E;
+  --white:#ffffff;
+  --surface:#f0efe9;
+  --border:rgba(255,255,255,0.08);
+  --accent:#C8102E;
+  --accent2:#C8102E;
+  --accent3:#C8102E;
+
+  --ink:#ffffff;
+  --ink-mid:rgba(255,255,255,0.85);
+  --ink-mute:rgba(255,255,255,0.65);
+  --ink-dim:rgba(255,255,255,0.45);
+
+  --grid:rgba(255,255,255,0.03);
+}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'DM Mono',monospace;line-height:1.6;overflow-x:hidden;}
