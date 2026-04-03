@@ -375,20 +375,21 @@ nav{padding:0 20px;}
 .contact-block{padding:28px 24px;}
 
 .hero-title{
-font-size:18px;
+font-size:clamp(16px,4.2vw,20px);
 letter-spacing:0.06em;
 line-height:1.6;
 text-align:center;
 }
 
-.hero-eyebrow-sub{
-font-size:12px;
-letter-spacing:0.12em;
-line-height:1.7;
+.hero-eyebrow{
+font-size:clamp(11px,3vw,14px);
 text-align:center;
 }
 
-.hero-eyebrow{
+.hero-eyebrow-sub{
+font-size:clamp(10px,2.8vw,13px);
+letter-spacing:0.12em;
+line-height:1.7;
 text-align:center;
 }
 
@@ -398,7 +399,7 @@ justify-content:center;
 }
 
 .badge{
-font-size:10px;
+font-size:clamp(9px,2.6vw,11px);
 padding:6px 12px;
 letter-spacing:0.12em;
 }
@@ -410,9 +411,13 @@ text-align:center;
 gap:14px;
 }
 
+/* 写真を名前の上に移動 */
+
 .hero-photo-wrap{
 order:-1;
 }
+
+/* 改行制御 */
 
 .hero-eyebrow span,
 .hero-eyebrow-sub span,
