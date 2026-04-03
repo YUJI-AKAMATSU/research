@@ -382,15 +382,27 @@ text-align:center;
 }
 
 .hero-eyebrow{
-font-size:clamp(11px,3vw,14px);
+font-size:clamp(11px,2.8vw,13px);
 text-align:center;
 }
 
+/* 博士後期課程・理工学研究科 */
+
 .hero-eyebrow-sub{
-font-size:clamp(10px,2.8vw,13px);
+font-size:clamp(9px,2.5vw,12px);
 letter-spacing:0.12em;
 line-height:1.7;
 text-align:center;
+}
+
+/* 学際的研究推進（少し強調） */
+
+.hero-eyebrow-sub .jp{
+font-size:clamp(10px,2.7vw,13px);
+}
+
+.hero-eyebrow-sub .en{
+font-size:clamp(9px,2.4vw,12px);
 }
 
 .hero-badges{
@@ -411,13 +423,13 @@ text-align:center;
 gap:14px;
 }
 
-/* 写真を名前の上に移動 */
+/* 写真を上へ */
 
 .hero-photo-wrap{
 order:-1;
 }
 
-/* 改行制御 */
+/* 改行 */
 
 .hero-eyebrow span,
 .hero-eyebrow-sub span,
@@ -426,7 +438,6 @@ display:block;
 }
 
 }
-
   #coming-soon-overlay{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;}
   #coming-soon-overlay::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(200,16,46,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,16,46,0.025) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
   .cs-inner{position:relative;text-align:center;padding:48px;}
