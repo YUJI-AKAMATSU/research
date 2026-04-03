@@ -350,20 +350,23 @@ startFrom(0);
   .reveal.animate{opacity:0;transform:translateY(20px);}
   .reveal.animate.visible{opacity:1;transform:translateY(0);}
   
+/* PCでは横並び */
+
 .hero-eyebrow .jp,
 .hero-eyebrow-sub .jp,
 .hero-title .jp{
-display:block;
+display:inline;
 }
 
 .hero-eyebrow .en,
 .hero-eyebrow-sub .en,
 .hero-title .en{
-display:block;
-font-size:0.9em;
-letter-spacing:0.18em;
-margin-top:4px;
+display:inline;
+margin-left:8px;
 }
+
+
+/* モバイルのみ改行 */
 
 @media(max-width:640px){
 
@@ -386,16 +389,12 @@ font-size:clamp(11px,2.8vw,13px);
 text-align:center;
 }
 
-/* 博士後期課程・理工学研究科 */
-
 .hero-eyebrow-sub{
 font-size:clamp(9px,2.5vw,12px);
 letter-spacing:0.12em;
 line-height:1.7;
 text-align:center;
 }
-
-/* 学際的研究推進（少し強調） */
 
 .hero-eyebrow-sub .jp{
 font-size:clamp(10px,2.7vw,13px);
@@ -423,18 +422,17 @@ text-align:center;
 gap:14px;
 }
 
-/* 写真を上へ */
-
 .hero-photo-wrap{
 order:-1;
 }
 
-/* 改行 */
+/* モバイルだけ改行 */
 
 .hero-eyebrow span,
 .hero-eyebrow-sub span,
 .hero-title span{
 display:block;
+margin-left:0;
 }
 
 }
