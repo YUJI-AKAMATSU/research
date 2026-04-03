@@ -349,6 +349,21 @@ startFrom(0);
   .reveal{opacity:1;transform:translateY(0);transition:opacity 0.65s ease,transform 0.65s ease;}
   .reveal.animate{opacity:0;transform:translateY(20px);}
   .reveal.animate.visible{opacity:1;transform:translateY(0);}
+  
+.hero-eyebrow .jp,
+.hero-eyebrow-sub .jp,
+.hero-title .jp{
+display:block;
+}
+
+.hero-eyebrow .en,
+.hero-eyebrow-sub .en,
+.hero-title .en{
+display:block;
+font-size:0.9em;
+letter-spacing:0.18em;
+margin-top:4px;
+}
 
 @media(max-width:640px){
 
@@ -395,21 +410,11 @@ text-align:center;
 gap:14px;
 }
 
-/* 追加ここから */
-
-.hero-eyebrow span{
-display:block;
-}
-
-.hero-eyebrow-sub span{
-display:block;
-}
-
+.hero-eyebrow span,
+.hero-eyebrow-sub span,
 .hero-title span{
 display:block;
 }
-
-/* 追加ここまで */
 
 }
 
