@@ -350,37 +350,49 @@ startFrom(0);
   .reveal.animate{opacity:0;transform:translateY(20px);}
   .reveal.animate.visible{opacity:1;transform:translateY(0);}
 
-  @media(max-width:640px){
-    nav{padding:0 20px;}
-    .nav-links{display:none;}
-    .container{padding:0 20px;}
-    .hero{padding:96px 0 56px;}
-    .hero-photo{width:88px;height:88px;}
-    .contact-block{padding:28px 24px;}
-  }
+@media(max-width:640px){
 
-  @media(max-width:640px){
+nav{padding:0 20px;}
+.nav-links{display:none;}
+.container{padding:0 20px;}
+.hero{padding:96px 0 56px;}
+.hero-photo{width:88px;height:88px;}
+.contact-block{padding:28px 24px;}
 
 .hero-title{
 font-size:18px;
 letter-spacing:0.06em;
 line-height:1.6;
+text-align:center;
 }
 
 .hero-eyebrow-sub{
 font-size:12px;
 letter-spacing:0.12em;
 line-height:1.7;
+text-align:center;
+}
+
+.hero-eyebrow{
+text-align:center;
 }
 
 .hero-badges{
 gap:6px;
+justify-content:center;
 }
 
 .badge{
 font-size:10px;
 padding:6px 12px;
 letter-spacing:0.12em;
+}
+
+.hero-top{
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:14px;
 }
 
 }
@@ -413,12 +425,21 @@ letter-spacing:0.12em;
 <div class="container">
 <section id="about" class="hero">
 
-<div class="hero-eyebrow">上智大学大学院 — Sophia University</div>
+<div class="hero-eyebrow">
+<span class="jp">上智大学大学院</span>
+<span class="en">SOPHIA UNIVERSITY</span>
+</div>
 <div class="hero-eyebrow-sub">博士後期課程  理工学研究科</div>  
-<div class="hero-eyebrow-sub">学際的研究推進「複合知と専門性を兼ね備えた知的能力を育む」
+<div class="hero-eyebrow-sub">
+<span class="jp">学際的研究推進</span>
+<span class="en">「複合知と専門性を兼ね備えた知的能力を育む」</span>
+</div>
 <div class="hero-top">
 <div class="hero-top-left">
-<h1 class="hero-title">赤松 祐治   YUJI AKAMATSU</h1>
+<h1 class="hero-title">
+<span class="jp">赤松 祐治</span>
+<span class="en">YUJI AKAMATSU</span>
+</h1>
 <div class="hero-badges">
 <span class="badge hl">Ph.D. Student</span>
 <span class="badge">Interdisciplinary Research Scientist</span>
