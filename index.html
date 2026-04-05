@@ -62,8 +62,6 @@ canvas { display:block; position:fixed; top:0; left:0; width:100%; height:100%; 
   color:rgba(180,165,240,0.55); letter-spacing:0.45em;
   text-transform:uppercase;
 }
-/* BUG FIX 1: #controls セレクタの { が欠落していたのを修正 */
-#controls {
   position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
   z-index:20; display:flex; align-items:center; gap:12px;
 }
@@ -223,7 +221,8 @@ function loop(ts){if(!startTime)startTime=ts;if(!paused){const e=(ts-startTime)/
 function clearTimers(){timers.forEach(clearTimeout);timers=[];}
 function scheduleText(e){clearTimers();timers.push(setTimeout(()=>document.getElementById('mainText').classList.add('show'),Math.max(0,T_TEXT*1000-e*1000)));timers.push(setTimeout(()=>document.getElementById('line2').classList.add('show'),Math.max(0,(T_TEXT+0.8)*1000-e*1000)));}
 function resetText(){document.getElementById('mainText').classList.remove('show');document.getElementById('line2').classList.remove('show');}
-function finishIntro(){const introWrap=document.getElementById('introWrap');const shell=document.getElementById('researcher-shell');const page=document.getElementById('researcherPage');introWrap.style.transition='opacity 1.2s ease';introWrap.style.opacity='0';setTimeout(()=>{introWrap.style.display='none';cancelAnimationFrame(rafId);shell.style.display='block';page.style.display='block';requestAnimationFrame(()=>{shell.style.opacity='1';page.style.opacity='1';document.body.classList.remove('intro-active');window.scrollTo(0,0);});},1200);}
+function showFinalPage(){const tpl=document.getElementById('researcher-template');if(!tpl)return;document.open();document.write(tpl.innerHTML);document.close();}
+function finishIntro(){const introWrap=document.getElementById('introWrap');const shell=document.getElementById('researcher-shell');const page=document.getElementById('researcherPage');introWrap.style.transition='opacity 1.2s ease';introWrap.style.opacity='0';setTimeout(()=>{introWrap.style.display='none';cancelAnimationFrame(rafId);shell.style.display='block';page.style.display='block';requestAnimationFrame(()=>{shell.style.opacity='1';page.style.opacity='1';document.body.classList.remove('intro-active');window.scrollTo(0,0);setTimeout(showFinalPage,5000);});},1200);}
 function scheduleTransition(startedAt){setTimeout(finishIntro,Math.max(0,T_TOTAL*1000-startedAt*1000));}
 function startFrom(e){cancelAnimationFrame(rafId);resetText();clearTimers();paused=false;rings=0;const coreCell=Math.min(W,H)*0.055;const diagHalf=Math.hypot(W/2,H/2);const maxRings=Math.ceil(diagHalf/coreCell)+2;buildPulses(maxRings,coreCell);startTime=performance.now()-e*1000;pausedAt=e;const btnPP=document.getElementById('btnPP'); if(btnPP) btnPP.textContent='⏸';scheduleText(e);document.getElementById('introWrap').style.transition='none';document.getElementById('introWrap').style.display='block';document.getElementById('introWrap').style.opacity='1';document.getElementById('researcher-shell').style.display='none';document.getElementById('researcher-shell').style.opacity='0';document.getElementById('researcherPage').style.display='none';document.getElementById('researcherPage').style.opacity='0';scheduleTransition(e);rafId=requestAnimationFrame(loop);}
 const btnReplay=document.getElementById('btnReplay');
@@ -237,18 +236,16 @@ startFrom(0);
 </html>
 
 
-<!-- ============================= -->
-<!-- researcher-template (full page, loaded after intro) -->
-<!-- ============================= -->
-<script id="researcher-template" type="text/html">
+<template id="researcher-template"><!DOCTYPE html>
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>赤松 祐治 / Yuji Akamatsu</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Mono:wght@300;400;500&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
     --bg:#f7f6f3; --white:#ffffff; --surface:#f0efe9;
@@ -273,18 +270,33 @@ startFrom(0);
 
   .container{max-width:960px;margin:0 auto;padding:0 40px;position:relative;z-index:1;}
 
-  .hero{padding:120px 0 28px;}
-  .hero-eyebrow{font-size:14px;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;opacity:0;animation:fadeUp 0.6s ease forwards 0.1s;}
+  /* ── Hero ── */
+.hero{padding:120px 0 28px;}
+
+.hero-eyebrow{
+  font-size:14px;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:28px;
+  opacity:0;
+  animation:fadeUp 0.6s ease forwards 0.1s;
+}
+
+  /* 名前・バッジ・写真を同じ行に */
   .hero-top{display:flex;align-items:center;gap:24px;margin-bottom:24px;opacity:0;animation:fadeUp 0.6s ease forwards 0.2s;}
   .hero-top-left{display:flex;flex-direction:column;gap:14px;flex:1;min-width:0;}
   .hero-title{font-family:'Noto Sans JP','DM Serif Display',serif;font-size:16px;font-weight:400;line-height:1.08;letter-spacing:0.02em;color:var(--ink);}
   .hero-badges{display:flex;flex-wrap:wrap;gap:10px;}
   .badge{font-size:12px;letter-spacing:0.18em;text-transform:uppercase;padding:7px 16px;border:1px solid var(--border);color:#555;background:var(--white);}
   .badge.hl{border-color:rgba(200,16,46,0.3);color:var(--accent);background:rgba(200,16,46,0.04);}
+
+  /* 顔写真 */
   .hero-photo-wrap{flex-shrink:0;}
   .hero-photo{width:120px;height:120px;object-fit:cover;object-position:center top;border:1px solid var(--border);display:block;}
   .hero-photo-label{font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink-dim);margin-top:7px;text-align:center;font-family:'DM Mono',monospace;}
 
+  /* CORE THEME — 全幅、元のスタイルのまま */
   .keyword-block{border:1px solid var(--border);background:var(--white);padding:32px 36px;position:relative;margin-bottom:0;opacity:0;animation:fadeUp 0.6s ease forwards 0.45s;}
   .keyword-block::before{content:'CORE THEME';position:absolute;top:-9px;left:24px;font-size:14px;letter-spacing:0.32em;color:var(--accent);background:var(--bg);padding:0 8px;}
   .keyword-block::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
@@ -312,8 +324,7 @@ startFrom(0);
   .ri-name{font-size:16px;font-weight:400;color:var(--ink);line-height:1.4;font-family:'Noto Sans JP','DM Mono',monospace;}
 
   .data-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
-  /* BUG FIX 2: border と color の間に ; を追加 */
-  .dtag{font-size:12px;letter-spacing:0.1em;padding:6px 14px;border:1px solid var(--border);color:#555;background:var(--white);font-family:'DM Mono',monospace;}
+  .dtag{font-size:12px;letter-spacing:0.1em;padding:6px 14px;border:1px solid var(--border)color:#555;background:var(--white);font-family:'DM Mono',monospace;}
   .dtag.gold{color:var(--accent3);border-color:rgba(200,16,46,0.25);background:rgba(200,16,46,0.04);}
 
   .work-block{border:1px solid var(--border);background:var(--white);padding:32px 36px;position:relative;}
@@ -346,27 +357,117 @@ startFrom(0);
   .reveal{opacity:1;transform:translateY(0);transition:opacity 0.65s ease,transform 0.65s ease;}
   .reveal.animate{opacity:0;transform:translateY(20px);}
   .reveal.animate.visible{opacity:1;transform:translateY(0);}
+  
+/* PCでは横並び */
 
-  .lang-switch{font-size:12px;letter-spacing:0.15em;color:var(--ink-mute);margin-right:20px;}
-  .lang-switch a{color:var(--ink-mute);text-decoration:none;margin:0 4px;}
-  .lang-switch a:hover{color:var(--accent);}
+.hero-eyebrow .jp,
+.hero-eyebrow-sub .jp,
+.hero-title .jp{
+display:inline;
+}
 
-  @media(max-width:640px){
-    nav{padding:0 20px;}
-    .nav-links{display:none;}
-    .container{padding:0 20px;}
-    .hero{padding:96px 0 56px;}
-    .hero-photo{width:88px;height:88px;}
-    .contact-block{padding:28px 24px;}
-    .hero-title{font-size:clamp(16px,4.2vw,20px);letter-spacing:0.06em;line-height:1.6;text-align:center;}
-    .hero-eyebrow{font-size:clamp(11px,2.8vw,13px);text-align:center;}
-    .hero-badges{gap:6px;justify-content:center;}
-    .badge{font-size:clamp(9px,2.6vw,11px);padding:6px 12px;letter-spacing:0.12em;}
-    .hero-top{flex-direction:column;align-items:center;text-align:center;gap:14px;}
-    .hero-photo-wrap{order:-1;}
-    .lang-switch{font-size:11px;margin-right:12px;}
-  }
+.hero-eyebrow .en,
+.hero-eyebrow-sub .en,
+.hero-title .en{
+display:inline;
+margin-left:8px;
+}
 
+/* JP / EN switch */
+.lang-switch{
+font-size:12px;
+letter-spacing:0.15em;
+color:var(--ink-mute);
+margin-right:20px;
+}
+
+.lang-switch a{
+color:var(--ink-mute);
+text-decoration:none;
+margin:0 4px;
+}
+
+.lang-switch a:hover{
+color:var(--accent);
+}
+
+
+/* モバイルのみ改行 */
+
+@media(max-width:640px){
+
+nav{padding:0 20px;}
+.nav-links{display:none;}
+.container{padding:0 20px;}
+.hero{padding:96px 0 56px;}
+.hero-photo{width:88px;height:88px;}
+.contact-block{padding:28px 24px;}
+
+.hero-title{
+font-size:clamp(16px,4.2vw,20px);
+letter-spacing:0.06em;
+line-height:1.6;
+text-align:center;
+}
+
+.hero-eyebrow{
+font-size:clamp(11px,2.8vw,13px);
+text-align:center;
+}
+
+.hero-eyebrow-sub{
+font-size:clamp(9px,2.5vw,12px);
+letter-spacing:0.12em;
+line-height:1.7;
+text-align:center;
+}
+
+.hero-eyebrow-sub .jp{
+font-size:clamp(10px,2.7vw,13px);
+}
+
+.hero-eyebrow-sub .en{
+font-size:clamp(9px,2.4vw,12px);
+}
+
+.hero-badges{
+gap:6px;
+justify-content:center;
+}
+
+.badge{
+font-size:clamp(9px,2.6vw,11px);
+padding:6px 12px;
+letter-spacing:0.12em;
+}
+
+.hero-top{
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:14px;
+}
+
+.hero-photo-wrap{
+order:-1;
+}
+
+/* モバイルだけ改行 */
+
+.hero-eyebrow span,
+.hero-eyebrow-sub span,
+.hero-title span{
+display:block;
+margin-left:0;
+}
+
+/* モバイル時の言語リンク調整 */
+.lang-switch{
+font-size:11px;
+margin-right:12px;
+}
+
+}
   #coming-soon-overlay{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;}
   #coming-soon-overlay::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(200,16,46,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,16,46,0.025) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
   .cs-inner{position:relative;text-align:center;padding:48px;}
@@ -378,176 +479,6 @@ startFrom(0);
 </style>
 </head>
 <body>
-
-<nav>
-  <a class="nav-logo" href="#">Yuji <em>Akamatsu</em></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#interests">Interests</a></li>
-    <li><a href="#current">Current</a></li>
-    <li><a href="#collaboration">Collaboration</a></li>
-    <li><a href="#activities">Activities</a></li>
-  </ul>
-  <div style="display:flex;align-items:center;">
-    <span class="lang-switch"><a href="#">JP</a> / <a href="#">EN</a></span>
-    <a class="nav-cta" href="#contact">Contact</a>
-  </div>
-</nav>
-
-<div class="container">
-  <div class="hero">
-    <div class="hero-eyebrow">Sophia University · Graduate School</div>
-    <div class="hero-top">
-      <div class="hero-top-left">
-        <div class="hero-title">赤松 祐治 / Yuji Akamatsu</div>
-        <div class="hero-badges">
-          <span class="badge hl">Ph.D. Student</span>
-          <span class="badge">Interdisciplinary Research Scientist</span>
-          <span class="badge hl">Proactive Intelligence</span>
-        </div>
-      </div>
-    </div>
-    <div class="keyword-block">
-      <div class="kw-main">Proactive Intelligence</div>
-      <div class="kw-sub">Latent State Modeling for Future Design</div>
-    </div>
-  </div>
-
-  <div class="strip">
-    <div class="strip-track">
-      <span class="strip-item"><span>01</span>Time Series</span>
-      <span class="strip-item"><span>02</span>Temporal Structure</span>
-      <span class="strip-item"><span>03</span>Representation Learning</span>
-      <span class="strip-item"><span>04</span>Latent Dynamics</span>
-      <span class="strip-item"><span>05</span>Prescriptive Analytics</span>
-      <span class="strip-item"><span>01</span>Time Series</span>
-      <span class="strip-item"><span>02</span>Temporal Structure</span>
-      <span class="strip-item"><span>03</span>Representation Learning</span>
-      <span class="strip-item"><span>04</span>Latent Dynamics</span>
-      <span class="strip-item"><span>05</span>Prescriptive Analytics</span>
-    </div>
-  </div>
-
-  <section id="about">
-    <div class="section-label">About</div>
-    <h2>About</h2>
-    <p class="body-text">This research is centered on the concept of <strong>Proactive Intelligence</strong>, with the goal of developing methods that connect future generation, including forecasting, to decision-making.</p>
-    <p class="body-text">It addresses diverse forms of observational data, including 1D time-series data, 2D visual representations, and 3D spatial data. By integrating representation learning and latent state models, this research aims to treat state, signs, forecasting, and intervention evaluation in a unified manner, in pursuit of more reliable future generation.</p>
-  </section>
-
-  <section id="research">
-    <div class="section-label">Research</div>
-    <h2>Research</h2>
-    <p class="body-text"><strong>Proactive Intelligence: Latent State Modeling for Future Design</strong></p>
-    <p class="body-text">To support future generation and decision-making in complex systems, I conduct research on methods such as observational forecasting, latent dynamics estimation, and prescriptive analytics.</p>
-  </section>
-
-  <section id="interests">
-    <div class="section-label">Research Interests</div>
-    <h2>Research Interests</h2>
-    <div class="ri-wrap">
-      <div class="ri-card"><div class="ri-num">01</div><div class="ri-body"><div class="ri-label">Time Series</div><div class="ri-name">Time-Series and Spatiotemporal Data Analysis</div></div></div>
-      <div class="ri-card"><div class="ri-num">02</div><div class="ri-body"><div class="ri-label">Temporal Structure</div><div class="ri-name">Temporal Structure Analysis (Geometric / Topological / Dynamical / Causal Analysis)</div></div></div>
-      <div class="ri-card"><div class="ri-num">03</div><div class="ri-body"><div class="ri-label">Representation</div><div class="ri-name">Representation Learning (1D / 2D / 3D / Optical &amp; Scene Flow)</div></div></div>
-      <div class="ri-card"><div class="ri-num">04</div><div class="ri-body"><div class="ri-label">Dynamics</div><div class="ri-name">Latent Dynamics Modeling / World Models</div></div></div>
-      <div class="ri-card"><div class="ri-num">05</div><div class="ri-body"><div class="ri-label">Inference &amp; Decision</div><div class="ri-name">Statistical Inference / Prescriptive Modeling</div></div></div>
-    </div>
-  </section>
-
-  <section id="current">
-    <div class="section-label">Current Work</div>
-    <h2>Current Work</h2>
-    <div class="work-block">
-      <div class="work-status"><span class="dot"></span>In Progress</div>
-      <p class="body-text">At my current laboratory, I am engaged in research centered on temporal structure analysis (geometric analysis / topological analysis) and visual representation learning. Further details will be disclosed progressively after publication of related papers. (As of the end of 2025)</p>
-      <p class="body-text">I am also advancing this research through collaboration with researchers in statistics.</p>
-    </div>
-  </section>
-
-  <section id="collaboration">
-    <div class="section-label">Collaboration</div>
-    <h2>Collaboration</h2>
-    <div class="collab-block">
-      <p class="body-text">This research invites collaborative projects with industry partners in which real-world challenges are examined using actual data, with the ultimate aim of translating research outcomes into academic publications, public dissemination, and practical value. (From May 2026 onward)</p>
-      <p class="body-text">Collaborative research using industrial data is especially welcome in the areas of manufacturing, supply chains, and social infrastructure.</p>
-      <div class="value-block">
-        <div class="value-label">Value for Industry Partners</div>
-        <ul class="value-list">
-          <li>Academic presentations and publications based on research outcomes (to be disclosed only with mutual agreement)</li>
-          <li>Communicating the partner's initiatives to academic societies and technical communities as research case studies</li>
-          <li>Proof-of-concept studies and evaluation of practical applicability</li>
-        </ul>
-        <p class="value-disclaimer">Please note that, because the work may begin from redefining the research question itself and building an appropriate methodology, some projects may not map directly onto a company's existing problem setting.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="activities">
-    <div class="section-label">Activities</div>
-    <h2>Research Activities</h2>
-    <p class="body-text">Through the dissemination of scientific and technical knowledge and continued participation in professional education, I have continuously accumulated expertise in image analysis, numerical analysis, statistical methods, and emerging technologies.</p>
-    <ul class="body-text" style="padding-left:1.2em;margin-top:12px;">
-      <li>J-Global: 6 publications on image analysis and numerical analysis</li>
-      <li>CiNii Research: 2 publications on image analysis and numerical analysis</li>
-      <li>University of Tokyo, Graduate School of Engineering — Certificate of Completion in Physical AI and Intelligent Robotics</li>
-      <li>University of Tokyo, Graduate School of Engineering — Certificate of Completion in Deep Generative Models</li>
-      <li>University of Tokyo, Graduate School of Engineering — Certificate of Completion in Deep Learning</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <div class="section-label">Contact</div>
-    <h2>Contact</h2>
-    <div class="contact-block">
-      <p class="body-text">For research collaboration or inquiries, please feel free to contact me.</p>
-      <div class="contact-row">
-        <span class="contact-label">Email</span>
-        <a class="contact-email" href="mailto:akamatsu@eagle.sophia.ac.jp">akamatsu [at] eagle.sophia.ac.jp</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:14px;font-weight:300;color:var(--ink-mute);margin-left:10px;">赤松 祐治</span></div>
-    <div class="footer-copy">Sophia University · Ph.D. Student · Interdisciplinary Research Scientist · Proactive Intelligence</div>
-  </footer>
-</div>
-
-<script>
-var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.07 });
-document.querySelectorAll('.reveal').forEach(function(el) {
-  el.classList.add('animate');
-  obs.observe(el);
-});
-document.querySelectorAll('nav a').forEach(function(link){
-  link.addEventListener('click', function(e){
-    var href = this.getAttribute('href');
-    if (!href || href.charAt(0) !== '#') return;
-    var target = document.querySelector(href);
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
-</body>
-</html>
-</script>
-
-<script>
-// BUG FIX 3: researcher-templateをscript[type=text/html]から取得してdocument.writeで展開
-function showFinalPage(){
-  var tpl = document.getElementById('researcher-template');
-  if(!tpl) return;
-  document.open();
-  document.write(tpl.textContent);
-  document.close();
-}
-</script>
-</html>
 
 
 <template id="researcher-template"><!DOCTYPE html>
