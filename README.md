@@ -1,6 +1,6 @@
 ４月下旬まで更新作業中<br> 
 
-Research site：https://yuji-akamatsu.github.io/research/
+Research site：https://yuji-akamatsu.github.io/research/<br>
 An English version is provided below.
 
 <span style="font-size:13px;">
