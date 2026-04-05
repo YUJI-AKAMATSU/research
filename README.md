@@ -128,3 +128,133 @@ Representation Learning / Prescriptive Modeling
 
 Email: akamatsu [at] eagle.sophia.ac.jp  
 ※ [at] を @ に置き換えてください。
+
+
+Updating until late April<br>
+Research page: https://yuji-akamatsu.github.io/research/<br><br>
+
+<span style="font-size:13px;">
+Sophia University — Ph.D. Program<br>
+Yuji Akamatsu — Interdisciplinary Research Initiative<br>  
+Yuji Akamatsu<br>  
+Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
+
+Interdisciplinary Research<br>
+Spatiotemporal Analysis / Temporal Structure Analysis<br>
+Latent Dynamics / World Models<br>
+Representation Learning / Prescriptive Modeling
+</span>
+
+---
+
+### Proactive Intelligence  “Toward Observing the Unseen Future”
+
+---
+
+### About
+
+This research is centered on Proactive Intelligence, aiming to develop methods that connect future generation such as forecasting to decision-making.<br>
+The research targets diverse observational data including 1D time-series data, 2D visual representation data, and 3D spatial data.<br>
+By integrating representation learning and latent state models, this research jointly handles state estimation, signal detection, forecasting, and intervention evaluation to generate more reliable future scenarios.<br>
+
+This research is based on fundamental studies of temporal structure analysis and latent dynamics, aiming to build an analytical framework that integrates state estimation, signal detection, forecasting, and intervention evaluation.<br>
+The goal is to generate more reliable future scenarios and support decision-making.
+
+Particular interest lies in applications in manufacturing, supply chain, social infrastructure, and healthcare.<br>
+These research interests are based on professional experience in industrial domains, particularly manufacturing and healthcare.
+
+I have worked on 3D image processing related IT systems as well as ECM and SCM enterprise systems.<br>
+Through solution development and deployment, I contributed to data infrastructure development and digital transformation initiatives.<br>
+These efforts focused on data-driven visualization and decision support for operational improvements.
+
+In real-world environments, decision-making often requires anticipating future conditions beyond traditional data analysis.<br>
+From these experiences, I recognized the importance of proactive information utilization, including forecasting and future estimation.
+
+Based on this perspective, this research integrates images, data, and AI to estimate future states and support decision-making.<br>
+Through both practical experience and research activities, this work aims to contribute to industrial AI applications and operational improvements.
+
+---
+
+### Research
+
+#### Proactive Intelligence: Latent State Modeling for Future Design
+
+This research focuses on future generation and decision support in complex systems, including:
+
+- Observational forecasting  
+- Latent dynamics estimation  
+- Prescriptive analytics  
+
+---
+
+### Research Interests
+
+- Time-series and spatiotemporal data analysis  
+- Temporal structure analysis (geometric / topological / dynamical / causal analysis)  
+- Representation learning (1D / 2D / 3D / Optical & Scene Flow)  
+- Latent dynamics modeling / world models  
+- Statistical inference / prescriptive modeling  
+
+---
+
+### Current Work
+
+Currently conducting research on temporal structure analysis and visual representation learning.<br>
+Further details will be released after paper publication.
+
+Collaborating with researchers in statistics to expand the research.
+
+---
+
+### Collaboration
+
+This research welcomes collaborative studies with industry partners.<br>
+The goal is academic publication, practical implementation, and real-world impact.
+
+Target domains:
+
+- Manufacturing  
+- Supply chain  
+- Social infrastructure  
+
+Example data:
+
+- Demand / planning / inventory data  
+- Sensor data  
+- Process data  
+- Mobility data  
+- Image data  
+- Point cloud data  
+
+---
+
+### Value for Industry Partners
+
+- Academic publications  
+- Technical dissemination  
+- Proof-of-concept evaluation  
+- Practical implementation feasibility  
+
+---
+
+### Research Activities
+
+- J-Global publications (Image analysis / numerical analysis)  
+- CiNii publications  
+- University of Tokyo Graduate School — Physical AI  
+- University of Tokyo Graduate School — Generative Models  
+- University of Tokyo Graduate School — Deep Learning  
+
+---
+
+Long-term collaborative partners are welcome.<br>
+This research emphasizes future-oriented decision-making focusing on time t+1.<br>
+Collaborations with organizations interested in proactive decision-making are encouraged.
+
+---
+
+## Contact
+
+Email: akamatsu [at] eagle.sophia.ac.jp  
+Replace [at] with @
+
