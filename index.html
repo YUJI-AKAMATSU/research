@@ -373,6 +373,24 @@ display:inline;
 margin-left:8px;
 }
 
+/* JP / EN switch */
+.lang-switch{
+font-size:12px;
+letter-spacing:0.15em;
+color:var(--ink-mute);
+margin-right:20px;
+}
+
+.lang-switch a{
+color:var(--ink-mute);
+text-decoration:none;
+margin:0 4px;
+}
+
+.lang-switch a:hover{
+color:var(--accent);
+}
+
 
 /* モバイルのみ改行 */
 
@@ -443,6 +461,12 @@ display:block;
 margin-left:0;
 }
 
+/* モバイル時の言語リンク調整 */
+.lang-switch{
+font-size:11px;
+margin-right:12px;
+}
+
 }
   #coming-soon-overlay{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;}
   #coming-soon-overlay::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(200,16,46,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,16,46,0.025) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
@@ -458,6 +482,7 @@ margin-left:0;
 
 <nav>
 <a class="nav-logo" href="#"></a>
+
 <ul class="nav-links">
 <li><a href="#about">About</a></li>
 <li><a href="#research">Research</a></li>
@@ -467,8 +492,17 @@ margin-left:0;
 <li><a href="#Activities">Activities</a></li>  
 <li><a href="#contact">Contact</a></li>
 </ul>
+
+<div class="lang-switch">
+<a href="#about">JP</a>
+<span>/</span>
+<a href="#english">EN</a>
+</div>
+
 <a class="nav-cta" href="#contact">Contact</a>
+
 </nav>
+
 <div class="container">
 <section id="about" class="hero">
 
@@ -715,6 +749,136 @@ margin-left:0;
 <p style="font-size:13px;color:var(--ink-dim);font-family:'DM Mono',monospace;margin-top:10px;">※ [at] を @ に置き換えてください</p>
 </div>
 </section>
+
+<!-- ============================= -->
+<!-- English Version -->
+<!-- ============================= -->
+
+<section id="english">
+
+<div class="section-label">English</div>
+<h2>English Version</h2>
+
+
+<div class="section-label">About</div>
+<h2>About</h2>
+
+<p class="body-text">
+This research is centered on the concept of <strong>Proactive Intelligence</strong>, 
+aiming to connect future generation such as forecasting with decision-making.
+</p>
+
+<p class="body-text">
+The research focuses on diverse observational information including 
+1D time-series data, 2D visual representations, and 3D spatial data. 
+By integrating representation learning and latent state modeling, 
+this work aims to unify state, signals, prediction, and intervention evaluation.
+</p>
+
+<p class="body-text">
+I am particularly interested in applications that improve real-world operations 
+and reliability in domains such as manufacturing, supply chain, and social infrastructure.
+These interests are grounded in my professional experience in manufacturing and medical industries.
+</p>
+
+<p class="body-text">
+I have worked not only in mission-critical IT involving 3D image processing technologies, 
+but also in companies handling enterprise systems such as ECM and SCM. 
+Through these experiences, I have engaged in business solution development 
+and implementation support for industry-specific systems.
+</p>
+
+<p class="body-text">
+In particular, I have worked on data construction support and DX promotion, 
+including visualization of workflows and decision-making support using images and data.
+These experiences led to my interest in proactive forecasting and decision-making research.
+</p>
+
+
+
+<div class="section-label">Research</div>
+<h2>Research</h2>
+
+<p class="body-text">
+This research investigates modeling methods that estimate latent states 
+and system dynamics from observational data.
+</p>
+
+<p class="body-text">
+The goal is to support future generation and decision-making in complex systems 
+by integrating prediction, state estimation, and intervention evaluation.
+</p>
+
+
+
+<div class="section-label">Research Interests</div>
+<h2>Research Interests</h2>
+
+<div class="ri-wrap">
+
+<div class="ri-card">
+<div class="ri-num">01</div>
+<div class="ri-body">
+<div class="ri-label">Time Series</div>
+<div class="ri-name">Time Series Forecasting</div>
+</div>
+</div>
+
+<div class="ri-card">
+<div class="ri-num">02</div>
+<div class="ri-body">
+<div class="ri-label">Spatiotemporal</div>
+<div class="ri-name">Spatiotemporal Analysis</div>
+</div>
+</div>
+
+<div class="ri-card">
+<div class="ri-num">03</div>
+<div class="ri-body">
+<div class="ri-label">Representation</div>
+<div class="ri-name">Representation Learning</div>
+</div>
+</div>
+
+<div class="ri-card">
+<div class="ri-num">04</div>
+<div class="ri-body">
+<div class="ri-label">Dynamics</div>
+<div class="ri-name">Latent Dynamics / World Models</div>
+</div>
+</div>
+
+<div class="ri-card">
+<div class="ri-num">05</div>
+<div class="ri-body">
+<div class="ri-label">Decision</div>
+<div class="ri-name">Prescriptive Modeling</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="section-label">Collaboration</div>
+<h2>Collaboration</h2>
+
+<p class="body-text">
+I am open to collaboration in interdisciplinary research areas including 
+AI, time series analysis, representation learning, and real-world industrial applications.
+</p>
+
+
+
+<div class="section-label">Contact</div>
+<h2>Contact</h2>
+
+<p class="body-text">
+For research collaboration or inquiries, please feel free to contact me.
+</p>
+
+</section>
+
 <footer>
 <div class="footer-logo">Yuji <em>Akamatsu</em> <span style="font-family:'Noto Sans JP',serif;font-size:14px;font-weight:300;color:var(--ink-mute);margin-left:10px;">赤松 祐治</span></div>
 <div class="footer-copy">Sophia University · Ph.D. Student · Interdisciplinary Research Scientist · Proactive Intelligence</div>
