@@ -1,5 +1,7 @@
-４月下旬まで更新作業中<br>
-研究ページ：https://yuji-akamatsu.github.io/research/
+４月下旬まで更新作業中<br> 
+
+Research site：https://yuji-akamatsu.github.io/research/
+An English version is provided below.
 
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
@@ -129,13 +131,14 @@ Representation Learning / Prescriptive Modeling
 Email: akamatsu [at] eagle.sophia.ac.jp  
 ※ [at] を @ に置き換えてください。
 
+---
+
+## ENGLISH
 
 Updating until late April<br>
 Research page: https://yuji-akamatsu.github.io/research/<br><br>
 
 <span style="font-size:13px;">
-Sophia University — Ph.D. Program<br>
-Yuji Akamatsu — Interdisciplinary Research Initiative<br>  
 Yuji Akamatsu<br>  
 Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
 
