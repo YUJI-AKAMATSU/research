@@ -65,7 +65,7 @@ Representation Learning / Prescriptive Modeling
 
 - 時系列・時空間データ解析  
 - 時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）  
-- 表現学習（1D・2D・3D・Optical & Scene Flow）  
+- 表現学習（1D・2D・3D）  
 - 潜在ダイナミクスモデリング／世界モデル  
 - 統計的推論 / 処方的モデリング
 
