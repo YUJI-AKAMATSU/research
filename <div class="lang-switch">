@@ -95,7 +95,6 @@ body.intro-active{overflow:hidden;}
 #researcher-shell{display:none;opacity:0;transition:opacity 1.4s ease;}
 </style>
 
-
 <style>
 @media (max-width: 600px){
   #line1{
@@ -157,21 +156,17 @@ body.intro-active{overflow:hidden;}
 <nav id="rp-nav">
   <a class="rp-nav-logo" href="javascript:void(0)"></a>
 
-<!-- template内のnav（本体ページ側） -->
-<ul class="nav-links">
-  <li><a href="#about">About</a></li>
-  <li><a href="#research">Research</a></li>
-  <li><a href="#interests">Interests</a></li>
-  <li><a href="#current">Current</a></li>
-  <li><a href="#collaboration">Collaboration</a></li>
-  <li><a href="#Activities">Activities</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="en.html" target="_blank">EN</a></li>  <!-- ← 追加 -->
-</ul>
+  <ul class="rp-nav-links">
+    <li><a href="javascript:void(0)">About</a></li>
+    <li><a href="javascript:void(0)">Research</a></li>
+    <li><a href="javascript:void(0)">Interests</a></li>
+    <li><a href="javascript:void(0)">Current</a></li>
+    <li><a href="javascript:void(0)">Collaboration</a></li>
+    <li><a href="javascript:void(0)">Activities</a></li>
+  </ul>
 
   <a class="rp-nav-cta" href="javascript:void(0)">Contact</a>
 </nav>
-
 
 <div id="rp-main">
   <div class="rp-cs-inner">
@@ -185,9 +180,6 @@ body.intro-active{overflow:hidden;}
 </div><!-- end researcherPage -->
 
 </div>
-
-
-
 
 <script>
 (function(){
