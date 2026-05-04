@@ -746,3 +746,341 @@ margin-right:12px;
 </div>
 </section>
 
+<!-- ============================================================ -->
+<!-- このブロックを <section id="english"> ... </section> と差し替え -->
+<!-- ============================================================ -->
+
+<!-- EN専用スタイル（既存JPスタイルを上書きしないようスコープ） -->
+<style>
+#english {
+  /* リセット：JP側のフォント・行間が漏れてこないように */
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #4a4a46;
+}
+
+/* ── 変数（#english スコープ内のみ有効） ── */
+#english {
+  --en-ink:        #1a1a18;
+  --en-ink-sec:    #4a4a46;
+  --en-ink-mute:   #888780;
+  --en-ink-faint:  #b4b2a9;
+  --en-bg-sec:     #f3f2ee;
+  --en-border:     rgba(0,0,0,0.10);
+  --en-border-sec: rgba(0,0,0,0.18);
+  --en-radius-md:  8px;
+  --en-radius-lg:  12px;
+  --en-max-w:      700px;
+}
+
+/* ── ページ幅 ── */
+#english .en-page {
+  max-width: var(--en-max-w);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* ── ヘッダ ── */
+#english .en-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 0.5px solid var(--en-border-sec);
+}
+#english .en-header-name {
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--en-ink);
+  letter-spacing: 0.01em;
+}
+#english .en-header-name em { font-style: italic; }
+#english .en-header-kanji {
+  font-size: 13px;
+  color: var(--en-ink-mute);
+  margin-left: 10px;
+}
+#english .en-header-tag {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--en-ink-mute);
+}
+
+/* ── セクション ── */
+#english .en-section { margin-bottom: 3.25rem; }
+
+#english .en-section-label {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--en-ink-faint);
+  margin-bottom: 0.35rem;
+}
+
+#english .en-section h2 {
+  font-size: 13.5px;
+  font-weight: normal;
+  color: var(--en-ink-sec);
+  border-bottom: 0.5px solid var(--en-border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.02em;
+  font-family: 'Georgia', serif;
+}
+
+/* ── 本文 ── */
+#english .en-body {
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: var(--en-ink-sec);
+  margin-bottom: 1.3rem;
+}
+#english .en-body:last-child { margin-bottom: 0; }
+#english .en-body strong { color: var(--en-ink); font-weight: bold; }
+#english .en-body em {
+  font-style: italic;
+  color: var(--en-ink-mute);
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+
+/* ── リスト ── */
+#english ul.en-body,
+#english .en-body ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.3rem;
+}
+#english ul.en-body li,
+#english .en-body ul li {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--en-ink-sec);
+  margin-bottom: 0.25rem;
+}
+
+/* ── Research Interests カード ── */
+#english .en-ri-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 9px;
+  margin-top: 0.6rem;
+}
+#english .en-ri-card {
+  background: #fff;
+  border: 0.5px solid var(--en-border);
+  border-radius: var(--en-radius-lg);
+  padding: 0.85rem 1rem;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+#english .en-ri-num {
+  font-size: 10.5px;
+  color: var(--en-ink-faint);
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+  min-width: 18px;
+}
+#english .en-ri-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--en-ink-mute);
+  margin-bottom: 3px;
+}
+#english .en-ri-name {
+  font-size: 13px;
+  color: var(--en-ink);
+  line-height: 1.45;
+}
+
+/* ── ハイライトボックス ── */
+#english .en-highlight {
+  background: var(--en-bg-sec);
+  border-radius: var(--en-radius-md);
+  padding: 0.9rem 1.15rem;
+  margin-bottom: 1.3rem;
+}
+#english .en-highlight .en-body { margin-bottom: 0; }
+
+/* ── フッター ── */
+#english .en-footer {
+  border-top: 0.5px solid var(--en-border-sec);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+#english .en-footer-logo { font-size: 14px; color: var(--en-ink); }
+#english .en-footer-logo em { font-style: italic; }
+#english .en-footer-copy { font-size: 11.5px; color: var(--en-ink-mute); letter-spacing: 0.01em; }
+
+/* ── モバイル ── */
+@media (max-width: 600px) {
+  #english .en-header { flex-direction: column; gap: 0.25rem; }
+  #english .en-ri-wrap { grid-template-columns: 1fr; }
+}
+</style>
+
+<section id="english">
+<div class="en-page">
+
+  <!-- Header -->
+  <header class="en-header">
+    <div>
+      <span class="en-header-name">Yuji <em>Akamatsu</em></span>
+      <span class="en-header-kanji">赤松 祐治</span>
+    </div>
+    <div class="en-header-tag">Sophia University · Ph.D. Student</div>
+  </header>
+
+  <!-- About -->
+  <div class="en-section">
+    <div class="en-section-label">About</div>
+    <h2>About</h2>
+    <p class="en-body">This research is centered on the concept of <strong>Proactive Intelligence</strong>, with the goal of developing methods that connect future generation, including forecasting, to decision-making.</p>
+    <p class="en-body">It addresses diverse forms of observational data, including 1D time-series data, 2D visual representations, and 3D spatial data. By integrating representation learning and latent state models, this research aims to treat state, signs, forecasting, and intervention evaluation in a unified manner, in pursuit of more reliable future generation.</p>
+    <p class="en-body">Building on fundamental studies in temporal structure analysis and latent dynamics, this research seeks to establish an analytical framework that jointly handles state, signs, forecasting, and intervention evaluation. Through this framework, the goal is to enable more reliable future generation and more effective decision support.</p>
+    <p class="en-body">I am particularly interested in applications that connect generated futures to operational improvement and enhanced reliability in fields such as manufacturing, supply chains, social infrastructure, and healthcare.</p>
+    <p class="en-body">These research interests are grounded in my professional experience in industrial domains, particularly manufacturing and healthcare. I have worked not only on mission-critical IT systems involving technologies such as 3D image processing, but also at companies dealing with enterprise systems such as ECM and SCM. In these roles, I have been engaged in the development and implementation support of industry-oriented solutions.</p>
+    <p class="en-body">In particular, through data infrastructure support and digital transformation initiatives, I have worked on the visualization of operations and decision support using images and data, contributing to improvements in real-world workflows.</p>
+    <p class="en-body">In practice, there are many situations where conventional data analysis alone is insufficient, and where judgment and decision-making must take future conditions into account. Through these experiences, I came to strongly recognize the importance of not only reactive use of data, but also proactive use of information that incorporates forecasting and future estimation.</p>
+    <p class="en-body">Motivated by this perspective, I have developed this line of work into research that integrates images, data, and AI to address practical challenges in forecasting and decision-making by estimating the future from data and linking it to action. Through both professional practice and academic research, I aim to contribute to the realization of industrial AI and to practical operational improvement.</p>
+  </div>
+
+  <!-- Research -->
+  <div class="en-section">
+    <div class="en-section-label">Research</div>
+    <h2>Research</h2>
+    <div class="en-highlight">
+      <p class="en-body"><strong>Proactive Intelligence: Latent State Modeling for Future Design</strong></p>
+    </div>
+    <p class="en-body">To support future generation and decision-making in complex systems, I conduct research on methods such as observational forecasting, latent dynamics estimation, and prescriptive analytics.</p>
+  </div>
+
+  <!-- Research Interests -->
+  <div class="en-section">
+    <div class="en-section-label">Research Interests</div>
+    <h2>Research Interests</h2>
+    <p class="en-body" style="font-size:13px;color:#888780;margin-bottom:1rem;">Guiding principles: "Creating new value through the fusion of broad academic domains" and "Fostering intellectual capability that combines interdisciplinary breadth with deep expertise"</p>
+    <div class="en-ri-wrap">
+      <div class="en-ri-card">
+        <div class="en-ri-num">01</div>
+        <div>
+          <div class="en-ri-label">Time Series</div>
+          <div class="en-ri-name">Time-Series and Spatiotemporal Data Analysis</div>
+        </div>
+      </div>
+      <div class="en-ri-card">
+        <div class="en-ri-num">02</div>
+        <div>
+          <div class="en-ri-label">Temporal Structure</div>
+          <div class="en-ri-name">Temporal Structure Analysis (Geometric / Topological / Dynamical / Causal)</div>
+        </div>
+      </div>
+      <div class="en-ri-card">
+        <div class="en-ri-num">03</div>
+        <div>
+          <div class="en-ri-label">Representation</div>
+          <div class="en-ri-name">Representation Learning (1D / 2D / 3D / Optical &amp; Scene Flow)</div>
+        </div>
+      </div>
+      <div class="en-ri-card">
+        <div class="en-ri-num">04</div>
+        <div>
+          <div class="en-ri-label">Dynamics</div>
+          <div class="en-ri-name">Latent Dynamics Modeling / World Models</div>
+        </div>
+      </div>
+      <div class="en-ri-card">
+        <div class="en-ri-num">05</div>
+        <div>
+          <div class="en-ri-label">Inference &amp; Decision</div>
+          <div class="en-ri-name">Statistical Inference / Prescriptive Modeling</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Work -->
+  <div class="en-section">
+    <div class="en-section-label">Current Work</div>
+    <h2>Current Work</h2>
+    <p class="en-body">At my current laboratory, I am engaged in research centered on temporal structure analysis (geometric analysis / topological analysis) and visual representation learning. Further details will be disclosed progressively after publication of related papers. (As of the end of 2025)</p>
+    <p class="en-body">I am also advancing this research through collaboration with researchers in statistics.</p>
+  </div>
+
+  <!-- Collaboration -->
+  <div class="en-section">
+    <div class="en-section-label">Collaboration</div>
+    <h2>Collaboration</h2>
+    <p class="en-body">This research invites collaborative projects with industry partners in which real-world challenges are examined using actual data, with the ultimate aim of translating research outcomes into academic publications, public dissemination, and practical value. (From May 2026 onward)</p>
+    <p class="en-body">Collaborative research using industrial data is especially welcome in the areas of manufacturing, supply chains, and social infrastructure. I am particularly interested in diverse observational data that contain temporal variation.</p>
+    <p class="en-body">Examples of target data include:</p>
+    <ul class="en-body">
+      <li>Demand, planning, and inventory data</li>
+      <li>Sensor data (equipment and machinery)</li>
+      <li>Process data (factory operations)</li>
+      <li>Mobility data (e.g. autonomous driving)</li>
+      <li>Diverse image data (people, crowd flow, medical, satellite, and general images)</li>
+      <li>Point cloud data</li>
+    </ul>
+  </div>
+
+  <!-- Value -->
+  <div class="en-section">
+    <div class="en-section-label">Value</div>
+    <h2>Value for Industry Partners</h2>
+    <ul class="en-body">
+      <li>Academic presentations and publications based on research outcomes (to be disclosed only with mutual agreement)</li>
+      <li>Communicating the partner's initiatives to academic societies and technical communities as research case studies</li>
+      <li>Proof-of-concept studies and evaluation of practical applicability</li>
+    </ul>
+    <p class="en-body"><em>Please note that, because the work may begin from redefining the research question itself and building an appropriate methodology, some projects may not map directly onto a company's existing problem setting.</em></p>
+  </div>
+
+  <!-- Activities -->
+  <div class="en-section">
+    <div class="en-section-label">Activities</div>
+    <h2>Research Activities</h2>
+    <p class="en-body">Through the dissemination of scientific and technical knowledge and continued participation in professional education, I have continuously accumulated expertise in image analysis, numerical analysis, statistical methods, and emerging technologies. In addition, through learning opportunities at other graduate-level institutions, I continue to strengthen my research foundation from both theoretical and implementation perspectives.</p>
+    <ul class="en-body">
+      <li>J-Global: 6 publications on image analysis and numerical analysis</li>
+      <li>CiNii Research: 2 publications on image analysis and numerical analysis</li>
+      <li>University of Tokyo, Graduate School of Engineering — Certificate of Completion in Physical AI and Intelligent Robotics</li>
+      <li>University of Tokyo, Graduate School of Engineering — Certificate of Completion in Deep Generative Models</li>
+      <li>University of Tokyo, Graduate School of Engineering — Certificate of Completion in Deep Learning</li>
+    </ul>
+    <p class="en-body">
+      <em>I am seeking industry partners who can support this research from a long-term perspective.</em><br><br>
+      <em>Because this research places emphasis on "time t+1," it is oriented toward collaboration with organizations that value future-oriented decision-making while making effective use of the past without being constrained by it.</em><br><br>
+      <em>Please note that some details may change depending on institutional circumstances and related conditions.</em><br><br>
+      <em>From the end of March 2026, I will begin full-scale discussions and outreach regarding collaborative research and related requests.</em>
+    </p>
+  </div>
+
+  <!-- Contact -->
+  <div class="en-section">
+    <div class="en-section-label">Contact</div>
+    <h2>Contact</h2>
+    <p class="en-body">For research collaboration or inquiries, please feel free to contact me.</p>
+    <p class="en-body">Email: akamatsu [at] eagle.sophia.ac.jp<br>Please replace [at] with @.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="en-footer">
+    <div class="en-footer-logo">Yuji <em>Akamatsu</em> <span style="font-size:13px;color:#888780;margin-left:8px;">赤松 祐治</span></div>
+    <div class="en-footer-copy">Sophia University · Ph.D. Student · Interdisciplinary Research Scientist · Proactive Intelligence</div>
+  </footer>
+
+</div>
+</section>
+
