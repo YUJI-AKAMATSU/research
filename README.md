@@ -44,8 +44,12 @@ Representation Learning / Pluralistic Prescriptive Modeling
 現場ではデータ分析では対応できない、将来の状況を見据えた判断や意思決定が求められる場面が多く存在します。<br>
 これらの経験から、データのリアクティブ（事後対応）な活用にとどまらず、予測や将来推定を含めた<br>「プロアクティブ（事前対応）な情報活用」の重要性を強く認識しました。
 
-この問題意識を背景に、現場で直面する予測・判断の課題を解決するため、画像・データ・AIを統合し、<br>
-データから未来を推定し意思決定へ結び付ける手法の研究へと発展させています。<br>
+この問題意識を背景に、現場で直面する予測・判断の課題を解決するため、
+画像・データ・AIを統合し、データから未来を推定し意思決定へ結び付ける手法の研究へと発展させています。
+
+また、多様な価値観や意思を協調的な意思決定へ接続することにも関心があり、
+Plurality の理念を背景として、複数主体環境における協調形成や意思決定構造のモデル化にも関心があります。
+
 実務経験と研究活動の双方を通じて、産業応用AIの実現と業務改善への貢献を目指しています。
 
 ---
@@ -168,12 +172,13 @@ I have worked on 3D image processing related IT systems as well as ECM and SCM e
 Through solution development and deployment, I contributed to data infrastructure development and digital transformation initiatives.<br>
 These efforts focused on data-driven visualization and decision support for operational improvements.
 
-In real-world environments, decision-making often requires anticipating future conditions beyond traditional data analysis.<br>
-From these experiences, I recognized the importance of proactive information utilization, including forecasting and future estimation.
+In real-world environments, decision-making often requires anticipating future conditions beyond traditional reactive data analysis.
+Through these experiences, I recognized the importance of proactive information utilization, including forecasting and future-state estimation.
 
-Based on this perspective, this research integrates images, data, and AI to estimate future states and support decision-making.<br>
+Based on this perspective, this research integrates images, data, and AI to estimate future states and connect them to decision-making processes.
+In addition, inspired by the concept of Plurality, I am also interested in collaborative decision-making frameworks that coordinate diverse values and intentions across multiple agents.
+
 Through both practical experience and research activities, this work aims to contribute to industrial AI applications and operational improvements.
-
 ---
 
 ### Research
@@ -184,7 +189,7 @@ This research focuses on future generation and decision support in complex syste
 
 - Observational forecasting  
 - Latent dynamics estimation  
-- Prescriptive analytics  
+- Pluralistic Prescriptive Modeling
 
 ---
 
@@ -194,7 +199,7 @@ This research focuses on future generation and decision support in complex syste
 - Temporal structure analysis (geometric / topological / dynamical / causal analysis)  
 - Representation learning (1D / 2D / 3D / Optical & Scene Flow)  
 - Latent dynamics modeling / world models  
-- Statistical inference / prescriptive modeling  
+- Statistical inference / Pluralistic Prescriptive Modeling
 
 ---
 
