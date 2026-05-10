@@ -12,7 +12,7 @@ Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
 Interdisciplinary Research<br>
 Spatiotemporal Analysis / Temporal Structure Analysis<br>
 Latent Dynamics / World Models<br>
-Representation Learning / Prescriptive Modeling
+Representation Learning / Pluralistic Prescriptive Modeling
 
 </span>
 
@@ -67,7 +67,7 @@ Representation Learning / Prescriptive Modeling
 - 時間構造の解析（幾何解析 / 位相解析 / 動力学解析 / 因果解析）  
 - 表現学習（1D・2D・3D）  
 - 潜在ダイナミクスモデリング／世界モデル  
-- 統計的推論 / 処方的モデリング
+- 統計的推論 / 多視点処方モデリング
 
 ---
 
