@@ -2,7 +2,7 @@ updating<br>
 
 An English version is provided below.
 Research site：https://yuji-akamatsu.github.io/research/<br>
-https://note.com/proactive_ai/n/n481da2119fd3
+Note: https://note.com/proactive_ai/n/n481da2119fd3
 
 
 <span style="font-size:13px;">
