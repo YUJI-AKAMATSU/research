@@ -1,6 +1,6 @@
 updating<br> 
 
-An English version is provided below.
+An English version is provided below.<br>
 Research site：https://yuji-akamatsu.github.io/research/<br>
 Note: https://note.com/proactive_ai/n/n481da2119fd3
 
