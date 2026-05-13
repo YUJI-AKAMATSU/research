@@ -1,7 +1,9 @@
-５月下旬まで更新作業中<br> 
+updating<br> 
 
-Research site：https://yuji-akamatsu.github.io/research/<br>
 An English version is provided below.
+Research site：https://yuji-akamatsu.github.io/research/<br>
+https://note.com/proactive_ai/n/n481da2119fd3
+
 
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
