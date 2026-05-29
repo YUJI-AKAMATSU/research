@@ -249,6 +249,10 @@ Example data:
 
 ### Research Activities
 
+Yuji Akamatsu
+Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of Vision Transformer Attention Structures
+Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.
+
 - J-Global publications (Image analysis / numerical analysis)  
 - CiNii publications  
 - University of Tokyo Graduate School — Physical AI  
