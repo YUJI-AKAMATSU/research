@@ -250,7 +250,7 @@ Example data:
 ### Research Activities
 
 Yuji Akamatsu
-Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of Vision Transformer Attention Structures
+Geometric Re-Embedding of Temporal Structures for Temporal Phase Alignment Analysis in Vision Transformer Attention
 Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.
 
 - J-Global publications (Image analysis / numerical analysis)  
