@@ -124,12 +124,6 @@ Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase
 - 東京大学大学院工学系研究科 深層生成モデル講座 修了認定
 - 東京大学大学院工学系研究科 深層学習（Deep Learning）講座 修了認定
 
-
-※ 社会人博士支援など、長期的な視点で継続的に研究をご支援いただける企業様を募集しております。<br>
-※ 本研究は「時刻 t+1」を重視する為、過去を活かしながら過去にとらわれず未来志向の意思決定を重視する企業様との共創を志向します。<br>
-
-
-
 ---
 
 ## Contact
