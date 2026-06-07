@@ -249,13 +249,6 @@ Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation,
 - University of Tokyo Graduate School — Generative Models  
 - University of Tokyo Graduate School — Deep Learning  
 
----
-
-Long-term collaborative partners are welcome.<br>
-This research emphasizes future-oriented decision-making focusing on time t+1.<br>
-Collaborations with organizations interested in proactive decision-making are encouraged.
-
----
 
 ## Contact
 
