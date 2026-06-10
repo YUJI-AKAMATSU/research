@@ -141,7 +141,7 @@ Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
 Interdisciplinary Research<br>
 Spatiotemporal Analysis / Temporal Structure Analysis<br>
 Latent Dynamics / World Models<br>
-Representation Learning / Prescriptive Modeling
+Representation Learning / Pluralistic Prescriptive Modeling
 </span>
 
 ---
@@ -152,106 +152,113 @@ Representation Learning / Prescriptive Modeling
 
 ### About
 
-This research is centered on Proactive Intelligence, aiming to develop methods that connect future generation such as forecasting to decision-making.<br>
-The research targets diverse observational data including 1D time-series data, 2D visual representation data, and 3D spatial data.<br>
-By integrating representation learning and latent state models, this research jointly handles state estimation, signal detection, forecasting, and intervention evaluation to generate more reliable future scenarios.<br>
+My research is centered on Proactive Intelligence, with the aim of developing methods that connect forecasting and future-state estimation to decision-making.<br>
+The research targets diverse forms of observational data, including 1D time-series data, 2D visual representations, and 3D spatial data.<br>
+By integrating representation learning and latent state modeling, I aim to build an analytical framework that jointly addresses state estimation, early signal detection, forecasting, and intervention-effect evaluation.<br>
 
-This research is based on fundamental studies of temporal structure analysis and latent dynamics, aiming to build an analytical framework that integrates state estimation, signal detection, forecasting, and intervention evaluation.<br>
-The goal is to generate more reliable future scenarios and support decision-making.
+I am particularly interested in applications in manufacturing, supply chains, social infrastructure, and healthcare, where future-oriented analysis can contribute to operational improvement, reliability enhancement, risk reduction, and business optimization.<br>
+These research interests are grounded in my professional experience in industrial domains, particularly in manufacturing and healthcare.<br>
 
-Particular interest lies in applications in manufacturing, supply chain, social infrastructure, and healthcare.<br>
-These research interests are based on professional experience in industrial domains, particularly manufacturing and healthcare.
+I have worked on IT systems related to 3D image processing, as well as enterprise systems such as ECM and SCM.<br>
+Through solution development, implementation support, data infrastructure development, and DX initiatives, I have contributed to operational visualization and data-driven decision support in real-world settings.<br>
 
-I have worked on 3D image processing related IT systems as well as ECM and SCM enterprise systems.<br>
-Through solution development and deployment, I contributed to data infrastructure development and digital transformation initiatives.<br>
-These efforts focused on data-driven visualization and decision support for operational improvements.
+In practical environments, there are many situations where decision-making requires anticipating future conditions beyond what can be addressed by conventional reactive data analysis.<br>
+Through these experiences, I recognized the importance of proactive information utilization: not only analyzing past and present data, but also estimating future states and connecting those estimates to decisions and actions.<br>
 
-In real-world environments, decision-making often requires anticipating future conditions beyond traditional reactive data analysis.
-Through these experiences, I recognized the importance of proactive information utilization, including forecasting and future-state estimation.
+Based on this perspective, my research integrates images, data, and AI to estimate future states from observed data and link them to decision-making processes.<br>
+In addition, inspired by the concept of Plurality, I am also interested in modeling collaborative decision-making structures in multi-agent environments, where diverse values, intentions, and perspectives need to be coordinated.<br>
 
-Based on this perspective, this research integrates images, data, and AI to estimate future states and connect them to decision-making processes.
-In addition, inspired by the concept of Plurality, I am also interested in collaborative decision-making frameworks that coordinate diverse values and intentions across multiple agents.
+Through both practical experience and academic research, I aim to contribute to the realization of industrial AI applications and operational improvement.<br>
 
-Through both practical experience and research activities, this work aims to contribute to industrial AI applications and operational improvements.
 ---
 
 ### Research
 
 #### Proactive Intelligence: Latent State Modeling for Future Design
 
-This research focuses on future generation and decision support in complex systems, including:
+This research focuses on future-state estimation and decision support in complex systems, including:
 
 - Observational forecasting  
 - Latent dynamics estimation  
-- Pluralistic Prescriptive Modeling
+- Prescriptive analytics  
+- Pluralistic prescriptive modeling  
 
 ---
 
 ### Research Interests
 
 - Time-series and spatiotemporal data analysis  
-- Temporal structure analysis (geometric / topological / dynamical / causal analysis)  
-- Representation learning (1D / 2D / 3D / Optical & Scene Flow)  
+- Temporal structure analysis  
+  - Geometric analysis  
+  - Topological analysis  
+  - Dynamical analysis  
+  - Causal analysis  
+- Representation learning for 1D, 2D, and 3D data  
+- Optical flow / scene flow representation  
 - Latent dynamics modeling / world models  
-- Statistical inference / Pluralistic Prescriptive Modeling
+- Statistical inference  
+- Pluralistic prescriptive modeling  
 
 ---
 
 ### Current Work
 
-Currently conducting research on temporal structure analysis and visual representation learning.<br>
-Further details will be released after paper publication.
+I am currently conducting research on temporal structure analysis, including geometric and topological approaches, and visual representation learning.<br>
+Further details will be released after the publication of related papers.<br>
 
-Collaborating with researchers in statistics to expand the research.
+I am also expanding this research through collaboration with researchers in statistics.<br>
 
 ---
 
 ### Collaboration
 
-This research welcomes collaborative studies with industry partners.<br>
-The goal is academic publication, practical implementation, and real-world impact.
+This research welcomes collaborative studies with industry partners based on real-world data.<br>
+The goal is to develop research outcomes that can contribute to academic publications, technical dissemination, and practical value creation.<br>
 
-Target domains:
+Collaborations are particularly welcome in the following domains:
 
 - Manufacturing  
-- Supply chain  
+- Supply chains  
 - Social infrastructure  
+- Healthcare  
+- Mobility and transportation  
 
 Example data:
 
-- Demand / planning / inventory data  
-- Sensor data  
-- Process data  
-- Mobility data  
-- Image data  
+- Demand, planning, and inventory data  
+- Sensor data from equipment and facilities  
+- Process data from factory operations  
+- Mobility data, including autonomous driving-related data  
+- Image data, including human activity, people flow, medical, satellite, and general image data  
 - Point cloud data  
 
 ---
 
 ### Value for Industry Partners
 
-- Academic publications  
-- Technical dissemination  
+- Academic publication of research outcomes, subject to mutual agreement  
+- Dissemination of company initiatives as research cases in academic and technical communities  
 - Proof-of-concept evaluation  
-- Practical implementation feasibility  
+- Assessment of feasibility for practical implementation  
+
+Please note that, because the research may begin with problem redefinition and methodological development, some projects may not be directly tied to an immediate business issue.<br>
 
 ---
 
 ### Research Activities
 
-Yuji Akamatsu
-Geometric Re-Embedding of Temporal Structures for Temporal Phase Alignment Analysis in Vision Transformer Attention
-Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.
+Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase Alignment Analysis in Vision Transformer Attention.” Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.<br>
 
-- J-Global publications (Image analysis / numerical analysis)  
-- CiNii publications  
-- University of Tokyo Graduate School — Physical AI  
-- University of Tokyo Graduate School — Generative Models  
-- University of Tokyo Graduate School — Deep Learning  
+I continuously develop my knowledge of image analysis, numerical analysis, statistical methods, and emerging technologies through science and technology communication, specialized education, and graduate-level study.<br>
+I am also strengthening my research foundation from both theoretical and implementation perspectives.<br>
 
+- J-GLOBAL: 6 articles related to image analysis and numerical analysis  
+- CiNii Research: 2 articles related to image analysis and numerical analysis  
+- The University of Tokyo, Graduate School of Engineering — Physical AI and Intelligent Robotics Program, Certificate of Completion  
+- The University of Tokyo, Graduate School of Engineering — Deep Generative Models Program, Certificate of Completion  
+- The University of Tokyo, Graduate School of Engineering — Deep Learning Program, Certificate of Completion  
 
 ## Contact
 
 Email: akamatsu [at] eagle.sophia.ac.jp  
-Replace [at] with @
-
+Please replace [at] with @.
