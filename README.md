@@ -253,6 +253,10 @@ Please note that, because the research may begin with problem redefinition and m
 
 Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase Alignment Analysis in Vision Transformer Attention.” Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.<br>
 
+Academic Activities
+Engaged in peer review activities for an international journal in the field of AI and data science.
+Evaluated research papers related to time-series forecasting, demand forecasting, machine learning, and reinforcement learning, focusing on methodological validity, experimental design, evaluation metrics, clarity of presentation, and industrial applicability, and provided constructive feedback for improving manuscript quality.
+
 I continuously develop my knowledge of image analysis, numerical analysis, statistical methods, and emerging technologies through science and technology communication, specialized education, and graduate-level study.<br>
 I am also strengthening my research foundation from both theoretical and implementation perspectives.<br>
 
