@@ -252,6 +252,7 @@ Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase
 I continuously develop my knowledge of image analysis, numerical analysis, statistical methods, and emerging technologies through science and technology communication, specialized education, and graduate-level study.<br>
 I am also strengthening my research foundation from both theoretical and implementation perspectives.<br>
 
+- Google Scholar: [Yuji Akamatsu](https://scholar.google.com/citations?hl=ja&user=PO-5DD4AAAAJ&view_op=list_works&gmla=AEk_c1tkVtTnCRgllI2np-wiItWY1YCkD0xzEBY3Di5BF29DROo_fSLB3VUJA1tEPlDfOAy-gkI86X-ObVR-mNBbQ1eXmW7QVNvvs-GtLyBYhzcQQInA78nl0BjaER6s2G1uwOmXAvmVUZ11TSP40SxwpyS_IE_c))
 - J-GLOBAL: 6 articles related to image analysis and numerical analysis  
 - CiNii Research: 2 articles related to image analysis and numerical analysis  
 - The University of Tokyo, Graduate School of Engineering — Physical AI and Intelligent Robotics Program, Certificate of Completion  
