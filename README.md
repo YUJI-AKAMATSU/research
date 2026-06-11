@@ -26,7 +26,7 @@ Representation Learning / Pluralistic Prescriptive Modeling
 
 ### About はじめに
 
-本研究は Proactive Intelligence をテーマとし、予測や将来推定を意思決定に接続する方法の構築を目的としています。<br>
+本研究は Proactive Intelligence をテーマとし、予測や将来推定を意思決定に接続する方法の構築を目的としています。
 対象は 1D時系列データ、2D視覚表現データ、3D空間データ など多様な観測情報であり、<br>
 表現学習および潜在状態モデルを統合することで、状態の把握、兆候の検出、将来予測、介入効果の評価を一体的に扱う<br>
 分析枠組みの構築を目指しています。<br>
