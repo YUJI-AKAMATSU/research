@@ -89,10 +89,7 @@ Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase
 Q1国際論文誌における査読活動に関与しています。
 時系列予測、需要予測、機械学習、強化学習、SCMに関する研究論文について、手法の妥当性、実験設計、評価指標、記述の明確性、産業応用可能性の観点から確認し、論文品質向上に向けた改善提案を行っています。
 
-科学技術情報の発信および専門教育の履修を通じて、 画像・数値解析・統計手法および新テクノロジーなどの知見を<br>継続的に蓄積しています。 
 また、他の大学院を通じて、理論・実装の両面から研究基盤の強化を進めています。
-- J-Global 画像解析・数値解析 6件執筆
-- CiNii Research 画像解析・数値解析 2件執筆
 - 東京大学大学院工学系研究科 Physical AI・知能ロボティクス講座 修了認定
 - 東京大学大学院工学系研究科 深層生成モデル講座 修了認定
 - 東京大学大学院工学系研究科 深層学習（Deep Learning）講座 修了認定
@@ -252,12 +249,7 @@ Academic Activities<br>
 Engaged in peer review activities for a Q1 international journal in the field of AI and data science.
 Evaluated research papers related to time-series forecasting, demand forecasting, machine learning, and reinforcement learning, focusing on methodological validity, experimental design, evaluation metrics, clarity of presentation, and industrial applicability, and provided constructive feedback for improving manuscript quality.
 
-I continuously develop my knowledge of image analysis, numerical analysis, statistical methods, and emerging technologies through science and technology communication, specialized education, and graduate-level study.<br>
 I am also strengthening my research foundation from both theoretical and implementation perspectives.<br>
-
-- Google Scholar: [Yuji Akamatsu](https://scholar.google.com/citations?hl=ja&user=PO-5DD4AAAAJ&view_op=list_works&gmla=AEk_c1tkVtTnCRgllI2np-wiItWY1YCkD0xzEBY3Di5BF29DROo_fSLB3VUJA1tEPlDfOAy-gkI86X-ObVR-mNBbQ1eXmW7QVNvvs-GtLyBYhzcQQInA78nl0BjaER6s2G1uwOmXAvmVUZ11TSP40SxwpyS_IE_c))
-- J-GLOBAL: 6 articles related to image analysis and numerical analysis  
-- CiNii Research: 2 articles related to image analysis and numerical analysis  
 - The University of Tokyo, Graduate School of Engineering — Physical AI and Intelligent Robotics Program, Certificate of Completion  
 - The University of Tokyo, Graduate School of Engineering — Deep Generative Models Program, Certificate of Completion  
 - The University of Tokyo, Graduate School of Engineering — Deep Learning Program, Certificate of Completion  
