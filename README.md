@@ -86,8 +86,8 @@ Plurality の理念を背景として、複数主体環境における協調形�
 Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase Alignment Analysis in Vision Transformer Attention,” Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.
 
 学術活動<br>
-Q1国際論文誌における査読活動に関与しています。
-時系列予測、需要予測、機械学習、強化学習、SCMに関する研究論文について、手法の妥当性、実験設計、評価指標、記述の明確性、産業応用可能性の観点から確認し、論文品質向上に向けた改善提案を行っています。
+Q1国際論文誌、機械学習TOPの国際会議WSにおける査読活動に関与しています。
+時系列予測、需要予測、機械学習、強化学習、深層学習、SCMに関する研究論文について、手法の妥当性、実験設計、評価指標、記述の明確性、産業応用可能性の観点から確認し、論文品質向上に向けた改善提案を行っています。
 
 また、他の大学院を通じて、理論・実装の両面から研究基盤の強化を進めています。
 - 東京大学大学院工学系研究科 Physical AI・知能ロボティクス講座 修了認定
