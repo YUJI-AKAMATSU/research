@@ -88,7 +88,7 @@ Plurality の理念を背景として、複数主体環境における協調形�
 * NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)<br>
     When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting<br>
     Sydney, Australia<br>
-* MIRU 2026 Accept
+* MIRU 2026 Accept<br>
     時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析<br>
     Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention<br>
     Nagasaki, Japan
