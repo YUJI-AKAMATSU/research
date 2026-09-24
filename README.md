@@ -11,7 +11,7 @@ Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
 Time Series Forecasting<br>
 Spatiotemporal & Temporal Structure Analysis<br>
 Representation & Latent Dynamics<br>
-Forecasting & Decision Intelligence </span>
+Decision Intelligence </span>
 
 ---
 
