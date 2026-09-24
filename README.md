@@ -36,11 +36,10 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 
 ### Research Interests
 
-* **Spatiotemporal Intelligence / 時空間知能**
-* **Representation & Latent Dynamics / 表現・潜在ダイナミクス**
-* **Forecasting & Decision Intelligence / 予測・意思決定知能**
-
----
+* **Time Series Forecasting**
+* **Spatiotemporal & Temporal Structure Analysis**
+* **Representation & Latent Dynamics**
+* **Decision Intelligence**
 
 ### Research Activities
 
