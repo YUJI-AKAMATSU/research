@@ -86,7 +86,6 @@ Email: akamatsu [at] eagle.sophia.ac.jp
 ---
 
 ## ENGLISH
-## ENGLISH
 
 <span style="font-size:13px;">
 Yuji Akamatsu<br>
