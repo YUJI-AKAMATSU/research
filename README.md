@@ -47,7 +47,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
   Sydney, Australia
 
 * **MIRU 2026 — Paper Accepted**　<br>
-  *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*　<br>
+  *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*, Nagasaki, Japan
 
 * **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**　
