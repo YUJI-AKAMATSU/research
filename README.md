@@ -83,7 +83,16 @@ Plurality の理念を背景として、複数主体環境における協調形�
 ---
 ### Research Activities 研究・活動特記事項
 
-Akamatsu, Y. “Geometric Re-Embedding of Temporal Structures for Temporal Phase Alignment Analysis in Vision Transformer Attention,” Meeting on Image Recognition and Understanding (MIRU 2026), Poster Presentation, 2026.
+2026
+
+* NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)
+    When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting
+    Sydney, Australia
+* MIRU 2026 Accept
+    時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析
+    Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention
+    Nagasaki, Japan
+* Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)
 
 学術活動<br>
 Q1国際論文誌、機械学習TOPの国際会議WSにおける査読活動に関与しています。
