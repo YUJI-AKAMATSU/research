@@ -44,11 +44,11 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 
 ### Research Activities
 
-* **NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)**　<br>
+* **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**　<br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*　<br>
   Sydney, Australia
 
-* **MIRU 2026 Accept**　<br>
+* **MIRU 2026 — Paper Accepted**　<br>
   *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*　<br>
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*　<br>
   Nagasaki, Japan
