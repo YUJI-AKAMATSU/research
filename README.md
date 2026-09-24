@@ -10,7 +10,8 @@ Note: https://note.com/proactive_ai
 Yuji Akamatsu<br>
 Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
 
-Spatiotemporal Intelligence<br>
+Time Series Forecasting<br>
+Spatiotemporal & Temporal Structure Analysis<br>
 Representation & Latent Dynamics<br>
 Forecasting & Decision Intelligence </span>
 
