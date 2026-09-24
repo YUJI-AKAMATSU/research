@@ -120,9 +120,10 @@ My research is primarily motivated by industrial applications in manufacturing, 
 
 ### Research Interests
 
-* **Spatiotemporal Intelligence**
+* **Time Series Forecasting**
+* **Spatiotemporal & Temporal Structure Analysis**
 * **Representation & Latent Dynamics**
-* **Forecasting & Decision Intelligence**
+* **Decision Intelligence**
 
 ---
 
