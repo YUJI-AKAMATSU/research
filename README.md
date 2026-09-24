@@ -88,6 +88,7 @@ Email: akamatsu [at] eagle.sophia.ac.jp
 ---
 
 ## ENGLISH
+## ENGLISH
 
 <span style="font-size:13px;">
 Yuji Akamatsu<br>
@@ -107,13 +108,12 @@ Forecasting & Decision Intelligence </span>
 
 ### About
 
-My research focuses on Proactive Intelligence: developing methods that estimate future states from observational data and connect forecasting to decision-making.
+My research focuses on Proactive Intelligence, with the aim of estimating future states from observational data and connecting forecasting to decision-making.<br>
+I work with time-series and spatiotemporal data, visual representations, and 3D spatial data, combining temporal structure analysis, representation learning, and latent state modeling.<br>
+The goal is to develop analytical frameworks that jointly support state understanding, early signal detection, forecasting, and decision support.<br>
 
-I study time-series and spatiotemporal data, visual representations, and 3D spatial data by integrating temporal structure analysis, representation learning, and latent state modeling.
-
-The goal is to develop analytical frameworks that jointly support state understanding, early signal detection, forecasting, and decision support.
-
-My research is primarily motivated by industrial applications in manufacturing, supply chains, social infrastructure, and healthcare. Drawing on professional experience in 3D image processing, ECM, SCM, enterprise systems, and digital transformation, I aim to connect research outcomes to operational improvement, reliability, and risk reduction.
+My research interests are primarily motivated by industrial applications in manufacturing, supply chains, social infrastructure, and healthcare.<br>
+Drawing on professional experience in 3D image processing, ECM, SCM, enterprise systems, and digital transformation, I place particular emphasis on connecting research outcomes to operational improvement, reliability enhancement, and risk reduction.<br>
 
 ---
 
@@ -124,37 +124,39 @@ My research is primarily motivated by industrial applications in manufacturing, 
 * **Representation & Latent Dynamics**
 * **Decision Intelligence**
 
----
-
 ### Research Activities
 
-#### 2026
-
-* **NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)**
-  *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*
+* **NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)**<br>
+  *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*<br>
   Sydney, Australia
 
-* **MIRU 2026 Accept**
-  *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*
+* **MIRU 2026 Accept**<br>
+  *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*<br>
   Nagasaki, Japan
 
 * **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**
 
-* **Peer Reviewer, Q1 International Journals in AI / Data Science**
+* **Peer Reviewer, Q1 International Journals**
 
 #### Academic Programs
 
-* The University of Tokyo, Graduate School of Engineering — Physical AI and Intelligent Robotics Program
-* The University of Tokyo, Graduate School of Engineering — Deep Generative Models Program
-* The University of Tokyo, Graduate School of Engineering — Deep Learning Program
+* The University of Tokyo, Graduate School of Engineering — Physical AI and Intelligent Robotics Program, Certificate of Completion
+* The University of Tokyo, Graduate School of Engineering — Deep Generative Models Program, Certificate of Completion
+* The University of Tokyo, Graduate School of Engineering — Deep Learning Program, Certificate of Completion
 
 ---
 
 ### Collaboration
 
-I welcome collaborative research with industry partners using real-world data, particularly in manufacturing, supply chains, social infrastructure, healthcare, and mobility.
+I welcome collaborative research with industry partners using real-world data, particularly in manufacturing, supply chains, social infrastructure, and healthcare.
 
-Example data include demand and inventory data, sensor and process data, mobility data, image data, and point cloud data.
+Example data:
+
+* Demand, planning, and inventory data
+* Sensor and process data
+* Mobility data
+* Image data
+* Point cloud data
 
 Collaborations may include problem formulation, methodological development, proof-of-concept studies, academic publication, and evaluation of practical applicability.
 
@@ -162,5 +164,5 @@ Collaborations may include problem formulation, methodological development, proo
 
 ## Contact
 
-Email: akamatsu [at] eagle.sophia.ac.jp
+Email: akamatsu [at] eagle.sophia.ac.jp<br>
 Please replace [at] with @.
