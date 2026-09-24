@@ -24,11 +24,13 @@ Forecasting & Decision Intelligence </span>
 
 ### About
 
-Proactive Intelligence をテーマとして、観測データから将来状態を推定し、予測を意思決定へ接続する方法を研究しています。
+Proactive Intelligence をテーマとして、観測データから将来状態を推定し、予測を意思決定へ接続する方法を研究しています。<br>
+時系列・時空間データ、視覚表現、3D空間データを対象に、時間構造解析、表現学習、潜在状態モデリングを組み合わせ、<br>
+状態把握・兆候検出・将来予測・意思決定支援を一体的に扱う分析枠組みの構築を目指しています。<br>
 
-時系列・時空間データ、視覚表現、3D空間データを対象に、時間構造解析、表現学習、潜在状態モデリングを組み合わせ、状態把握・兆候検出・将来予測・意思決定支援を一体的に扱う分析枠組みの構築を目指しています。
-
-研究関心は、製造業、サプライチェーン、社会インフラ、医療などの産業応用を中心としています。製造・医療分野における3D画像処理、ECM、SCM、業務システム、DX推進の実務経験を背景に、研究成果を実運用の改善、信頼性向上、リスク低減へ接続することを重視しています。
+研究関心は、製造業、サプライチェーン、社会インフラ、医療などの産業応用を中心としています。<br>
+製造・医療分野における3D画像処理、ECM、SCM、業務システム、DX推進の実務経験を背景に、<br>
+研究成果を実運用の改善、信頼性向上、リスク低減へ接続することを重視しています。<br>
 
 ---
 
@@ -44,18 +46,18 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 
 #### 2026
 
-* **NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)**
+* **NeurIPS 2026 Workshop Accept (TAE: Trust-AI-Eval)**　<br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*
   Sydney, Australia
 
-* **MIRU 2026 Accept**
+* **MIRU 2026 Accept**　<br>
   *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*
   Nagasaki, Japan
 
-* **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**
+* **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**　
 
-* **Peer Reviewer, Q1 International Journals in AI / Data Science**
+* **Peer Reviewer, Q1 International Journals in e**
 
 #### Academic Programs
 
