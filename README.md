@@ -52,7 +52,8 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 
 * **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**　
 
-* **Peer Reviewer, Q1 International Journals**　Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, etc.
+* **Peer Reviewer, Q1 International Journals**
+　Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, etc.
 
 #### Academic Programs
 2025
@@ -134,6 +135,7 @@ Drawing on professional experience in 3D image processing, ECM, SCM, enterprise 
 * **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**
 
 * **Peer Reviewer, Q1 International Journals**
+  Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, etc.
 
 #### Academic Programs
 
