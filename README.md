@@ -55,7 +55,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 * **Peer Reviewer, Q1 International Journals**
 
 #### Academic Programs
-
+2025
 * 東京大学大学院工学系研究科 Physical AI・知能ロボティクス講座 修了
 * 東京大学大学院工学系研究科 深層生成モデル講座 修了
 * 東京大学大学院工学系研究科 深層学習講座 修了
