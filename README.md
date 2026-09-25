@@ -50,7 +50,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
   *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*, Nagasaki, Japan
 
-* **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**　
+* **Reviewer, NeurIPS 2026 Workshop on TAE**　
 
 * **Peer Reviewer, Q1 International Journals**
   *Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
