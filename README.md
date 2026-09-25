@@ -53,7 +53,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 * **Reviewer, NeurIPS 2026 Workshop on TAE**　
 
 * **Peer Reviewer, Q1 International Journals**　<br>
-  *Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
+  Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
 
 #### Academic Programs
 2025
