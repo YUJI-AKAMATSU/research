@@ -127,6 +127,7 @@ Drawing on professional experience in 3D image processing, ECM, SCM, enterprise 
 
 ### Research Activities
 
+# Conference
 * **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**<br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*<br>
   Sydney, Australia
@@ -135,6 +136,7 @@ Drawing on professional experience in 3D image processing, ECM, SCM, enterprise 
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*<br>
   Nagasaki, Japan
 
+# Reviewing Activities
 * **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**
 
 * **Peer Reviewer, Q1 International Journals**
