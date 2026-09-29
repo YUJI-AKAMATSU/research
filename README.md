@@ -127,20 +127,21 @@ Drawing on professional experience in 3D image processing, ECM, SCM, enterprise 
 
 ### Research Activities
 
-# Conference
-* **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**<br>
+#### Conference
+* **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**　<br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*<br>
-  Sydney, Australia
+  December 11, 2026 · Sydney, Australia
 
-* **MIRU 2026 — Paper Accepted** <br>
+* **MIRU 2026 — Paper Accepted**　<br>
+  *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*<br>
-  Nagasaki, Japan
+  August 5, 2026 · Nagasaki, Japan
 
-# Reviewing Activities
-* **Reviewer, NeurIPS 2026 Workshop on Trust-AI-Eval (TAE)**
+#### Reviewing Activities
+* **Reviewer, NeurIPS 2026 Workshop on TAE**　
 
-* **Peer Reviewer, Q1 International Journals**
-  *Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
+* **Peer Reviewer, Q1 International Journals**　<br>
+  Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
 
 #### Academic Programs
 
