@@ -53,7 +53,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
   August 5, 2026 · Nagasaki, Japan
 
 #### Reviewing Activities
-* **Reviewer, NeurIPS 2026 Workshop on TAE**　
+* **Reviewer, NeurIPS 2026 Workshop*　
 
 * **Peer Reviewer, Q1 International Journals**　<br>
   Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
