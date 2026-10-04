@@ -48,7 +48,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
   December 11, 2026 · Sydney, Australia https://neurips.cc/Conferences/2026 <br>
 
 * **MIRU 2026 — Paper Accepted**　
-  *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析* 
+  *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*　<br> 
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention* https://miru-committee.github.io/miru2026/program/timetable/ <br> 
   August 5, 2026 · Nagasaki, Japan 
 
