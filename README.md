@@ -140,7 +140,7 @@ Drawing on professional experience in 3D image processing, ECM, SCM, enterprise 
 #### Reviewing Activities
 * **Reviewer, NeurIPS 2026 Workshop on TAE**　
 
-* **Peer Reviewer, Q1 International Journals**　<br>
+* **Peer Reviewer, Q1 International Journals**　https://orcid.org/0009-0005-3719-3146 <br>
   Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
 
 #### Academic Programs
