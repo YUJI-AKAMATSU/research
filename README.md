@@ -47,10 +47,10 @@ Proactive Intelligence をテーマとして、観測データから将来状態
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting*<br>
   December 11, 2026 · Sydney, Australia https://tai-eval.github.io/papers/ <br> 
 
-* **MIRU 2026 — Paper Accepted**　https://miru-committee.github.io/miru2026/program/timetable/ <br>
+* **MIRU 2026 — Paper Accepted**　https://miru-committee.github.io/miru2026/<br>
   *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析* 
   *Geometric Re-embedding of Temporal Structure and Temporal Phase Alignment Analysis of ViT Attention*<br>
-  August 5, 2026 · Nagasaki, Japan
+  August 5, 2026 · Nagasaki, Japan https://miru-committee.github.io/miru2026/program/timetable/ <br>
 
 #### Reviewing Activities
 * **Reviewer, NeurIPS Workshop**　https://tai-eval.github.io/reviewers/ <br>
