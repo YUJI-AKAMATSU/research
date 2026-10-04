@@ -55,7 +55,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 #### Reviewing Activities
 * **Reviewer, NeurIPS Workshop**　https://tai-eval.github.io/reviewers/ <br>
 
-* **Peer Reviewer, Q1 International Journals**　<br>
+* **Peer Reviewer, Q1 International Journals**　https://orcid.org/0009-0005-3719-3146 <br>
   Fields include Time-Series Analysis, Machine Learning, Deep Learning, Computer Vision, and Reinforcement Learning.
 
 #### Academic Programs
