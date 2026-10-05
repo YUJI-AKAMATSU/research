@@ -101,12 +101,6 @@ Forecasting & Decision Intelligence </span>
 
 ---
 
-### Proactive Intelligence
-
-“Toward Observing the Unseen Future”
-
----
-
 ### About
 
 My research focuses on Proactive Intelligence, with the aim of estimating future states from observational data and connecting forecasting to decision-making.<br>
