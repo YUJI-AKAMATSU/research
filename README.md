@@ -45,7 +45,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 #### Conference
 * **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**　https://tai-eval.github.io/papers/ <br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting* <br>
-  December 11, 2026 · Sydney, Australia
+  December 11, 2026 · Sydney, Australia https://neurips.cc/virtual/2026/loc/sydney/178217
 
 * **MIRU 2026 — Paper Accepted**　https://miru-committee.github.io/miru2026/program/timetable/ 　<br> 
   *時間構造の幾何的再埋め込みとViT注意構造の時間位相整合解析*
