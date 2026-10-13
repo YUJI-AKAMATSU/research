@@ -2,14 +2,13 @@ An English version is provided below.<br>
 Research site: https://yuji-akamatsu.github.io/research/<br>
 Note: https://note.com/proactive_ai
 
+<img src="images/overview.jpg" align="right" width="220" alt="Research Overview">
+
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
 赤松 祐治 / 学際的研究推進<br>
 Yuji Akamatsu<br> 
 Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
-<p align="center">
-  <img src="images/overview.jpg" alt="Research Overview" width="100">
-</p>
 
 Time Series Forecasting<br>
 Spatiotemporal & Temporal Structure Analysis<br>
