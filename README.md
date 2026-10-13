@@ -5,8 +5,9 @@ Note: https://note.com/proactive_ai
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
 赤松 祐治 / 学際的研究推進<br>
-Yuji Akamatsu<br>
+Yuji Akamatsu<br> 
 Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
+![Research Overview](images/overview.jpg)
 
 Time Series Forecasting<br>
 Spatiotemporal & Temporal Structure Analysis<br>
