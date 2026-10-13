@@ -8,7 +8,7 @@ Note: https://note.com/proactive_ai
 Yuji Akamatsu<br> 
 Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
 <p align="center">
-  <img src="images/overview.jpg" alt="Research Overview" width="600">
+  <img src="images/overview.jpg" alt="Research Overview" width="100">
 </p>
 
 Time Series Forecasting<br>
