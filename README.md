@@ -1,6 +1,5 @@
 An English version is provided below.<br>
-Research site: https://yuji-akamatsu.github.io/research/<br>
-Note: https://note.com/proactive_ai<br>
+
 <img src="images/overview.jpg" align="right" width="80" alt="Research Overview">
 
 <span style="font-size:13px;">
@@ -89,6 +88,9 @@ Email: akamatsu [at] eagle.sophia.ac.jp
 ※ [at] を @ に置き換えてください。
 
 ---
+
+Research site: https://yuji-akamatsu.github.io/research/<br>
+Note: https://note.com/proactive_ai<br>
 
 ## ENGLISH
 
