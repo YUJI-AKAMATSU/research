@@ -2,7 +2,7 @@ An English version is provided below.<br>
 Research site: https://yuji-akamatsu.github.io/research/<br>
 Note: https://note.com/proactive_ai
 
-<img src="images/overview.jpg" align="right" width="220" alt="Research Overview">
+<img src="images/overview.jpg" align="right" width="120" alt="Research Overview">
 
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
