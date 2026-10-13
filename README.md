@@ -3,6 +3,7 @@ An English version is provided below.<br>
 Research site: https://yuji-akamatsu.github.io/research/<br>
 Note: https://note.com/proactive_ai
 
+
 <span style="font-size:13px;">
 上智大学大学院 博士後期課程<br>
 赤松 祐治 / 学際的研究推進<br>
