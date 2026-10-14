@@ -6,7 +6,8 @@ An English version is provided below.<br>
 上智大学大学院 博士後期課程<br>
 赤松 祐治 / 学際的研究推進<br>
 Yuji Akamatsu<br> 
-Ph.D. Student / Interdisciplinary Research Scientist, Sophia University<br><br>
+Ph.D. Student / Interdisciplinary Research Scientist <br>
+Sophia University<br><br>
 
 Time Series Forecasting<br>
 Spatiotemporal & Temporal Structure Analysis<br>
