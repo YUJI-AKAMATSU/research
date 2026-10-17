@@ -43,7 +43,7 @@ Proactive Intelligence をテーマとして、観測データから将来状態
 ### Research Activities
 
 #### Conference
-* **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**　https://tai-eval.github.io/papers/ <br>
+* **NeurIPS 2026 Workshop on Trustworthy AI Evaluation (TAE: Trust-AI-Eval) — Full Paper Accepted**　https://tai-eval.github.io/papers/ <br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting* Australia https://neurips.cc/virtual/2026/loc/sydney/178217<br>
   December 11, 2026 · Sydney, 
 
@@ -125,7 +125,7 @@ Drawing on professional experience in 3D image processing, ECM, SCM, enterprise 
 ### Research Activities
 
 #### Conference
-* **NeurIPS 2026 Workshop (TAE: Trust-AI-Eval) — Full Paper Accepted**　https://tai-eval.github.io/papers/ <br>
+* **NeurIPS 2026 Workshop on Trustworthy AI Evaluation (TAE: Trust-AI-Eval) — Full Paper Accepted**　https://tai-eval.github.io/papers/ <br>
   *When Attention Does Not Explain the Peak: Temporal Reference vs. Forecast Output in Attention-Based Time-Series Forecasting* Australia https://neurips.cc/virtual/2026/loc/sydney/178217<br>
   December 11, 2026 · Sydney, 
 
